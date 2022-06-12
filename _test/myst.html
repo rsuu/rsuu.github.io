@@ -632,8 +632,11 @@ Label2</label></div>
 <p>2</p>
 </div>
 </div>
-</div><div class="tabbed-block docutils">
-<p class="tabbed-label rubric">Label2</p>
+</div><div class="tabbed-set tabbed-alternate" data-tabs="2:1">
+<input checked type="radio" id="__tabbed_2_1" name="__tabbed_2"><div class="tabbed-labels docutils">
+<label class="tabbed-label" for="__tabbed_2_1">
+Label2</label></div>
+<div class="tabbed-content docutils">
 <div class="tabbed-block docutils">
 <div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"></span>
@@ -642,16 +645,11 @@ Label2</label></div>
 </div>
 </div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>
-
-
-```{eval-rst}
-.. include:: ./rst.rst
-</code></pre></div>
-</div>
-<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+</div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>
+```{literalinclude} ./test.rs
+---
+language: rust
+---
 </code></pre></div>
 </div>
 <div class="error admonition">

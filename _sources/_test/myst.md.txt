@@ -51,22 +51,15 @@ Content 1
 
 ::::
 
-```{md-tab-item} Label2
-```{literalinclude} ./test.rs
----
-language: rust
----
+```{md-tab-set}
+  ```{md-tab-item} Label2
+    ```{literalinclude} ./test.rs
+    ---
+    language: rust
+    ---
+    ```
+  ```
 ```
-
-```
-
-
-
-```{eval-rst}
-.. include:: ./rst.rst
-```
-
-
 
 ```{literalinclude} ./test.rs
 ---
