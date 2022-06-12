@@ -41,7 +41,7 @@
 
             .. md-tab-item:: Custom Rust
 
-                .. literalinclude:: _static/test.rs
+                .. literalinclude:: /_static/test.rs
                     :language: rust
                     :start-after: /* ************************ custom-tab-set-style
                     :end-before: /* *********************** custom-tab-item-style
