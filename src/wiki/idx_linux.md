@@ -1,6 +1,7 @@
 ## Linux
 
 ```{toctree}
+:hidden:
 :caption: Linux
 :maxdepth: 2
 
