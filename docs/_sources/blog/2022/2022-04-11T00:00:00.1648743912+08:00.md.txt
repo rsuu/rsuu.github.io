@@ -1,0 +1,32 @@
+---
+date: 2022-04-11T00:00:00+08:00
+title:
+categories:
+tags:
+- ing
+- telegraph
+udc:
+reference:
+---
+
+## 自定义一个 telegram 的 instant view
+
+
++ 1. 登入 https://instantview.telegram.org/my/
++ 2.
++ 3.
++ 4.
+
+```text
+~version: "2.1"
+site_name: "TK4E"
+author: "TK4E"
+author_url:"https://github.com/rsuu"
+channel: "@daslittlewitch"
+
+​
+title: /html/body/h1
+body: /html/body/div
+
+```
+

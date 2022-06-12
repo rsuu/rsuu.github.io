@@ -1,0 +1,25 @@
+---
+date: 2022-04-11T00:00:00+08:00
+title:
+categories:
+tags: 
+- ffmpeg
+- usb 
+udc: 
+reference: 
+---
+
+## v4l2
+
+### list
+
+v4l2-ctl --list-devices
+
+### 
+
+ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mkv
+
+### 
+
+ffplay /dev/video0
+

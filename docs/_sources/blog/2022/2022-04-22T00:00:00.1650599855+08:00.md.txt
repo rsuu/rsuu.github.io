@@ -1,0 +1,17 @@
+---
+date: 2022-04-22T00:00:00+08:00
+title:
+categories:
+tags:
+- acpi
+udc: 
+reference: 
+ 
+---
+
+## ACPI
+
+关闭 ACPI 后将不能使用 poweroff 或 shutdown 关机
+
+
+	

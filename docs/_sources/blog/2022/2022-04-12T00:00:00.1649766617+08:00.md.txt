@@ -1,0 +1,47 @@
+---
+date: 2022-04-12T00:00:00+08:00
+title:
+categories:
+tags:
+- ing
+- ja
+udc: 
+- 811.521
+reference: 
+---
+
+## 单词
+
+Japanese | English | Reading | Notes
+|:-|:-|:-|:-
+梅酒 | Plum wine | うめしゅ | 
+日本酒 | Sake; Japanese rice wine | にほんしゅ | 
+麦酒 | Beer | ビール | 
+生ビール | Draft beer | なまビール | 
+Wine | ワイン | 
+Sherry | シェリー | 
+三鞭酒 | champagne | シャンパン | 
+白ワイン | White wine | しろワイン | 
+赤ワイン | Red wine | あかワイン | 
+焼酎 | Distilled spirits; liquor | しょうちゅう | 
+ウィスキー | Whiskey | 
+ ウォッカ |Vodka | 
+ ジン | Gin |
+スコッチ | Scotch | 
+テキーラ | Tequila | 
+ ブランデー | Brandy |
+ラム  |Rum | RaMu
+
+
+
+
+
+---
+
+
+
+
+
+
+
+	
