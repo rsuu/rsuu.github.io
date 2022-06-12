@@ -45,21 +45,3 @@ Content 1
 ```{eval-rst}
 .. include:: ./rst.rst
 ```
-
-```{md-tab-set}
-            .. md-tab-item:: Cross-page Ref
-
-                To cross-reference this tab set from a different page, use
-                :ref:`tab set description <ref_this_tab_set>`
-
-                Clearly, this also works on the same page.
-
-            .. md-tab-item:: Custom Rust
-
-                .. literalinclude:: ./test.rs
-                    :language: rust
-                    :start-after: /* ************************ custom-tab-set-style
-                    :end-before: /* *********************** custom-tab-item-style
-
-
-```
