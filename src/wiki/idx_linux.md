@@ -4,5 +4,5 @@
 :caption: Linux
 :maxdepth: 2
 
-./ffmpeg-video.md
+linux/ffmpeg-video.md
 ```
