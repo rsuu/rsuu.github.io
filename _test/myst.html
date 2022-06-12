@@ -629,10 +629,31 @@
 
 
   <h1 id="syntax">syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-{cite, notranslate"><div class="highlight"><pre><span></span><code>
-</code></pre></div>
-</div>
-<p>failure
+<p>important
+hint
+tip
+seealso
+note
+todo
+attention
+caution
+warning
+danger
+error
+info
+abstract
+summary
+tldr
+success
+check
+done
+question
+faq
+help
+cite
+quote
+example
+failure
 fail
 missing
 bug</p>
@@ -747,15 +768,30 @@ Custom Rust</label></div>
 <details class="help">
 <summary>
 Closed by default</summary><p>Without the <code class="docutils literal notranslate"><span class="pre">:open:</span></code> flag, the admonition is collapsed by default.</p>
-</details><div class="admonition">
-<p>class: error</p>
+</details><div class="error admonition">
 <p>This example uses the styling of the <code class="docutils literal notranslate"><span class="pre">error</span></code> admonition</p>
 </div>
-<details>
+<details class="help">
 <summary>
-Closed by default</summary><p>class: help</p>
-<p>Without the <code class="docutils literal notranslate"><span class="pre">:open:</span></code> flag, the admonition is collapsed by default.</p>
-</details>
+Closed by default</summary><p>Without the <code class="docutils literal notranslate"><span class="pre">:open:</span></code> flag, the admonition is collapsed by default.</p>
+</details><figure class="align-default" id="rst-fun-fish">
+<a class="reference internal image-reference" href="_test/img/fun-fish.png"><img alt="_test/img/fun-fish.png" src="_test/img/fun-fish.png" style="width: 100px;" /></a>
+<figcaption>
+<p><span class="caption-text"><span class="caption-text">
+Party time!</span><a class="headerlink" href="#rst-fun-fish" title="Permalink to this image">¶</a></span><a class="headerlink" href="#rst-fun-fish" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>A reference from inside: <a class="reference internal" href="#rst-fun-fish"><span class="std std-ref">Party time!</span></a></p>
+<p>A reference from outside: <span class="xref std std-ref">syntax/directives/parsing</span></p>
+<div class="mermaid-diagram docutils" id="flowcharts">
+<pre class="mermaid">
+<code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">LR</span>
+&#160; <span class="pre">A[Start]</span> <span class="pre">--&gt;</span> <span class="pre">B{Error?};</span>
+&#160; <span class="pre">B</span> <span class="pre">--&gt;|Yes|</span> <span class="pre">C[Hmm...];</span>
+&#160; <span class="pre">C</span> <span class="pre">--&gt;</span> <span class="pre">D[Debug];</span>
+&#160; <span class="pre">D</span> <span class="pre">--&gt;</span> <span class="pre">B;</span>
+&#160; <span class="pre">B</span> <span class="pre">----&gt;|No|</span> <span class="pre">E[Yay!];</span></code></pre></div>
+
 
 
               
