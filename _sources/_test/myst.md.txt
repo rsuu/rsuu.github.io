@@ -59,9 +59,15 @@ Content 1
 
 ```{literalinclude} test.rs
 ---
-language: python
+language: rust
 start-after: "/* ************************ custom-tab-set-style"
 end-before: "/* *********************** custom-tab-item-style"
+---
+```
+
+```{literalinclude} ./test.rs
+---
+language: rust
 ---
 ```
 
@@ -71,6 +77,8 @@ end-before: "/* *********************** custom-tab-item-style"
 This example uses the styling of the ``error`` admonition
 
 ```
+
+
 
 ```{details} Closed by default
 :class: help
