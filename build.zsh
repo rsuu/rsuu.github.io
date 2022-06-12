@@ -15,8 +15,6 @@ Temp=$(cat "$Temp_Index")
 cd "$Dir"
 rm "$To"
 
-ls
-
 List=$(find "$Text_Dir" -type f)
 OutPut=$(echo $Temp | sd "<=Replace=>" "$List")
 
