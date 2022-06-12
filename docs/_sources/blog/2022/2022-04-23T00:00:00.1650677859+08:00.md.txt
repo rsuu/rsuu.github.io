@@ -1,0 +1,42 @@
+---
+date: 2022-04-23T00:00:00+08:00
+title:
+categories:
+tags:
+- linux,grub]
+udc: 
+reference:
+
+1|https://www.cnblogs.com/lif323/p/15041913.html
+2|https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849
+
+ 
+---
+
+## 内核损坏
+
+> 现象
+> 无法通过 grub 进入系统
+
+
+进入 archiso
+
+mount /dev/sda2 /mnt
+mount /dev/sda3 /mnt/root
+
+arch-chroot /mnt
+
+pacman -S linux
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+reboot
+
+### Warning: os-prober will not be executed to detect other bootable partitions
+
+vim /etc/default/grub
+# uncomment/add GRUB_DISABLE_OS_PROBER=false 
+
+
+
+	

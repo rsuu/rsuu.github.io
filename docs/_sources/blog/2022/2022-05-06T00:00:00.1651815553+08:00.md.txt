@@ -1,0 +1,21 @@
+---
+date: 2022-05-06T00:00:00+08:00
+title:
+categories:
+tags: 
+- cmd
+udc: 
+reference: 
+ 
+---
+
+## tail
+
+```bash
+tail -3 a
+    # 删除 文件a 的尾三行
+
+tail -f log.txt
+    # 可以实时监控 log.txt 中的内容
+
+```

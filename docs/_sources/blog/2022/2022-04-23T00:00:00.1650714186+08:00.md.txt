@@ -1,0 +1,47 @@
+---
+date: 2022-04-23T00:00:00+08:00
+title:
+categories:
+tags:
+- latex, ing
+udc: 
+reference: 
+ 
+---
+
+## 
+
+### 基本排版
+
+```latex
+\\：换行
+
+\\[offset]：换行, 并且与下一行的行间距为原来行间距+offset
+
+\linebreak：强制换行
+
+
+
+
+\par：分段
+
+\newpage：分页
+
+
+\setlength{\parindent}{2em}
+首行缩进则
+
+\setlength{\parindent}{0pt}
+让整篇文章都首行不缩进
+
+\setlength{\parskip}{10pt}
+设置段落间隔为 \lineskip 和 \parskip 之和
+
+
+```
+
+
+
+
+
+	

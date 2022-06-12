@@ -1,0 +1,35 @@
+---
+
+date: 2022-04-12T00:00:00+08:00
+title:
+categories:
+tags: 
+udc: 
+reference: 
+ 
+
+
+---
+
+## aseprite
+
+```text
+# {
+View -> Summetry
+Togg
+Togg
+
+# } 
+```
+
+
+
+---
+
+
+
+
+
+
+
+	

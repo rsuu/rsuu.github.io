@@ -1,0 +1,20 @@
+---
+date: 2022-04-24T00:00:00+08:00
+title:
+categories:
+tags: 
+- cmd
+udc: 
+reference: 
+ 
+---
+
+## OOM
+
+```bash
+pacman -S earlyoom
+systemctl enable --now earlyoom
+```
+
+
+	
