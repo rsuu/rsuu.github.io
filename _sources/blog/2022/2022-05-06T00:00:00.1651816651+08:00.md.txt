@@ -1,0 +1,20 @@
+---
+date: 2022-05-06T00:00:00+08:00
+title:
+categories:
+tags: 
+- cmd
+udc: 
+reference: 
+ 
+---
+
+## ln
+
+```bash
+ln a b             
+    # 把 b 作为 a 的硬链接
+ln -s a b          
+    # 把 b 作为 a 的软链接
+
+```

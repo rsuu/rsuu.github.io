@@ -1,0 +1,31 @@
+---
+date: 2022-04-22T00:00:00+08:00
+title:
+categories:
+tags: 
+- cmd
+udc: 
+reference: 
+ 
+---
+
+## imagemagick
+
+```bash
+sleep 5; import 123.png
+    # 等待5秒截屏
+
+
+import -frame 123.jpg
+    # 截取鼠标点击的那个窗口
+
+
+import -windows root 123.png
+    # 截取全屏幕
+
+
+```
+
+
+
+	

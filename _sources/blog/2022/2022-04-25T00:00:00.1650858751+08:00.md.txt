@@ -1,0 +1,35 @@
+---
+date: 2022-04-25T00:00:00+08:00
+title:
+categories:
+tags:
+- rust
+- slice
+- array
+udc: 
+reference:
+- 1|https://doc.rust-lang.org/beta/unstable-book/language-features/unsized-locals.html#variable-length-arrays
+---
+
+## rust slice and array
+
++ slice
+    + & 
++ array 
+    + [T; n]
+
+slice 和 array 的区别很坑人
+&[0, 0] 和 [0; 2] 完全不同
+前者是 slice 
+后者是 array
+
+```rust
+// array to slice
+[0; 2].as_slice()
+
+
+```
+
+### VLA
+
+可变长数组

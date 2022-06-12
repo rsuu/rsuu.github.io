@@ -1,0 +1,21 @@
+---
+date: 2022-05-01T00:00:00+08:00
+title:
+categories:
+tags: 
+- cmd
+udc: 
+reference: 
+ 
+---
+
+## ulimit
+
+```sh
+ulimit -a 
+    #显示当前用户的栈大小
+
+ulimit -s 32768 
+    #将当前用户的栈大小设置为32M bytes
+```
+

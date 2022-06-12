@@ -1,0 +1,42 @@
+---
+date: 2022-04-12T00:00:00+08:00
+title:
+categories:
+- rust
+tags:
+- enum
+- rust
+udc: [004.434]
+reference:
+
+---
+
+## Multiple return types in rust
+
+
+
+```rust
+fn main() {
+
+enum Multiple {
+A(u8),
+B(char)
+}
+
+
+fn f(b: bool) -> Multiple {
+if b {
+Multiple::A(0)
+} else {
+Multiple::B('b')
+}
+
+}
+
+
+println!("{:#?}",f(true));
+println!("{:#?}",f(false));
+
+}
+
+```

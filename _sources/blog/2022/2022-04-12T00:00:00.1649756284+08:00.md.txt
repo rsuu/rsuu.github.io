@@ -1,0 +1,101 @@
+---
+date: 2022-04-12T00:00:00+08:00
+title:
+categories:
+- learn
+tags:
+- rust
+- impl
+- trait
+udc:
+reference:
+- 1|https://github.com/rust-lang/rfcs/blob/master/text/1522-conservative-impl-trait.md
+
+---
+
+## trait
+
+### impl Trait
+
+{1}
+```rust
+// 1.40.0-nightly (2019-11-05 1423bec54cf2db283b61)
+#![feature(type_alias_impl_trait)]
+
+trait FromTheFuture {
+    type Iter: Iterator<Item = u8>;
+
+    fn example(&self) -> Self::Iter;
+}
+
+impl FromTheFuture for u8 {
+    type Iter = impl Iterator<Item = u8>;
+
+    fn example(&self) -> Self::Iter {
+        std::iter::repeat(*self).take(*self as usize)
+    }
+}
+
+fn main() {
+    for v in 7.example() {
+        println!("{}", v);
+    }
+}
+```
+
+```rust
+/// `impl Display` : sum_to() 返回的类型必须实现 Display 这个 trait
+fn sum_to(n: u32) -> impl Display {
+    fn sum_to_(n: u32) -> u32 {
+        if n == 0 {
+            0
+        } else {
+            n + sum_to_(n - 1)
+        }
+    }
+    sum_to_(n)
+}
+
+```
+
+### associated type
+
+
+```rust
+trait B {}
+struct C;
+
+impl B for C {}
+
+trait A {
+    type FReturn: B;
+    fn f() -> Self::FReturn;
+}
+
+struct Person;
+
+impl A for Person {
+    type FReturn = C;
+    fn f() -> C {
+        C
+    }
+}
+```
+
+
+```rust
+trait a {}
+struct A{}
+impl a for A {}
+
+struct B{}
+
+fn a() -> impl a {
+A{}
+}
+
+// fn b() -> impl a {
+// B{} // error[E0277]: the trait bound B: a is not satisfied
+// }
+
+```
