@@ -38,19 +38,21 @@ exclude_patterns = ['_build', '_templates']
 
 templates_path = [ '_templates' ]
 
-html_static_path = ['_static']
 
-html_css_files = [
-    #'my_style.css',
-    #'dracula.css',
-    #'dark.css',
-]
+
+# The reST default role (used for this markup: `text`) to use for all
+# documents.
+default_role = "any"
+
+autoclass_content = "class"
+
+autosummary_generate = True
+
 
 extensions = [
     "sphinx_comments",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
-    "sphinx_immaterial",
 
     "myst_parser",
     "sphinx_design",
@@ -71,8 +73,6 @@ extensions = [
 
 ]
 
-
-autosummary_generate = True
 
 
 # myst
@@ -107,6 +107,7 @@ comments_config = {
 
 # -- Options for HTML output -------------------------------------------------
 
+extensions.append("sphinx_immaterial")
 html_theme = 'sphinx_immaterial'
 html_theme_options = {
     "icon": {
@@ -171,65 +172,15 @@ html_theme_options = {
     "toc_title_is_page_title": True,
 }
 
+html_static_path = ["_static"]
+html_css_files = [
+    'extra_css.css',    
+]
 
-# html_theme = 'sphinx_rtd_theme'
-# html_theme_options = {
-#     'analytics_id': 'G-XXXXXXXXXX',  #  Provided by Google in your dashboard
-#     'analytics_anonymize_ip': False,
-#     'logo_only': False,
-#     'display_version': True,
-#     'prev_next_buttons_location': 'bottom',
-#     'style_external_links': False,
-#     'vcs_pageview_mode': '',
-#     #'style_nav_header_background': 'white',
-#     # Toc options
-#     'collapse_navigation': True,
-#     'sticky_navigation': True,
-#     'navigation_depth': 6,
-#     'includehidden': True,
-#     'titles_only': False
-# }
-
-
-
-# html_theme = 'sphinx_book_theme'
-# html_logo = "_static/logo-wide.svg"
-# html_title = "Sphinx Book Theme"
-# html_copy_source = True
-# html_sourcelink_suffix = ""
-# html_favicon = "_static/logo-square.svg"
-# html_last_updated_fmt = ""
-# html_theme_options = {
-#     "path_to_docs": "docs",
-#     "repository_url": "https://github.com/executablebooks/sphinx-book-theme",
-#     # "repository_branch": "gh-pages",  # For testing
-#     "launch_buttons": {
-#         "binderhub_url": "https://mybinder.org",
-#         "colab_url": "https://colab.research.google.com/",
-#         "deepnote_url": "https://deepnote.com/",
-#         "notebook_interface": "jupyterlab",
-#         "thebe": True,
-#         # "jupyterhub_url": "https://datahub.berkeley.edu",  # For testing
-#     },
-#     "use_edit_page_button": True,
-#     "use_issues_button": True,
-#     "use_repository_button": True,
-#     "use_download_button": True,
-#     "use_sidenotes": True,
-#     "logo_only": True,
-#     "show_toc_level": 2,
-# #    "announcement": (
-# #        "⚠️The latest release refactored our HTML, "
-# #        "so double-check your custom CSS rules!⚠️"
-# #    ),
-#     # For testing
-#     # "use_fullscreen_button": False,
-#     # "home_page_in_toc": True,
-#     # "single_page": True,
-#     # "extra_footer": "<a href='https://google.com'>Test</a>",  # DEPRECATED KEY
-#     # "extra_navbar": "<a href='https://google.com'>Test</a>",
-#     # "show_navbar_depth": 2,
-# }
+html_last_updated_fmt = ""
+html_title = "RSUU"
+#html_favicon = "_static/svg/logo.svg"  
+#html_logo = "_static/svg/logo.svg"  
 
 
 
@@ -279,6 +230,7 @@ class RVLexer(RegexLexer):
 
 lexers['riscv'] = RVLexer()
 
+todo_include_todos = True
 
 
 object_description_options = []
