@@ -1,26 +1,5 @@
 #!/bin/zsh
 
-Pwd=$PWD
-Temp_Path='src/_templates/index'
-
-
-index_new() {
-Temp_Index="$1"
-Text_Dir="$2"
-To="$3"
-
-Temp=$(cat "$Temp_Index")
-
-cd "$Text_Dir"
-rm "$To"
-
-List=$(find "./" -type f)
-OutPut=$(echo $Temp | sd "<=Replace=>" "$List")
-
-echo "$OutPut" > "$To"
-cd $Pwd
-}
-
 
 
 rm -rf docs
@@ -35,4 +14,4 @@ index_new "$Temp_Path/wiki_linux.temp" 'src/wiki/linux' '../idx_linux.md';
 
 
 
-sphinx-build . docs
+sphinx-build src docs
