@@ -1,6 +1,7 @@
 ## RSUU
 
 ```{toctree}
+:hidden:
 :caption: Blog
 :maxdepth: 2
 
