@@ -1,6 +1,7 @@
 ## RSUU
 
 ```{toctree}
+:hidden:
 :caption: Blog
 :maxdepth: 2
 
@@ -9,6 +10,7 @@
 ```
 
 ```{toctree}
+:hidden:
 :caption: Book
 :maxdepth: 2
 
@@ -16,6 +18,7 @@
 ```
 
 ```{toctree}
+:hidden:
 :caption: Wiki
 :maxdepth: 2
 
@@ -23,6 +26,7 @@
 ```
 
 ```{toctree}
+:hidden:
 :caption: Doc
 :maxdepth: 2
 
