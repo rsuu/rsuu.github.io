@@ -28,20 +28,20 @@ Content 2
 
 
 
-:::::{md-tab-set}
+::::{md-tab-set}
 
-::::{md-tab-item} Label1
+:::{md-tab-item} Label1
 Content 1
-::::
-
-::::{md-tab-item} Label2
-:::{literalinclude} _static/test.rs
-:language: rust
 :::
+
+:::{md-tab-item} Label2
+2
+:::
+
 ::::
 
 
 
-:::::
-
-
+```{eval-rst}
+.. include:: ./rst.rst
+```
