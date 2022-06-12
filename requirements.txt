@@ -10,3 +10,10 @@ jieba
 myst_parser
 sphinx-immaterial
 linkify-it-py
+markupsafe
+pydantic
+typing-extensions
+sphinxcontrib-details-directive
+sphinx-design
+sphinx_jinja
+sphinx-tabs

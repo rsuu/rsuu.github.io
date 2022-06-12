@@ -30,10 +30,26 @@ extensions = [
     "sphinx_comments",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
-
     "sphinx_immaterial",
 
     "myst_parser",
+    "sphinx_tabs.tabs",
+    "sphinx_design",
+
+    "sphinx.ext.doctest",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.todo",
+    #"sphinx.ext.mathjax",
+    "sphinx.ext.viewcode",
+    "sphinxcontrib.details.directive",
+    "sphinx_immaterial.theme_result",
+    "sphinx_immaterial.kbd_keys",
+    "sphinx_immaterial.format_signatures",
+    "sphinx_immaterial.cppreference",
+    "sphinx_immaterial.json_domain",
+    "sphinx_jinja",
+
 ]
 
 
