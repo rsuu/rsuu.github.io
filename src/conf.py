@@ -50,12 +50,8 @@ autosummary_generate = True
 
 
 extensions = [
-    "sphinx_comments",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
-
-    "myst_parser",
-    "sphinx_design",
 
     "sphinx.ext.doctest",
     "sphinx.ext.extlinks",
@@ -63,13 +59,22 @@ extensions = [
     "sphinx.ext.todo",
     #"sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
-    "sphinxcontrib.details.directive",
+
+    "sphinx_immaterial",
     "sphinx_immaterial.theme_result",
     "sphinx_immaterial.kbd_keys",
     "sphinx_immaterial.format_signatures",
     "sphinx_immaterial.cppreference",
     "sphinx_immaterial.json_domain",
+    "sphinx_immaterial",
+
     "sphinx_jinja",
+    "sphinxcontrib.details.directive",
+    "sphinx_comments",
+    "sphinx_design",
+
+    "myst_parser",
+
 
 ]
 
@@ -107,7 +112,6 @@ comments_config = {
 
 # -- Options for HTML output -------------------------------------------------
 
-extensions.append("sphinx_immaterial")
 html_theme = 'sphinx_immaterial'
 html_theme_options = {
     "icon": {
