@@ -1,12 +1,12 @@
 # -- Path setup --------------------------------------------------------------
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../'))
+sys.path.insert(0, os.path.abspath('./src'))
 
 
 # -- Project information -----------------------------------------------------
 project = 'RSUU'
-copyright = '2020-, RSUU'
+copyright = '2019-, RSUU'
 author = 'RSUU'
 language = 'en'
 html_search_language = 'zh'
@@ -26,6 +26,14 @@ exclude_patterns = ['_build', '_templates']
 
 templates_path = [ '_templates' ]
 
+html_static_path = ['_static']
+
+html_css_files = [
+    #'my_style.css',
+    #'dracula.css',
+    #'dark.css',
+]
+
 extensions = [
     "sphinx_comments",
     "sphinx.ext.autodoc",
@@ -33,7 +41,6 @@ extensions = [
     "sphinx_immaterial",
 
     "myst_parser",
-    "sphinx_tabs.tabs",
     "sphinx_design",
 
     "sphinx.ext.doctest",
@@ -93,11 +100,11 @@ html_theme_options = {
     "icon": {
         "repo": "fontawesome/brands/github",
     },
-    #"site_url": "https://rsuu.github.io",
-    "repo_url": "https://github.com/rsuu.github.io",
+    "site_url": "https://rsuu.github.io",
+    "repo_url": "https://github.com/rsuu/rsuu.github.io",
     "repo_name": "RSUU",
     "repo_type": "github",
-    "edit_uri": "blob/main/docs",
+    "edit_uri": "blob/main/src",
     # "google_analytics": ["UA-XXXXX", "auto"],
     "globaltoc_collapse": True,
     "features": [
@@ -212,13 +219,7 @@ html_theme_options = {
 #     # "show_navbar_depth": 2,
 # }
 
-html_static_path = ['_static']
 
-html_css_files = [
-    #'my_style.css',
-    #'dracula.css',
-    #'dark.css',
-]
 
 from pygments.lexer import RegexLexer
 from pygments import token

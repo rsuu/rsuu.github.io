@@ -16,4 +16,3 @@ typing-extensions
 sphinxcontrib-details-directive
 sphinx-design
 sphinx_jinja
-sphinx-tabs
