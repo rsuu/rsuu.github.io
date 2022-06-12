@@ -63,11 +63,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#directive-md-tab-set" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -534,58 +529,9 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          <span title="_test/myst (document)" class="md-ellipsis">syntax</span>
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="" class="md-nav__link md-nav__link--active">
         <span title="_test/myst (document)" class="md-ellipsis">syntax</span>
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary">
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      <span title="_test/myst (document)" class="md-ellipsis">syntax</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#directive-md-tab-set" class="md-nav__link">
-    <span class="md-ellipsis">..<wbr> md-<wbr>tab-<wbr>set::<wbr></span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".. md-tab-set::">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#directive-option-md-tab-set-class" class="md-nav__link">
-    <span class="md-ellipsis">:<wbr>class:<wbr></span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#directive-option-md-tab-set-name" class="md-nav__link">
-    <span class="md-ellipsis">:<wbr>name:<wbr></span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -686,90 +632,24 @@ Label2</label></div>
 <p>2</p>
 </div>
 </div>
-</div><dl class="rst directive objdesc">
-<dt class="sig sig-object highlight rst" id="directive-md-tab-set">
-<span class="sig-name descname"><span class="pre">..</span> <span class="pre">md-tab-set::</span></span><a class="headerlink" href="#directive-md-tab-set" title="Permalink to this definition">¶</a></dt>
-<dd><p>Each set of tabs on a page must begin with a <a class="reference internal" href="rst.html#directive-md-tab-set" title="md-tab-set directive"><code class="xref any rst rst-dir docutils literal notranslate"><span class="pre">md-tab-set</span></code></a> directive. This directive
-only accepts children that are <code class="xref any docutils literal notranslate"><span class="pre">md-tab-item</span></code> directives.</p>
-<dl class="rst directive:option objdesc">
-<dt class="sig sig-object highlight rst" id="directive-option-md-tab-set-class">
-<span id="directive:option-md-tab-set-class"></span><span class="sig-name descname"><span class="pre">:class:</span></span><em class="property"> <span class="pre">(string)</span></em><a class="headerlink" href="#directive-option-md-tab-set-class" title="Permalink to this definition">¶</a></dt>
-<dd><p>A space delimited list of qualified names that get used as the HTMl element’s
-<code class="docutils literal notranslate"><span class="pre">class</span></code> attribute.</p>
-</dd></dl>
-
-<dl class="rst directive:option objdesc">
-<dt class="sig sig-object highlight rst" id="directive-option-md-tab-set-name">
-<span id="directive:option-md-tab-set-name"></span><span class="sig-name descname"><span class="pre">:name:</span></span><em class="property"> <span class="pre">(string)</span></em><a class="headerlink" href="#directive-option-md-tab-set-name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A qualified name that get used as the HTML element’s <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute.</p>
-<p>Use the <code class="xref any docutils literal notranslate"><span class="pre">ref</span></code> role to reference the element by name.</p>
-</dd></dl>
-
-<p>This directive supports <code class="docutils literal notranslate"><span class="pre">:class:</span></code> and <code class="docutils literal notranslate"><span class="pre">:name:</span></code> options to use custom CSS classes
-and reference links (respectively).</p>
-<div class="results docutils container">
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption highlight"><span class="caption-text filename">
-<code class="docutils literal notranslate"><span class="pre">md-tab-set</span></code> Example<a class="headerlink" href="#id2" title="Permalink to this code">¶</a></span></div>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">md-tab-set</span><span class="p">::</span>
-    <span class="nc">:class:</span> custom-tab-set-style
-    <span class="nc">:name:</span> ref_this_tab_set
-
-<span class="p">    ..</span> <span class="ow">md-tab-item</span><span class="p">::</span> Local Ref
-
-        A reference to this tab set renders like so:
-        <span class="nv">`tab set description &lt;ref_this_tab_set&gt;`</span>.
-
-        This syntax can only be used on the same page as the tab set.
-
-<span class="p">    ..</span> <span class="ow">md-tab-item</span><span class="p">::</span> Cross-page Ref
-
-        To cross-reference this tab set from a different page, use
-        <span class="na">:ref:</span><span class="nv">`tab set description &lt;ref_this_tab_set&gt;`</span>
-
-        Clearly, this also works on the same page.
-
-<span class="p">    ..</span> <span class="ow">md-tab-item</span><span class="p">::</span> Custom Rust
-
-<span class="p">        ..</span> <span class="ow">literalinclude</span><span class="p">::</span> /_static/test.rs
-            <span class="nc">:language:</span> rust
-            <span class="nc">:start-after:</span> /<span class="ge">* *</span><span class="gs">********************</span><span class="ge">***</span> custom-tab-set-style
-            <span class="nc">:end-before:</span> /<span class="ge">* *</span><span class="gs">********************</span>** custom-tab-item-style
+</div><div class="tabbed-block docutils">
+<p class="tabbed-label rubric">Label2</p>
+<div class="tabbed-block docutils">
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
-<div class="result docutils container">
-<div class="tabbed-set tabbed-alternate custom-tab-set-style" data-tabs="2:3" id="ref-this-tab-set">
-<input checked type="radio" id="__tabbed_2_1" name="__tabbed_2"><input type="radio" id="__tabbed_2_2" name="__tabbed_2"><input type="radio" id="__tabbed_2_3" name="__tabbed_2"><div class="tabbed-labels docutils">
-<label class="tabbed-label" for="__tabbed_2_1">
-Local Ref</label><label class="tabbed-label" for="__tabbed_2_2">
-Cross-page Ref</label><label class="tabbed-label" for="__tabbed_2_3">
-Custom Rust</label></div>
-<div class="tabbed-content docutils">
-<div class="tabbed-block docutils">
-<p>A reference to this tab set renders like so:
-<a class="reference internal" href="rst.html#ref-this-tab-set"><span class="std std-ref">tab set description</span></a>.</p>
-<p>This syntax can only be used on the same page as the tab set.</p>
 </div>
-<div class="tabbed-block docutils">
-<p>To cross-reference this tab set from a different page, use
-<a class="reference internal" href="rst.html#ref-this-tab-set"><span class="std std-ref">tab set description</span></a></p>
-<p>Clearly, this also works on the same page.</p>
-</div>
-<div class="tabbed-block docutils">
-</div>
-</div>
-</div></div>
-</div>
-</dd></dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>
 
-<div class="error admonition">
-<p>This example uses the styling of the <code class="docutils literal notranslate"><span class="pre">error</span></code> admonition</p>
+
+```{eval-rst}
+.. include:: ./rst.rst
+</code></pre></div>
 </div>
-<details class="help">
-<summary>
-Closed by default</summary><p>Without the <code class="docutils literal notranslate"><span class="pre">:open:</span></code> flag, the admonition is collapsed by default.</p>
-</details><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
