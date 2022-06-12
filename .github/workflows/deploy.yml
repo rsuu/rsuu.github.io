@@ -17,7 +17,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: build doc
-        run: apt install zsh && zsh build.zsh
+        run: sudo apt install zsh && zsh build.zsh
 
       - name: create .nojekyll
         run: touch docs/.nojekyll
