@@ -45,3 +45,16 @@
                     :language: rust
                     :start-after: /* ************************ custom-tab-set-style
                     :end-before: /* *********************** custom-tab-item-style
+
+
+.. md-admonition::
+   :class: error
+
+   This example uses the styling of the ``error`` admonition
+
+
+
+.. details:: Closed by default
+   :class: help
+
+   Without the ``:open:`` flag, the admonition is collapsed by default.
