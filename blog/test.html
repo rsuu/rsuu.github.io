@@ -13,7 +13,7 @@
     
     
       
-        <title>Content tabs - RSUU  documentation</title>
+        <title><no title> - RSUU  documentation</title>
       
     
     
@@ -34,6 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+        <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -95,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Content tabs
+              &lt;no title&gt;
             
           </span>
         </div>
@@ -313,24 +315,7 @@
 
 
 
-  <h1 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This document discusses content tabs, not navigation tabs.</p>
-</div>
-<p>Use of <a class="reference external" href="https://squidfunk.github.io/mkdocs-material/reference/content-tabs/">content tabs in the mkdocs-material</a>
-theme relies on a markdown extension that isn’t used in the world of Sphinx. Instead,
-the sphinx-immaterial theme provides its own directives to make use of content tabs.</p>
-<div class="missing admonition">
-<p class="admonition-title">Linked Tabs</p>
-<p>The <a class="reference external" href="https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs">linked content tabs</a>
-feature seen in mkdocs-material is not supported until that feature transitions from the mkdocs-material theme’s insider
-releases to its public releases.</p>
-<p>You can use other sphinx extensions (like <a class="reference external" href="https://sphinx-design.readthedocs.io/en/furo-theme/tabs.html">sphinx-design tabs</a>) to achieve this functionality.
-However, other extensions will require some custom CSS styling to match the mkdocs-material
-theme’s styling for content tabs.</p>
-</div>
-<dl class="rst directive objdesc">
+  <dl class="rst directive objdesc">
 <dt class="sig sig-object highlight rst" id="directive-md-tab-set">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">md-tab-set::</span></span><a class="headerlink" href="#directive-md-tab-set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Each set of tabs on a page must begin with a <cite>md-tab-set</cite> directive. This directive
@@ -351,27 +336,62 @@ only accepts children that are <cite>md-tab-item</cite> directives.</p>
 
 <p>This directive supports <code class="docutils literal notranslate"><span class="pre">:class:</span></code> and <code class="docutils literal notranslate"><span class="pre">:name:</span></code> options to use custom CSS classes
 and reference links (respectively).</p>
+<div class="results docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption highlight"><span class="caption-text filename">
+<code class="docutils literal notranslate"><span class="pre">md-tab-set</span></code> Example<a class="headerlink" href="#id1" title="Permalink to this code">¶</a></span></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">md-tab-set</span><span class="p">::</span>
+    <span class="nc">:class:</span> custom-tab-set-style
+    <span class="nc">:name:</span> ref_this_tab_set
+
+<span class="p">    ..</span> <span class="ow">md-tab-item</span><span class="p">::</span> Local Ref
+
+        A reference to this tab set renders like so:
+        <span class="nv">`tab set description &lt;ref_this_tab_set&gt;`</span>.
+
+        This syntax can only be used on the same page as the tab set.
+
+<span class="p">    ..</span> <span class="ow">md-tab-item</span><span class="p">::</span> Cross-page Ref
+
+        To cross-reference this tab set from a different page, use
+        <span class="na">:ref:</span><span class="nv">`tab set description &lt;ref_this_tab_set&gt;`</span>
+
+        Clearly, this also works on the same page.
+
+<span class="p">    ..</span> <span class="ow">md-tab-item</span><span class="p">::</span> Custom Rust
+
+<span class="p">        ..</span> <span class="ow">literalinclude</span><span class="p">::</span> _static/test.rs
+            <span class="nc">:language:</span> rust
+            <span class="nc">:start-after:</span> /<span class="ge">* *</span><span class="gs">********************</span><span class="ge">***</span> custom-tab-set-style
+            <span class="nc">:end-before:</span> /<span class="ge">* *</span><span class="gs">********************</span>** custom-tab-item-style
+</code></pre></div>
+</div>
+</div>
+<div class="result docutils container">
+<div class="tabbed-set tabbed-alternate custom-tab-set-style" data-tabs="1:3" id="ref-this-tab-set">
+<input checked type="radio" id="__tabbed_1_1" name="__tabbed_1"><input type="radio" id="__tabbed_1_2" name="__tabbed_1"><input type="radio" id="__tabbed_1_3" name="__tabbed_1"><div class="tabbed-labels docutils">
+<label class="tabbed-label" for="__tabbed_1_1">
+Local Ref</label><label class="tabbed-label" for="__tabbed_1_2">
+Cross-page Ref</label><label class="tabbed-label" for="__tabbed_1_3">
+Custom Rust</label></div>
+<div class="tabbed-content docutils">
+<div class="tabbed-block docutils">
+<p>A reference to this tab set renders like so:
+<cite>tab set description &lt;ref_this_tab_set&gt;</cite>.</p>
+<p>This syntax can only be used on the same page as the tab set.</p>
+</div>
+<div class="tabbed-block docutils">
+<p>To cross-reference this tab set from a different page, use
+<a class="reference internal" href="#ref-this-tab-set"><span class="std std-ref">tab set description</span></a></p>
+<p>Clearly, this also works on the same page.</p>
+</div>
+<div class="tabbed-block docutils">
+</div>
+</div>
+</div></div>
+</div>
 </dd></dl>
 
-<dl class="rst directive objdesc">
-<dt class="sig sig-object highlight rst" id="directive-md-tab-item">
-<span class="sig-name descname"><span class="pre">..</span> <span class="pre">md-tab-item::</span></span><a class="headerlink" href="#directive-md-tab-item" title="Permalink to this definition">¶</a></dt>
-<dd><p>This directive is used to create a tab within a set of content tabs. It requires a
-label as it’s argument.</p>
-<dl class="rst directive:option objdesc">
-<dt class="sig sig-object highlight rst" id="directive-option-md-tab-item-class">
-<span id="directive:option-md-tab-item-class"></span><span class="sig-name descname"><span class="pre">:class:</span></span><em class="property"> <span class="pre">(string)</span></em><a class="headerlink" href="#directive-option-md-tab-item-class" title="Permalink to this definition">¶</a></dt>
-<dd><p>A space delimited list of qualified names that get used as the HTMl element’s
-<code class="docutils literal notranslate"><span class="pre">class</span></code> attribute.</p>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">:class:</span></code> option to optionally provide custom CSS classes to the tab’s content
-(not the tab’s label).</p>
-</dd></dl>
-
-</dd></dl>
-
-<p>Typical examples are seen in this documentations’
-<a class="reference external" href="admonitions.html#custom-admonitions">Custom admonitions</a> and
-<span class="xref std std-ref">Version Information Structure</span> sections.</p>
 
 
 
@@ -456,6 +476,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+        <script src="../_static/design-tabs.js"></script>
     
   </body>
 </html>
