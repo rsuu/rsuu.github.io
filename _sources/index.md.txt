@@ -34,3 +34,12 @@
 ```
 
 
+```{toctree}
+:hidden:
+:caption: Test
+:maxdepth: 2
+
+./_test/myst
+./_test/rst
+```
+

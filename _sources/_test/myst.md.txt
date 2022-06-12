@@ -14,27 +14,6 @@ abc | mnp | xyz
 :::
 
 
-::::{tab-set}
-
-:::{tab-item} Label1
-Content 1
-:::
-
-:::{tab-item} Label2
-Content 2
-:::
-
-::::
-
-
-
-::::{tab-set}
-
-:::{tab-item} Label1
-:sync: key1
-
-Content 1
-:::
 
 :::{tab-item} Label2
 :sync: key2
@@ -42,43 +21,27 @@ Content 1
 Content 2
 :::
 
+
+
 ::::
 
-::::{tab-set}
 
-:::{tab-item} Label1
-:sync: key1
 
+
+:::::{md-tab-set}
+
+::::{md-tab-item} Label1
 Content 1
-:::
+::::
 
-:::{tab-item} Label2
-:sync: key2
-
-Content 2
-:::
-
+::::{md-tab-item} Label2
 :::{literalinclude} _static/test.rs
 :language: rust
-:start-after: /* ************************ custom-tab-set-style
-:end-before: /* *********************** custom-tab-item-style
 :::
-
 ::::
 
 
 
-
-::::{md-tab-set}
-
-:::{md-tab-item} Label1
-Content 1
-:::
-
-:::{md-tab-item} Label2
-Content 2
-:::
-
-::::
+:::::
 
 
