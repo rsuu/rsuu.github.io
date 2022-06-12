@@ -28,10 +28,12 @@ templates_path = [ '_templates' ]
 
 extensions = [
     "sphinx_comments",
-    "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
+
     "sphinx_immaterial",
+
+    "myst_parser",
 ]
 
 
