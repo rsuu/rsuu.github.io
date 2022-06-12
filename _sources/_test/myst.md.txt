@@ -1,8 +1,85 @@
 ## syntax
 
-:::{note}
-This text is **standard** _Markdown_
+
+:::{important}
+
 :::
+
+:::{hint}
+
+:::
+
+:::{tip}
+
+:::
+
+:::{seealso}
+
+:::
+
+:::{note}
+:::
+
+:::{todo}
+:::
+
+:::{attention}
+:::
+
+:::{caution}
+:::
+
+:::{warning}
+:::
+
+:::{danger}
+:::
+
+:::{error}
+:::
+
+:::{info}
+:::
+
+:::{abstract}
+:::
+
+:::{summary}
+:::
+
+:::{tldr}
+:::
+
+:::{success}
+:::
+
+:::{check}
+:::
+
+:::{done}
+:::
+
+:::{question}
+:::
+
+:::{faq}
+:::
+
+:::{help}
+:::
+
+:::{cite, quote}
+:::
+
+
+
+:::{example}
+:::
+
+failure
+fail
+missing
+bug
 
 :::{table} This is a **standard** _Markdown_ title
 :align: center
@@ -12,20 +89,6 @@ abc | mnp | xyz
 --- | --- | ---
 123 | 456 | 789
 :::
-
-
-
-:::{tab-item} Label2
-:sync: key2
-
-Content 2
-:::
-
-
-
-::::
-
-
 
 
 ::::{md-tab-set}
@@ -44,4 +107,25 @@ Content 1
 
 ```{eval-rst}
 .. include:: ./rst.rst
+```
+
+```{literalinclude} test.rs
+---
+language: python
+start-after: "/* ************************ custom-tab-set-style"
+end-before: "/* *********************** custom-tab-item-style"
+---
+```
+
+```{md-admonition}
+class: error
+
+This example uses the styling of the ``error`` admonition
+
+```
+
+```{details} Closed by default
+class: help
+
+Without the ``:open:`` flag, the admonition is collapsed by default.
 ```
