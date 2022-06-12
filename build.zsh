@@ -15,7 +15,7 @@ index_new() {
     rm "$To"
 
     List=$(find "$Text_Dir" -type f)
-    OutPut=$(echo $Temp | ./bin/sd "<=Replace=>" "$List")
+    OutPut=$(echo $Temp | "$Pwd"/bin/sd "<=Replace=>" "$List")
 
     cd "$Pwd"
     echo "$OutPut" >"$Dir/$To"

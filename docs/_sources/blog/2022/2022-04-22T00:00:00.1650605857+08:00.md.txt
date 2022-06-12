@@ -1,0 +1,59 @@
+---
+date: 2022-04-22T00:00:00+08:00
+title:
+categories:
+tags:
+- cmd, debug]
+udc: 
+reference: 
+ 
+---
+
+## gdb
+
+
+### 基本使用方式
+
+```text
+# 基本命令
+
+C-x s :: tui
+
+q :: quit, exit SingleKey mode.
+c :: continue
+d :: down
+f :: finish
+n :: next
+r :: run
+s :: step
+u :: up
+v :: info locals
+w :: where
+
+ctrl-r :: 搜索历史记录
+
+
+(gdb) b main
+(gdb) r
+
+```
+
+```text
+# 运行代码 {
+gdb ls
+run
+# }
+
+
+# {
+gcore 1
+# 获取 pid=1 的进程的内存数据
+
+
+gdb --pid [pid]
+strings in.bin
+# }
+```
+
+
+	
