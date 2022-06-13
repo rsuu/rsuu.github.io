@@ -1,0 +1,22 @@
+---
+date: 2022-04-14T00:00:00+08:00
+title:
+categories:
+- linux
+tags:
+- bash
+- cmd
+udc:
+reference:
+
+---
+
+## column
+
+
+
+```bash
+column -t -o ' ' <file>
+    # 按空格对齐对齐文本
+```
+

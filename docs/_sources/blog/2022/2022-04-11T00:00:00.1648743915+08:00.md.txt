@@ -1,0 +1,26 @@
+---
+date: 2022-04-11T00:00:00+08:00
+title:
+categories:
+tags: 
+- ing
+- struct
+- type
+- binary 
+udc: 
+reference: 
+---
+
+## 数据类型
+
+
+### 整数
+
+[u8 | u16 | u32 | u64 | u128]
+[i8 | i16 | i32 | i64 | i128]
+
+
+### 浮点数
+
+### 字符串
+

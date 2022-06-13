@@ -1,0 +1,34 @@
+---
+
+date: 2022-04-12T00:00:00+08:00
+title:
+categories:
+tags: 
+udc: 
+reference: 
+ 
+
+
+---
+
+## path
+
+```bash
+/etc/shadow
+    # 新的存放密码的路径
+
+/etc/passwd
+    # 旧的存放密码的路径
+```
+
+
+
+---
+
+
+
+
+
+
+
+	

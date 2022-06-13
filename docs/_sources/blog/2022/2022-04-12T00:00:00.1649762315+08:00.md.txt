@@ -1,0 +1,100 @@
+---
+date: 2022-04-12T00:00:00+08:00
+title:
+categories:
+tags: 
+- cli
+- args 
+udc: 
+reference:
+- 1|https://stackoverflow.com/questions/9725675/is-there-a-standard-format-for-command-line-shell-help-text
+- 2|https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
+- 3|https://docopt.org/
+- 4|https://github.com/docopt/docopt.rs
+
+ 
+---
+
+## Utility Argument Syntax
+
+```bash
+Usage:
+  cli ship new <name>...
+  cli ship <name> move <x> <y> [--speed=<kn>]
+  cli ship shoot <x> <y>
+  cli mine (set|remove) <x> <y> [--moored|--drifting]
+  cli -h | --help
+  cli --version
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+  --speed=<kn>  Speed in knots [default: 10].
+  --moored      Moored (anchored) mine.
+  --drifting    Drifting mine.
+
+
+Usage:
+  cli command --option <argument>
+  cli [<optional-argument>]
+  cli --another-option=<with-argument>
+  cli (--either-that-option | <or-this-argument>)
+  cli <repeating-argument> <repeating-argument>...
+  cli [--up | --down | --left | --right]
+
+Usage: cli open <file>...
+       cli move (<from> <to>)...
+
+
+cli open file1 file2
+cli open file1 && cli open file2
+
+cli move file1 file2 file3 file4
+cli move file1 file2 && cli move file3 file4
+
+# 下面两个命令是等价的
+cli -abc file
+cli -a -b -c file
+
+
+# 下面两个命令是等价的
+cli -l
+cli --list
+
+# 下面两个命令是等价的  但我并不喜欢这样
+cli -f file
+cli -ffile
+
+
+# 下面两个命令是等价的  但我并不喜欢这样
+cli --file file
+cli --file=file
+
+# 同样等价
+cli --file file1 file2 file3
+cli --file=file1 file2 file3
+
+
+cli run [--fast]
+cli jump [--high]
+    # 等价于
+cli (run [--fast] | jump [--high])
+
+
+cli [run | build] [--] <file>...
+cli run -- other -i f1 f2 f3
+cli build -- other -i f1 f2 f3
+
+
+cli [-i]  
+echo 123 | cli -i -
+
+
+cli (-h | --help)
+cli
+cli -h
+cli --help
+
+
+```
+

@@ -1,0 +1,33 @@
+---
+date: 2022-04-11T00:00:00+08:00
+title:
+categories:
+tags: 
+- pinyin
+- flypy
+udc: 
+reference: 
+ 
+---
+
+## flypy
+
+
+特殊的键
+
+声母|键
+|:-|:-|
+zh | v
+ch | i
+sh | u
+
+韵母里开头的字母的出现频率
+|字母|排号
+|:-|:-|
+u5 i3 e2 ü1    | 1
+a4 i3 e2 u2 o1 | 2
+i4 u2 a1 o1 ü1 | 3
+
+e.g. 如果想打 `排` 
+第一次输入 p | p 不属于 v i u 所以直接打 p
+第二次输入 ai | ai 由 o 开头  只有 2 3 排有 o 所以排除 1

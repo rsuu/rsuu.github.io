@@ -82,6 +82,8 @@ extensions = [
 
 # myst
 myst_heading_anchors = 6
+myst_gfm_only = False
+myst_hard_wrap = True
 myst_enable_extensions = [
     "amsmath",
     "colon_fence",
@@ -178,13 +180,13 @@ html_theme_options = {
 
 html_static_path = ["_static"]
 html_css_files = [
-    'extra_css.css',    
+    'extra_css.css',
 ]
 
 html_last_updated_fmt = ""
 html_title = "RSUU"
-#html_favicon = "_static/svg/logo.svg"  
-#html_logo = "_static/svg/logo.svg"  
+#html_favicon = "_static/svg/logo.svg"
+#html_logo = "_static/svg/logo.svg"
 
 
 
