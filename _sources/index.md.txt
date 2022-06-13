@@ -1,45 +1,40 @@
 ## RSUU
 
 ```{toctree}
-:hidden:
 :caption: Blog
-:maxdepth: 2
+:maxdepth: 1
 
 ./blog/idx_2022
 
 ```
 
 ```{toctree}
-:hidden:
 :caption: Book
-:maxdepth: 2
+:maxdepth: 1
 
 ./book/idx_book1
 ```
 
 ```{toctree}
-:hidden:
 :caption: Wiki
-:maxdepth: 2
+:maxdepth: 1
 
 ./wiki/idx_linux
 ```
 
 ```{toctree}
-:hidden:
 :caption: Doc
-:maxdepth: 2
+:maxdepth: 1
 
 ./doc/idx_doc1
 ```
 
 
 ```{toctree}
-:hidden:
 :caption: Test
-:maxdepth: 2
+:maxdepth: 1
 
-./_test/myst
-./_test/rst
+./test/myst
+./test/rst
 ```
 

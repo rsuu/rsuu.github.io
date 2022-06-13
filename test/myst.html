@@ -42,6 +42,11 @@
 
     
     
+
+
+
+
+
   </head>
   
   
@@ -530,7 +535,7 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       <a href="" class="md-nav__link md-nav__link--active">
-        <span title="_test/myst (document)" class="md-ellipsis">syntax</span>
+        <span title="test/myst (document)" class="md-ellipsis">syntax</span>
       </a>
       
     </li>
@@ -545,7 +550,7 @@
   
     <li class="md-nav__item">
       <a href="rst.html" class="md-nav__link">
-        <span title="_test/rst (document)" class="md-ellipsis">..<wbr> md-<wbr>tab-<wbr>set::<wbr></span>
+        <span title="test/rst (document)" class="md-ellipsis">..<wbr> md-<wbr>tab-<wbr>set::<wbr></span>
       </a>
     </li>
   
@@ -569,7 +574,7 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset" role="main">
                 
-  <a href="https://github.com/rsuu/rsuu.github.io/blob/main/src/_test/myst.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/rsuu/rsuu.github.io/blob/main/src/test/myst.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
@@ -632,11 +637,15 @@ Label2</label></div>
 <p>2</p>
 </div>
 </div>
-</div><div class="tabbed-set tabbed-alternate" data-tabs="2:1">
-<input checked type="radio" id="__tabbed_2_1" name="__tabbed_2"><div class="tabbed-labels docutils">
+</div><div class="tabbed-set tabbed-alternate" data-tabs="2:2">
+<input checked type="radio" id="__tabbed_2_1" name="__tabbed_2"><input type="radio" id="__tabbed_2_2" name="__tabbed_2"><div class="tabbed-labels docutils">
 <label class="tabbed-label" for="__tabbed_2_1">
+Label1</label><label class="tabbed-label" for="__tabbed_2_2">
 Label2</label></div>
 <div class="tabbed-content docutils">
+<div class="tabbed-block docutils">
+<p>xxx</p>
+</div>
 <div class="tabbed-block docutils">
 <div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"></span>
@@ -645,11 +654,9 @@ Label2</label></div>
 </div>
 </div>
 </div>
-</div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>
-```{literalinclude} ./test.rs
----
-language: rust
----
+</div><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="error admonition">
@@ -659,7 +666,7 @@ language: rust
 <summary>
 Closed by default</summary><p>Without the <code class="docutils literal notranslate"><span class="pre">:open:</span></code> flag, the admonition is collapsed by default.</p>
 </details><figure class="align-default" id="rst-fun-fish">
-<a class="reference internal image-reference" href="_test/img/fun-fish.png"><img alt="_test/img/fun-fish.png" src="_test/img/fun-fish.png" style="width: 100px;" /></a>
+<a class="reference internal image-reference" href="test/img/fun-fish.png"><img alt="test/img/fun-fish.png" src="test/img/fun-fish.png" style="width: 100px;" /></a>
 <figcaption>
 <p><span class="caption-text"><span class="caption-text">
 Party time!</span><a class="headerlink" href="#rst-fun-fish" title="Permalink to this image">¶</a></span><a class="headerlink" href="#rst-fun-fish" title="Permalink to this image">¶</a></p>
@@ -675,6 +682,7 @@ Party time!</span><a class="headerlink" href="#rst-fun-fish" title="Permalink to
 &#160; <span class="pre">C</span> <span class="pre">--&gt;</span> <span class="pre">D[Debug];</span>
 &#160; <span class="pre">D</span> <span class="pre">--&gt;</span> <span class="pre">B;</span>
 &#160; <span class="pre">B</span> <span class="pre">----&gt;|No|</span> <span class="pre">E[Yay!];</span></code></pre></div>
+<p><code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">span</span></code></p>
 
 
 
@@ -683,7 +691,7 @@ Party time!</span><a class="headerlink" href="#rst-fun-fish" title="Permalink to
   <small>
     
       Last update:
-      Jun 12, 2022
+      Jun 13, 2022
     
   </small>
 </div>
