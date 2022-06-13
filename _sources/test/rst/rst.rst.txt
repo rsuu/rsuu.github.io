@@ -1,3 +1,5 @@
+rst
+
 .. rst:directive:: md-tab-set
 
     Each set of tabs on a page must begin with a `md-tab-set` directive. This directive

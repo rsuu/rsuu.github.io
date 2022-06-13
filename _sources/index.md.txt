@@ -34,7 +34,13 @@
 :caption: Test
 :maxdepth: 1
 
-./test/myst
-./test/rst
+./test/idx_test
+```
+
+```{toctree}
+:caption: Misc
+:maxdepth: 1
+
+./misc/idx_misc
 ```
 
