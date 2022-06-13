@@ -18,7 +18,7 @@ logger = sphinx.util.logging.getLogger(__name__)
 
 # -- Project information -----------------------------------------------------
 project = 'RSUU'
-copyright = '2019-, RSUU'
+copyright = 'cc-by-nc-sa 4.0'
 author = 'RSUU'
 language = 'en'
 html_search_language = 'zh'
@@ -113,7 +113,6 @@ comments_config = {
 
 
 # -- Options for HTML output -------------------------------------------------
-
 html_theme = 'sphinx_immaterial'
 html_theme_options = {
     "icon": {
@@ -146,7 +145,7 @@ html_theme_options = {
             "accent": "light-blue",
             "toggle": {
                 "icon": "material/lightbulb-outline",
-                "name": "Switch to dark mode",
+                "name": "Turn Off",
             },
         },
         {
@@ -156,7 +155,7 @@ html_theme_options = {
             "accent": "lime",
             "toggle": {
                 "icon": "material/lightbulb",
-                "name": "Switch to light mode",
+                "name": "Turn On",
             },
         },
     ],
@@ -164,15 +163,15 @@ html_theme_options = {
     "version_dropdown": True,
     "version_info": [
         {
-            "version": "https://rsuu.gtihub.io",
-            "title": "Site",
+            "version": "https://rsuu.github.io",
+            "title": "Home",
             "aliases": [],
         },
         {
             "version": "https://rsuu.github.io",
             "title": "Github Pages",
             "aliases": [],
-        },
+        },        
     ],
     # END: version_dropdown
     "toc_title_is_page_title": True,

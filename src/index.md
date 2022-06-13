@@ -38,3 +38,10 @@
 ./test/rst
 ```
 
+```{toctree}
+:caption: Misc
+:maxdepth: 1
+
+./misc/idx_misc
+```
+
