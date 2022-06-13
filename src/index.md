@@ -34,8 +34,7 @@
 :caption: Test
 :maxdepth: 1
 
-./test/myst
-./test/rst
+./test/idx_test
 ```
 
 ```{toctree}
