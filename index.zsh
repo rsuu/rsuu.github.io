@@ -14,7 +14,7 @@ update_index() {
     cd "$Dir"
     rm "$To"
 
-    List=$(find "$Text_Dir" -type f)
+    List=$(fd --type f \.md "$Text_Dir")
     OutPut=$(echo $Temp | sd "<=Replace=>" "$List")
 
     cd "$Pwd"
