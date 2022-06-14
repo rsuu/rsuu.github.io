@@ -4,7 +4,11 @@
 :caption: Myst
 :maxdepth: 2
 
-myst/mermaid
-myst/tab
-myst/table
+myst/admonition.md
+myst/include.md
+myst/mermaid.md
+myst/tab.md
+myst/table.md
+myst/test.md
+myst/other.md
 ```

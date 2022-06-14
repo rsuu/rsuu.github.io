@@ -1,9 +1,26 @@
-:::{table} This is a **standard** _Markdown_ title
+## table
+
+:::{table} 1
 :align: center
 :widths: grid
 
 abc | mnp | xyz
 --- | --- | ---
 123 | 456 | 789
+:::
+
+
+
+:::{eval-rst}
+:align: center
+:widths: grid
+
++----+------+------------+
+| s  | awd  |    aaaaa   |
++====+======+============+
+| s  | awd  |  ss        |
+| a  |      |       ss   |
+| s  | awd  |            |
++----+------+------------+
 :::
 
