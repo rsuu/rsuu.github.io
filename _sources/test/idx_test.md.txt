@@ -11,4 +11,5 @@ myst/tab.md
 myst/table.md
 myst/test.md
 myst/other.md
+myst/emoji.md
 ```
