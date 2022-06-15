@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#markdown-table" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -624,9 +629,52 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="test/myst/table (document)" class="md-ellipsis">table</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="" class="md-nav__link md-nav__link--active">
         <span title="test/myst/table (document)" class="md-ellipsis">table</span>
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      <span title="test/myst/table (document)" class="md-ellipsis">table</span>
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#markdown-table" class="md-nav__link">
+    <span title="test/myst/table.md#markdown-table (reference label)" class="md-ellipsis">markdown table</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rst-table" class="md-nav__link">
+    <span title="test/myst/table.md#rst-table (reference label)" class="md-ellipsis">rst table</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv-table" class="md-nav__link">
+    <span title="test/myst/table.md#csv-table (reference label)" class="md-ellipsis">csv table</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -678,6 +726,7 @@
 
 
   <h1 id="table">table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h1>
+<h2 id="markdown-table">markdown table<a class="headerlink" href="#markdown-table" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto colwidths-given docutils data align-center" id="id1">
 <caption><span class="caption-text">1</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <thead>
@@ -693,6 +742,22 @@
 </tr>
 </tbody>
 </table>
+<table class="colwidths-auto docutils data align-default">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>a</p></th>
+<th class="text-left head"><p>b</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>1</p></td>
+<td class="text-left"><p>2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>3</p></td>
+<td class="text-left"><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="rst-table">rst table<a class="headerlink" href="#rst-table" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">align</dt>
 <dd class="field-odd"><p>center</p>
@@ -724,10 +789,101 @@ s</p></td>
 <dt>ss</dt><dd><p>ss</p>
 </dd>
 </dl>
+<p>cc</p>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="field-list simple">
+<dt class="field-odd">align</dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+<dt class="field-even">widths</dt>
+<dd class="field-even"><p>grid</p>
+</dd>
+</dl>
+<table class="docutils data align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td colspan="2"><p>Cells may span columns.</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 3</p></td>
+<td rowspan="2"><p>Cells may
+span rows.</p></td>
+<td rowspan="2"><ul class="simple">
+<li><p>Cells</p></li>
+<li><p>contain</p></li>
+<li><p>blocks.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>body row 4</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">align</dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+<dt class="field-even">widths</dt>
+<dd class="field-even"><p>grid</p>
+</dd>
+</dl>
+<table class="docutils data align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">-</span><span class="n">a</span>            <span class="n">command</span><span class="o">-</span><span class="n">line</span> <span class="n">option</span> <span class="s2">&quot;a&quot;</span>
+<span class="o">-</span><span class="n">b</span> <span class="n">file</span>       <span class="n">options</span> <span class="n">can</span> <span class="n">have</span> <span class="n">arguments</span>
+              <span class="ow">and</span> <span class="n">long</span> <span class="n">descriptions</span>
+<span class="o">--</span><span class="n">long</span>        <span class="n">options</span> <span class="n">can</span> <span class="n">be</span> <span class="n">long</span> <span class="n">also</span>
+<span class="o">--</span><span class="nb">input</span><span class="o">=</span><span class="n">file</span>  <span class="n">long</span> <span class="n">options</span> <span class="n">can</span> <span class="n">also</span> <span class="n">have</span>
+              <span class="n">arguments</span>
+<span class="o">/</span><span class="n">V</span>            <span class="n">DOS</span><span class="o">/</span><span class="n">VMS</span><span class="o">-</span><span class="n">style</span> <span class="n">options</span> <span class="n">too</span>
+</code></pre></div>
+</div>
+</td>
+<td><dl class="option-list">
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>command-line option “a”</p>
+</dd>
+<dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
+<dd><p>options can have arguments
+and long descriptions</p>
+</dd>
+<dt><kbd><span class="option">--long</span></kbd></dt>
+<dd><p>options can be long also</p>
+</dd>
+<dt><kbd><span class="option">--input=<var>file</var></span></kbd></dt>
+<dd><p>long options can also have
+arguments</p>
+</dd>
+<dt><kbd><span class="option">/V</span></kbd></dt>
+<dd><p>DOS/VMS-style options too</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="csv-table">csv table<a class="headerlink" href="#csv-table" title="Permalink to this headline">¶</a></h2>
 
 
 
@@ -736,7 +892,7 @@ s</p></td>
   <small>
     
       Last update:
-      Jun 14, 2022
+      Jun 15, 2022
     
   </small>
 </div>
@@ -819,7 +975,7 @@ s</p></td>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.tabs", "toc.integrate", "navigation.sections", "navigation.instant", "header.autohide", "navigation.top", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike", "staticVersions": [{"aliases": [], "title": "Home", "version": "https://rsuu.github.io"}, {"aliases": [], "title": "Github Pages", "version": "https://rsuu.github.io"}], "versionPath": null}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.tabs", "toc.integrate", "navigation.sections", "navigation.instant", "header.autohide", "navigation.top", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike", "staticVersions": [{"aliases": [], "title": "Home", "version": "https://rsuu.github.io"}], "versionPath": null}}</script>
     
     
       <script src="../../_static/javascripts/bundle.37d1338f.min.js"></script>

@@ -23,3 +23,11 @@ Content 1
     ```
   ```
 :::
+
+```text
+:::{md-tab-set}
+  ```{md-tab-item} :octicon:`graph` Graphs
+  xxx
+  ```
+:::
+```
