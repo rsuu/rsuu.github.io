@@ -1,31 +1,33 @@
 ## include
 
 
+### a
+
 ```{literalinclude} ./test.rs
 ---
 language: rust
 ---
 ```
 
+### b
 
 ```{literalinclude} ./test.rs
----
-language: rust
-lineno-start: 4
----
+:language: rust
+:lineno-start: 4
 ```
 
-```{literalinclude} ./test.rs
----
-language: rust
-linenos: 1,10
-emphasize-lines: 1,5,8
----
-```
+### c
 
 ```{literalinclude} ./test.rs
----
-language: rust
-linenos:
----
+:language: rust
+:linenos:
 ```
+
+### d
+
+```{literalinclude} ./test.rs
+:language: rust
+:linenos: 
+:emphasize-lines: 1,5,8
+```
+
