@@ -1,27 +1,23 @@
 ---
 date: 2022-04-23T00:00:00+08:00
-title:
+title: LaTeX
 categories:
-tags:
-- latex, ing
+tags: [latex, ing]
 udc: 
 reference: 
  
 ---
 
-## 
+## LaTeX
 
 ### 基本排版
 
-```latex
+```text
 \\：换行
 
 \\[offset]：换行, 并且与下一行的行间距为原来行间距+offset
 
 \linebreak：强制换行
-
-
-
 
 \par：分段
 

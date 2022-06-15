@@ -1,15 +1,9 @@
 ---
-
 date: 2022-04-12T00:00:00+08:00
-title:
+title: 绳结
 categories:
-tags:
-- ing
+tags: [ing]
 udc: 
-reference: 
- 
-
-
 ---
 
 ## 绳结
@@ -69,13 +63,4 @@ reference:
 
 
 
-
----
-
-
-1{https://zh.m.wikipedia.org/wiki/%E7%B9%A9%E7%B5%90}
-
-
-
-
-	
+https://zh.m.wikipedia.org/wiki/%E7%B9%A9%E7%B5%90

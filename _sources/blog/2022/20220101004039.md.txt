@@ -1,22 +1,19 @@
 ---
 date: 2022-04-12T00:00:00+08:00
-title:
+title: Utility Argument Syntax
 categories:
-tags: 
-- cli
-- args 
+tags: [cli, args]
 udc: 
-reference:
+---
+
+## Utility Argument Syntax
+
 - 1|https://stackoverflow.com/questions/9725675/is-there-a-standard-format-for-command-line-shell-help-text
 - 2|https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 - 3|https://docopt.org/
 - 4|https://github.com/docopt/docopt.rs
 
  
----
-
-## Utility Argument Syntax
-
 ```bash
 Usage:
   cli ship new <name>...

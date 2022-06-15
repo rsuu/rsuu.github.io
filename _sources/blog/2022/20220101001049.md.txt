@@ -2,11 +2,8 @@
 date: 2022-05-01T00:00:00+08:00
 title:
 categories:
-tags: 
-- ip 
-udc: 
-reference: 
- 
+tags: [ip, ipv6]
+udc: [0]
 ---
 
 ## ipv6

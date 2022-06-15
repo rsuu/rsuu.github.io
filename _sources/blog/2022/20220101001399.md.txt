@@ -1,13 +1,9 @@
 ---
 date: 2022-04-12T00:00:00+08:00
-title:
-categories:
-tags: 
-- tpt
-- game
-udc: 
-- 004.42 
-reference: 
+title: TPT
+categories: game
+tags: [tpt, game]
+udc: [004.42]
 ---
 
 ## TPT
@@ -222,12 +218,4 @@ TPT[The Powder Toy] 是一个可以组合各种元素的沙盒游戏 <br />
 
 
 
----
-
-
-1{https://powdertoy.co.uk/Wiki/W/Main_Page.html}
-
-
-
-
-	
+https://powdertoy.co.uk/Wiki/W/Main_Page.html

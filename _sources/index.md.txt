@@ -20,6 +20,7 @@
 :maxdepth: 1
 
 ./wiki/idx_linux
+./wiki/idx_pl
 ```
 
 ```{toctree}

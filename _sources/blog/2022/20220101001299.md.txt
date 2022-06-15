@@ -1,18 +1,12 @@
 ---
-
 date: 2022-04-12T00:00:00+08:00
-title:
+title: 太阳黑子
 categories:
-tags:
-- sun
-udc: 
-reference: 
- 
-
-
+tags: [sun]
+udc: [4]
 ---
 
-## 太阳黑子周期
+## 太阳黑子
 
 太阳黑子影响气候
 气候影响农业
@@ -21,15 +15,3 @@ reference:
 经济影响生活
 
 神奇
-
-
-
----
-
-
-
-
-
-
-
-	
