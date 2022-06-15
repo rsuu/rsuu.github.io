@@ -1,4 +1,4 @@
-## RSUU
+## HOME
 
 ```{toctree}
 :caption: Blog
@@ -29,7 +29,6 @@
 ./doc/idx_doc1
 ```
 
-
 ```{toctree}
 :caption: Test
 :maxdepth: 1
@@ -44,3 +43,9 @@
 ./misc/idx_misc
 ```
 
+```{toctree}
+:caption: News | 用于存档新闻
+:maxdepth: 1
+
+./news/idx_2022
+```
