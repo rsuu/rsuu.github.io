@@ -31,3 +31,9 @@ language: rust
 :emphasize-lines: 1,5,8
 ```
 
+### e
+
+```{literalinclude} ./test.rs
+:language: rust
+:linenos: 1,5
+```
