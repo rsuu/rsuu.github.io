@@ -1,18 +1,12 @@
 ---
 date: 2022-05-01T00:00:00+08:00
-title:
-categories:
-tags:
-- cmd
-- ocr
+title: tesseract
+categories: linux
+tags: [cmd, ocr]
 udc:
-reference:
-
 ---
 
 ## tesseract
-
-
 
 ```sh
 tesseract --help-extra

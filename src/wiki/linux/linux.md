@@ -1,18 +1,14 @@
 ---
 date: 2022-04-12T00:00:00+08:00
-title:
-categories:
-tags:
-- ing,linux, os
+title: Linux
+categories: linux
+tags: [ing,linux,os]
 udc: [004.42
-reference:
-
-1|https://zh.m.wikipedia.org/wiki/%E5%86%85%E6%A0%B8
-
- 
 ---
 
 ## Linux
+
+https://zh.m.wikipedia.org/wiki/%E5%86%85%E6%A0%B8
 
 + 内核
     + 宏内核(大众使用的基本都是这个)

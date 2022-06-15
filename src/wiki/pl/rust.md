@@ -1,18 +1,15 @@
 ---
 date: 2022-05-01T00:00:00+08:00
-title:
-categories:
-tags:
-- rust
-udc: [4
-reference:
-
-1|https://t.me/c/1264662201/227665
-
- 
+title: Rust
+categories: [pl]
+tags: [rust]
+udc: [4]
 ---
 
 ## rust
+
+https://t.me/c/1264662201/227665
+
 
 ### KeyWord
 

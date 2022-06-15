@@ -65,6 +65,8 @@ flowchart LR
   B1 --> B2
 ```
 
+### gantt
+
 ```{md-mermaid}
 :name: gantt
 
@@ -77,4 +79,20 @@ gantt
     section Another
     Task in sec      :2014-01-12  , 12d
     another task      : 24d
+```
+
+
+
+```{md-mermaid}
+:name: gantt
+
+gantt
+    title 侏罗纪
+    dateFormat  YYYY
+    A
+    A1           :a1, 2010000, 1450000
+    A2     :after a1  , 20d
+    B
+    B1     :2014
+    B2      : 24d
 ```

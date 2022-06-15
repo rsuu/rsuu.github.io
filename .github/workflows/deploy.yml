@@ -14,10 +14,10 @@ jobs:
         with:
           python-version: "3.8.10"
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r lib/requirements.txt
 
       - name: build doc
-        run: sudo apt install zsh && zsh build.zsh
+        run: sudo apt install zsh && zsh bin/build.zsh
 
       - name: create .nojekyll
         run: touch docs/.nojekyll

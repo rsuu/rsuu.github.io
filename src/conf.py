@@ -4,6 +4,7 @@ import sys
 import typing
 
 sys.path.insert(0, os.path.abspath("."))
+sys.path.append(os.path.abspath("./_plug"))
 
 import docutils
 import sphinx
@@ -75,7 +76,7 @@ extensions = [
 
     "myst_parser",
 
-
+"helloworld", 
 ]
 
 

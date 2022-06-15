@@ -1,21 +1,17 @@
 ---
 date: 2022-04-12T00:00:00+08:00
-title:
-categories:
-tags:
-- async
-- rust
-- parallel
-udc: 
-- 0
-reference:
-- 1|https://blog.logrocket.com/a-practical-guide-to-async-in-rust/
-- 2|https://github.com/rust-lang/rust/issues/15641
-
- 
+title: Rust-Async
+categories: rust
+tags: [async,rust,parallel
+udc: [0]
 ---
 
-## async
+## Rust-Async
+
+https://blog.logrocket.com/a-practical-guide-to-async-in-rust/
+https://github.com/rust-lang/rust/issues/15641
+
+ 
 
 ```rust
 fn get_two_sites() {
