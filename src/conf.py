@@ -167,11 +167,7 @@ html_theme_options = {
             "title": "Home",
             "aliases": [],
         },
-        {
-            "version": "https://rsuu.github.io",
-            "title": "Github Pages",
-            "aliases": [],
-        },        
+           
     ],
     # END: version_dropdown
     "toc_title_is_page_title": True,
