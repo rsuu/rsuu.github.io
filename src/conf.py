@@ -23,6 +23,7 @@ copyright = 'cc-by-nc-sa 4.0'
 author = 'RSUU'
 language = 'en'
 html_search_language = 'zh'
+html_use_index = True
 
 # The full version, including alpha/beta/rc tags
 #release = '0.0.1'
