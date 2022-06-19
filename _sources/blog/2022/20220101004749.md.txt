@@ -1,13 +1,10 @@
 ---
-date: 2022-04-11T00:00:00+08:00
-title:
+layout: page
+date: 20220417164621
+title: nvim 折叠
 categories:
-tags:
-- nvim
+tags: [nvim]
 udc:
-- 0
-reference:
-
 ---
 
 ## nvim 折叠

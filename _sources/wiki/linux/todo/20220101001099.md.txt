@@ -1,0 +1,18 @@
+---
+layout: page
+date: 2022-05-01T00:00:00+08:00
+title:
+categories:
+tags: 
+- cmd
+udc: 
+
+ 
+---
+
+## taskwarrior
+
+```bash
+task add recur:daily due:9:00 until:12:00 wait:5:00 eat breakfast
+    # 每日任务
+```

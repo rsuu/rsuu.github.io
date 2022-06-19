@@ -1,19 +1,14 @@
 ---
-date: 2022-04-12T00:00:00+08:00
-title:
+layout: page
+date: 20220618164641
+title: Multiple return types in rust
 categories:
 - rust
-tags:
-- enum
-- rust
+tags: [enum, rust]
 udc: [004.434]
-reference:
-
 ---
 
 ## Multiple return types in rust
-
-
 
 ```rust
 fn main() {

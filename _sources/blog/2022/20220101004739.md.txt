@@ -1,12 +1,10 @@
 ---
-date: 2022-05-22T00:00:00+08:00
+layout: page
+date: 20220522547944
+title: 
 categories:
-tags:
-- 垃圾人
-udc:
-- 412
-reference:
-
+tags: [垃圾人]
+udc: [412]
 ---
 
 ## 傻逼直播助理

@@ -87,12 +87,27 @@ gantt
 :name: gantt
 
 gantt
-    title 侏罗纪
+
+    title N
+    todayMarker off 
     dateFormat  YYYY
-    A
-    A1           :a1, 2010000, 1450000
-    A2     :after a1  , 20d
-    B
-    B1     :2014
-    B2      : 24d
+    axisFormat  %Y Ma
+
+    section 侏罗纪
+    早侏罗纪 :0174, 0201
+    中侏罗纪 :active, c, 0163, 0174
+    晚侏罗纪 :0145, 0163
+    你 :active, b1, 0152, 0156
+
+```
+
+
+```{md-mermaid}
+:name: pie
+
+pie title NETFLIX
+
+"早侏罗纪" : 27
+"中侏罗纪" : 11
+"晚侏罗纪" : 11
 ```

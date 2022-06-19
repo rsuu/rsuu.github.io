@@ -1,12 +1,10 @@
 ---
-date: 2022-05-06T00:00:00+08:00
-title:
+layout: page
+date: 20220506004209
+title: pwd
 categories:
-tags: 
-- cmd
-udc: 
-reference: 
- 
+tags: [cmd]
+udc: []
 ---
 
 ## pwd

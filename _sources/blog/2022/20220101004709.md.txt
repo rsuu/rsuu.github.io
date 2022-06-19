@@ -1,13 +1,10 @@
 ---
-date: 2022-05-21T00:00:00+08:00
+layout: page
+date: 20220521194326
 title:
 categories:
-tags: 
-- draw
-- todo
-udc: 
-reference: 
- 
+tags: [draw, todo]
+udc: []
 ---
 
 ## 近期画画的一些体验

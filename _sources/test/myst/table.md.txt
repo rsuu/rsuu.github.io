@@ -273,7 +273,7 @@ F  360 361 362 363 364 365 366 367 370 371 372 373 374 375 376 377
 
 ### csv table
 
-:::{csv-table}
+:::{csv-table} title
 :header: "Treat", "Quantity", "Description"
 :widths: 15, 10, 30
 
@@ -282,4 +282,45 @@ F  360 361 362 363 364 365 366 367 370 371 372 373 374 375 376 377
 crunchy, now would it?"
 "Gannet Ripple", 1.99, "On a stick!"
 
+:::
+
+:::{csv-table} Title
+   :file: ./test.csv
+   :widths: 30, 70
+   :header-rows: 1
+
+:::
+
+:::{eval-rst}
+.. role:: gbg
+
+.. raw:: html
+
+   <style>
+      .gbg {background-color:#00ff00;} 
+   </style>
+
++-------+----------------+-------+---------+-------+---------+
+| UTC+1 | (d-s)          | UTC-6 | (zo)    | UTC-7 | (za)    |
++=======+================+=======+=========+=======+=========+
+| 15:00 | :gbg:`avail`   |  8:00 |         |  7:00 |         |
++-------+                +-------+---------+-------+         +
+| 15:30 |                |  8:30 |         |  7:30 |         |
++-------+----------------+-------+---------+-------+---------+
+
+:::
+
+:::{list-table} Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
 :::

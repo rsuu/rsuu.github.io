@@ -1,0 +1,22 @@
+---
+layout: page
+date: 2022-04-22T00:00:00+08:00
+title:
+categories:
+tags: 
+- cmd
+udc: 
+
+ 
+---
+
+## gpg2
+
+```bash
+echo 'password' | gpg --passphrase-fd 0 --output $outfile --decrypt a.gpg
+
+
+```
+
+
+	

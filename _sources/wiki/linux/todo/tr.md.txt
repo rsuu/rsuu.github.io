@@ -1,0 +1,24 @@
+---
+layout: page
+date: 2022-05-06T00:00:00+08:00
+title:
+categories:
+- linux
+tags:
+- cmd
+udc:
+reference:
+
+---
+
+## tr
+
+```bash
+cat a | tr o O
+    # 小写字母 o 变成大写
+
+cat a | tr [a-z] [A-Z]
+    # 把所有的小写字母都变成大写字母
+
+
+```

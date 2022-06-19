@@ -1,15 +1,10 @@
 ---
-
-date: 2022-04-12T00:00:00+08:00
+layout: page
+date: 20220611164621
 title:
 categories:
-tags:
-- ing
+tags: [ing]
 udc: 
-reference: 
- 
-
-
 ---
 
 ## 各国的主食
@@ -23,14 +18,3 @@ reference:
 ### 面包
 
 ### 无主食
-
-
----
-
-
-
-
-
-
-
-	
