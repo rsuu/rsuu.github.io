@@ -1,4 +1,5 @@
 ---
+layout: page
 date: 2022-05-01T00:00:00+08:00
 title: tesseract
 categories: linux

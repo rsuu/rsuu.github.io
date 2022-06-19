@@ -1,4 +1,5 @@
 ---
+layout: page
 date: 2022-04-12T00:00:00+08:00
 title: Linux
 categories: linux
