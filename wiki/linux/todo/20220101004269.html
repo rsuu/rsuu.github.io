@@ -27,15 +27,10 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
         <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
         <link rel="stylesheet" type="text/css" href="../../../_static/extra_css.css" />
+        <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -273,7 +268,7 @@
 
   <li class="md-tabs__item">
     <a href="../../../news/idx_2022.html" class="md-tabs__link">
-      <span class="md-ellipsis">News | 用于存档新闻</span>
+      <span class="md-ellipsis">News</span>
     </a>
   </li>
 
@@ -2134,14 +2129,14 @@
       
       
         <label class="md-nav__link" for="__nav_6">
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="News | 用于存档新闻" data-md-level="1">
+      <nav class="md-nav" aria-label="News" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2179,6 +2174,9 @@
   <a href="https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/todo/20220101004269.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
+
+
+  
 
 
 
@@ -2357,24 +2355,24 @@ git rebase –abort
 </code></pre></div>
 </div>
 <h2 id="id3"><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>git缓存区
-git stash save xxx 保存stash有名字
-git stash clear 清空缓存
-git stash list 缓存列表
+<p>git缓存区<br />
+git stash save xxx 保存stash有名字<br />
+git stash clear 清空缓存<br />
+git stash list 缓存列表<br />
 git stash apply stash&#64;{0} 应用缓存</p>
-<p>git rm -r –cached .
+<p>git rm -r –cached .<br />
 # 删除本地缓存</p>
 <h2 id="version">Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
 <p>版本回退</p>
-<p>git log
-git reset –hard HEAD^ //删除工作空间改动代码，撤销commit，撤销git add
-git reset –soft HEAD^ //撤回commit，代码仍然在add中
+<p>git log<br />
+git reset –hard HEAD^ //删除工作空间改动代码，撤销commit，撤销git add<br />
+git reset –soft HEAD^ //撤回commit，代码仍然在add中<br />
 git reset –mixed HEAD^ //不删除工作空间改动代码，撤销commit，并且撤销git add</p>
 <h2 id="id4">Branch<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <h3 id="rename">Rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h3>
 <p>分支强行替换名字</p>
-<p>git branch -m master old-master
-git branch -m develop master
+<p>git branch -m master old-master<br />
+git branch -m develop master<br />
 git push -f origin master</p>
 <h2 id="tag">Tag<a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h2>
 <h3 id="id5">tag<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
@@ -2394,7 +2392,7 @@ git push origin :<span class="o">[</span>tag<span class="o">]</span>
   <small>
     
       Last update:
-      Jun 19, 2022
+      Jun 24, 2022
     
   </small>
 </div>

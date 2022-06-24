@@ -27,7 +27,7 @@ language: rust
 
 ```{literalinclude} ./test.rs
 :language: rust
-:linenos: 
+:linenos:
 :emphasize-lines: 1,5,8
 ```
 
@@ -35,7 +35,7 @@ language: rust
 
 ```{literalinclude} ./test.rs
 :language: rust
-:linenos: 1,5
+:linenos: 1, 5
 ```
 
 ### f
@@ -44,5 +44,5 @@ language: rust
 ```{code-block} rust
 :linenos:
 
-  code 
+  code
 ```

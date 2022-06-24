@@ -27,15 +27,10 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
         <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
         <link rel="stylesheet" type="text/css" href="../../_static/extra_css.css" />
+        <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -273,7 +268,7 @@
 
   <li class="md-tabs__item">
     <a href="../../news/idx_2022.html" class="md-tabs__link">
-      <span class="md-ellipsis">News | 用于存档新闻</span>
+      <span class="md-ellipsis">News</span>
     </a>
   </li>
 
@@ -820,6 +815,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span title="test/myst/other.md# (reference label)" class="md-ellipsis">🔬</span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -872,14 +874,14 @@
       
       
         <label class="md-nav__link" for="__nav_6">
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="News | 用于存档新闻" data-md-level="1">
+      <nav class="md-nav" aria-label="News" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -919,8 +921,25 @@
   </a>
 
 
+  
+
+
 
   <h1 id="other">other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">features</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.annotate</span><span class="w"> </span><span class="c1"># (1)</span><span class="w"></span>
+</code></pre></div>
+</div>
+<ol class="arabic simple">
+<li><dl class="myst field-list simple">
+<dt class="field-odd">man_raising_hand</dt>
+<dd class="field-odd"><p>I’m a code annotation! I can contain <code class="docutils literal notranslate"><span class="pre">code</span></code>, <strong>formatted<br />
+text</strong>, images, … basically anything that can be written in Markdown.</p>
+</dd>
+</dl>
+</li>
+</ol>
 <p><s>strikethrough with <em>emphasis</em></s></p>
 <p><img alt="fishy" src="test/myst/test.svg" /></p>
 <a class="bg-primary reference internal image-reference" href="test/myst/test.svg"><img alt="fishy" class="bg-primary align-center" src="test/myst/test.svg" width="200px" /></a>
@@ -977,8 +996,8 @@ This is a caption in <strong>Markdown</strong></span><a class="headerlink" href=
 <dd class="field-odd"><p>Both name and body may contain <strong>nested syntax</strong>.</p>
 </dd>
 <dt class="field-even">Paragraphs</dt>
-<dd class="field-even"><p>Since the field marker may be quite long, the second
-and subsequent lines of a paragraph do not have to line up
+<dd class="field-even"><p>Since the field marker may be quite long, the second<br />
+and subsequent lines of a paragraph do not have to line up<br />
 with the first line.</p>
 </dd>
 <dt class="field-odd">Alignment 1</dt>
@@ -1020,9 +1039,9 @@ does not apply to the name of the symbol being defined by the signature, only
 to parameter types, return types, default value expressions, etc.</p>
 <p>For example, with the following in <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
 <div class="results docutils container">
-<div class="literal-block-wrapper docutils container" id="id1">
+<div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption highlight"><span class="caption-text filename">
-C++ function definition with stripped namespaces<a class="headerlink" href="#id1" title="Permalink to this code">¶</a></span></div>
+C++ function definition with stripped namespaces<a class="headerlink" href="#id2" title="Permalink to this code">¶</a></span></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:type</span><span class="p">::</span> my_ns1::A
 
 <span class="p">..</span> <span class="ow">cpp:type</span><span class="p">::</span> my_ns2::my_nested_ns::B
@@ -1081,9 +1100,9 @@ fully-qualified ids (for cross-linking purposes) of the form
 <p>This theme extend the C and C++ domains to allow signatures to specify required
 <a href="#id19"><span class="problematic" id="id20">:cpp:`#include`</span></a> directives.</p>
 <div class="results docutils container">
-<div class="literal-block-wrapper docutils container" id="id2">
+<div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption highlight"><span class="caption-text filename">
-Specifying <a href="#id21"><span class="problematic" id="id22">:cpp:`#include`</span></a> directives in signatures<a class="headerlink" href="#id2" title="Permalink to this code">¶</a></span></div>
+Specifying <a href="#id21"><span class="problematic" id="id22">:cpp:`#include`</span></a> directives in signatures<a class="headerlink" href="#id3" title="Permalink to this code">¶</a></span></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:function</span><span class="p">::</span> #include &quot;my_header.h&quot;
                   #include &quot;another_header.h&quot;
                   void foo(int param);
@@ -1107,6 +1126,10 @@ Specifying <a href="#id21"><span class="problematic" id="id22">:cpp:`#include`</
 
 </div>
 </div>
+<h2 id="id1">🔬<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Linux</p></li>
+</ul>
 
 
 
@@ -1115,7 +1138,7 @@ Specifying <a href="#id21"><span class="problematic" id="id22">:cpp:`#include`</
   <small>
     
       Last update:
-      Jun 19, 2022
+      Jun 24, 2022
     
   </small>
 </div>

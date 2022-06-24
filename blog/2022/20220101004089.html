@@ -27,15 +27,10 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
         <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
         <link rel="stylesheet" type="text/css" href="../../_static/extra_css.css" />
+        <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -268,7 +263,7 @@
 
   <li class="md-tabs__item">
     <a href="../../news/idx_2022.html" class="md-tabs__link">
-      <span class="md-ellipsis">News | 用于存档新闻</span>
+      <span class="md-ellipsis">News</span>
     </a>
   </li>
 
@@ -2452,14 +2447,14 @@
       
       
         <label class="md-nav__link" for="__nav_6">
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="News | 用于存档新闻" data-md-level="1">
+      <nav class="md-nav" aria-label="News" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2499,6 +2494,9 @@
   </a>
 
 
+  
+
+
 
   <h1 id="ast">AST<a class="headerlink" href="#ast" title="Permalink to this headline">¶</a></h1>
 <p>Lexer -&gt; Token -&gt; Parser -&gt; AST</p>
@@ -2506,7 +2504,7 @@
 <li><p>Lexer</p>
 <ul>
 <li><p>词法解析器</p></li>
-<li><p>就是给每一个 char[字符] 都标上记号(也就是打标签分类)
+<li><p>就是给每一个 char[字符] 都标上记号(也就是打标签分类)<br />
 更简单的解释就是从一大串 char 里面标记出 string[字符串]</p></li>
 </ul>
 </li>
@@ -2514,16 +2512,16 @@
 <li><p>Parser</p>
 <ul>
 <li><p>语法解析器</p></li>
-<li><p>和 Lexer 类似
+<li><p>和 Lexer 类似<br />
 不过此时所打的标签需要考虑上下文的影响</p></li>
 </ul>
 </li>
 <li><p>AST</p></li>
 </ul>
-<p>词法分析
-语法分析
-语义分析和中间代码产生
-编译器优化
+<p>词法分析<br />
+语法分析<br />
+语义分析和中间代码产生<br />
+编译器优化<br />
 目标代码生成</p>
 
 
@@ -2533,7 +2531,7 @@
   <small>
     
       Last update:
-      Jun 19, 2022
+      Jun 24, 2022
     
   </small>
 </div>

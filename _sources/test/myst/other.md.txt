@@ -1,4 +1,24 @@
+---
+blogpost: true
+date: Oct 10, 2020
+author: Nabil Freij
+location: World
+category: Manual
+language: English
+---
+
 ## other
+
+
+```yaml
+theme:
+  features:
+    - content.code.annotate # (1)
+```
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
+    text__, images, ... basically anything that can be written in Markdown.
+
 
 ~~strikethrough with *emphasis*~~
 
@@ -150,3 +170,9 @@ This theme extend the C and C++ domains to allow signatures to specify required
       Some function.
 
 ```
+
+
+### 🔬
+
++ Linux
+

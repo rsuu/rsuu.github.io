@@ -27,15 +27,10 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
         <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
         <link rel="stylesheet" type="text/css" href="../../../_static/extra_css.css" />
+        <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -273,7 +268,7 @@
 
   <li class="md-tabs__item">
     <a href="../../../news/idx_2022.html" class="md-tabs__link">
-      <span class="md-ellipsis">News | 用于存档新闻</span>
+      <span class="md-ellipsis">News</span>
     </a>
   </li>
 
@@ -1743,14 +1738,14 @@
       
       
         <label class="md-nav__link" for="__nav_6">
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="News | 用于存档新闻" data-md-level="1">
+      <nav class="md-nav" aria-label="News" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          <span class="md-ellipsis">News | 用于存档新闻</span>
+          <span class="md-ellipsis">News</span>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1788,6 +1783,9 @@
   <a href="https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/todo/20220101004469.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
+
+
+  
 
 
 
@@ -2003,26 +2001,26 @@ delete from _tab where _tab.rowid not in (select MAX(_tab.rowid) from _tab group
 </code></pre></div>
 </div>
 <h3 id="id2"><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>用insert语句插入数据, 为避免重复插入又不打断数据处理。
-首先要避免重复插入, 就必须在插入时引发冲突。
-在表中设置了id字段, 该字段为UNIQUE属性, 当插入的id已存在时引发冲突。
+<p>用insert语句插入数据, 为避免重复插入又不打断数据处理。<br />
+首先要避免重复插入, 就必须在插入时引发冲突。<br />
+在表中设置了id字段, 该字段为UNIQUE属性, 当插入的id已存在时引发冲突。<br />
 引发冲突后insert会做一些处理, 处理方式由OR字句定义。包含如下：</p>
 <ul class="simple">
 <li><p>ROLLBACK<br />
-当发生约束冲突, 立即ROLLBACK, 即结束当前事务处理, 命令中止并返回SQLITE_CONSTRAINT代码。
+当发生约束冲突, 立即ROLLBACK, 即结束当前事务处理, 命令中止并返回SQLITE_CONSTRAINT代码。<br />
 若当前无活动事务(除了每一条命令创建的默认事务以外), 则该算法与ABORT相同。</p></li>
-<li><p>ABORT  当发生约束冲突, 命令收回已经引起的改变并中止返回SQLITE_CONSTRAINT。
-但由于不执行ROLLBACK, 所以前面的命令产生的改变将予以保留。
+<li><p>ABORT  当发生约束冲突, 命令收回已经引起的改变并中止返回SQLITE_CONSTRAINT。<br />
+但由于不执行ROLLBACK, 所以前面的命令产生的改变将予以保留。<br />
 缺省采用这一行为。</p></li>
-<li><p>FAIL  当发生约束冲突, 命令中止返回SQLITE_CONSTRAINT。
-但遇到冲突之前的所有改变将被保留。
+<li><p>FAIL  当发生约束冲突, 命令中止返回SQLITE_CONSTRAINT。<br />
+但遇到冲突之前的所有改变将被保留。<br />
 例如, 若一条UPDATE语句在100行遇到冲突100th, 前99行的改变将被保留, 而对100行或以后的改变将不会发生。</p></li>
-<li><p>IGNORE  当发生约束冲突, 发生冲突的行将不会被插入或改变。
+<li><p>IGNORE  当发生约束冲突, 发生冲突的行将不会被插入或改变。<br />
 但命令将照常执行。在冲突行之前或之后的行将被正常的插入和改变, 且不返回错误信息。</p></li>
-<li><p>REPLACE  当发生UNIQUE约束冲突, 先存在的, 导致冲突的行在更改或插入发生冲突的行之前被删除。
+<li><p>REPLACE  当发生UNIQUE约束冲突, 先存在的, 导致冲突的行在更改或插入发生冲突的行之前被删除。<br />
 这样, 更改和插入总是被执行。命令照常执行且不返回错误信息。当发生NOT NULL约束冲突, 导致冲突的NULL值会被字段缺省值取代。若字段无缺省值, 执行ABORT算法</p></li>
 </ul>
-<p>为避免操作打断, 我选择了IGNORE。最后完整的用法如下：
+<p>为避免操作打断, 我选择了IGNORE。最后完整的用法如下：<br />
 INSERT OR IGNORE INTO troopstypes (id)values(2);</p>
 <h3 id="id3">数据类型<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -2059,8 +2057,8 @@ INSERT OR IGNORE INTO troopstypes (id)values(2);</p>
 </li>
 <li><p>bool</p>
 <ul>
-<li><p>布尔值需使用 INTEGER 代替
-1 为 true
+<li><p>布尔值需使用 INTEGER 代替<br />
+1 为 true<br />
 0 为 false</p></li>
 </ul>
 </li>
@@ -2074,7 +2072,7 @@ INSERT OR IGNORE INTO troopstypes (id)values(2);</p>
 </li>
 </ul>
 <h3 id="id4">主键与唯一索引<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>主键[primary key]
+<p>主键[primary key]<br />
 唯一索引[unique index]</p>
 <ul class="simple">
 <li><p>主键</p>
@@ -2096,7 +2094,7 @@ INSERT OR IGNORE INTO troopstypes (id)values(2);</p>
 </li>
 </ul>
 <p>(聚集索引确定表中数据的物理顺序)</p>
-<p>数据库连接池大小的设置
+<p>数据库连接池大小的设置<br />
 连接数 = ((核心数 * 2) + 有效磁盘数)</p>
 
 
@@ -2106,7 +2104,7 @@ INSERT OR IGNORE INTO troopstypes (id)values(2);</p>
   <small>
     
       Last update:
-      Jun 19, 2022
+      Jun 24, 2022
     
   </small>
 </div>
