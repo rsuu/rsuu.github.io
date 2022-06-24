@@ -1,6 +1,16 @@
 rst
 
-.. helloword::
+aaa
+.. hello::
+bbb
+
+.. recipe:recipe:: TomatoSoup
+   :contains: tomato, cilantro, salt, pepper
+
+   This recipe is a tasty tomato soup, combine all ingredients
+   and cook.
+
+
 
 .. rst:directive:: md-tab-set
 
@@ -47,8 +57,6 @@ rst
 
                 .. literalinclude:: /_static/test.rs
                     :language: rust
-                    :start-after: /* ************************ custom-tab-set-style
-                    :end-before: /* *********************** custom-tab-item-style
 
 
 .. md-admonition::

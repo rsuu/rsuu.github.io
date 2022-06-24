@@ -45,7 +45,7 @@
 ```
 
 ```{toctree}
-:caption: News | 用于存档新闻
+:caption: News
 :maxdepth: 1
 
 ./news/idx_2022

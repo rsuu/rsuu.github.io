@@ -1,1 +1,0 @@
-app.setup_extension("sphinx_immaterial.mermaid")

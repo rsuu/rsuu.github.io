@@ -23,7 +23,7 @@ copyright = 'cc-by-nc-sa 4.0'
 author = 'RSUU'
 language = 'en'
 html_search_language = 'zh'
-html_use_index = True
+html_use_index = False
 
 # The full version, including alpha/beta/rc tags
 #release = '0.0.1'
@@ -36,7 +36,7 @@ source_suffix = {
     '.md': 'markdown',
 }
 
-exclude_patterns = ['_build', '_templates']
+exclude_patterns = ['_build']
 
 templates_path = [ '_templates' ]
 
@@ -54,7 +54,7 @@ autosummary_generate = True
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
-    "sphinx.ext.imgmath", 
+    "sphinx.ext.imgmath",
     "sphinx.ext.doctest",
     "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
@@ -68,12 +68,13 @@ extensions = [
     "sphinx_immaterial.format_signatures",
     "sphinx_immaterial.cppreference",
     "sphinx_immaterial.json_domain",
-    
+
     "sphinx_jinja",
     "sphinxcontrib.details.directive",
     "sphinx_comments",
     "sphinx_design",
 
+#   "hello",
     "myst_parser",
 ]
 
@@ -114,6 +115,9 @@ comments_config = {
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'sphinx_immaterial'
 html_theme_options = {
+    "plugins": ["tags","search"],
+    "font": False,
+    #"font": {"text": "", "code": ""},
     "icon": {
         "repo": "fontawesome/brands/github",
     },
@@ -166,7 +170,7 @@ html_theme_options = {
             "title": "Home",
             "aliases": [],
         },
-           
+
     ],
     # END: version_dropdown
     "toc_title_is_page_title": True,
@@ -175,6 +179,7 @@ html_theme_options = {
 html_static_path = ["_static"]
 html_css_files = [
     'extra_css.css',
+    'style.css',
 ]
 
 html_last_updated_fmt = ""
