@@ -66,12 +66,12 @@ extensions = [
     "sphinx_immaterial.theme_result",
     "sphinx_immaterial.kbd_keys",
     #"sphinx_immaterial.format_signatures",
-    "sphinx_immaterial.cppreference",
-    "sphinx_immaterial.json_domain",
+    #"sphinx_immaterial.cppreference",
+    #"sphinx_immaterial.json_domain",
 
-    "sphinx_jinja",
-    "sphinxcontrib.details.directive",
-    "sphinx_comments",
+    #"sphinx_jinja",
+    #"sphinxcontrib.details.directive",
+    #"sphinx_comments",
     "sphinx_design",
 
 #   "hello",
