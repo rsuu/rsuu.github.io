@@ -1,6 +1,6 @@
 ---
 layout: page
-date: 20220618164521
+date: 20220101000000
 title: 人种差异
 categories:
 tags: 

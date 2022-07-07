@@ -1,6 +1,6 @@
 ---
 layout: page
-date: 20220418137845
+date: 20220101000000
 title: 十二平均律
 categories:
 tags: [music]

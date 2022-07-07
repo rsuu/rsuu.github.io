@@ -1,7 +1,7 @@
 ---
 
 layout: page
-date: 2022-04-12T00:00:00+08:00
+date: 20220101000000
 title:
 categories:
 tags:

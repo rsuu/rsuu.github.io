@@ -1,7 +1,7 @@
 ## HOME
 
 ```{toctree}
-:caption: Blog
+:caption: 📜 Blog
 :maxdepth: 1
 
 ./blog/idx_2022
@@ -9,14 +9,14 @@
 ```
 
 ```{toctree}
-:caption: Book
+:caption: 📚 Book
 :maxdepth: 1
 
 ./book/idx_book1
 ```
 
 ```{toctree}
-:caption: Wiki
+:caption: 📓 Wiki
 :maxdepth: 1
 
 ./wiki/idx_linux
@@ -24,28 +24,28 @@
 ```
 
 ```{toctree}
-:caption: Doc
+:caption: 📖 Doc
 :maxdepth: 1
 
 ./doc/idx_doc1
 ```
 
 ```{toctree}
-:caption: Test
+:caption: 🔬 Test
 :maxdepth: 1
 
 ./test/idx_test
 ```
 
 ```{toctree}
-:caption: Misc
+:caption: 🗞️ Misc
 :maxdepth: 1
 
 ./misc/idx_misc
 ```
 
 ```{toctree}
-:caption: News
+:caption: 📰 News
 :maxdepth: 1
 
 ./news/idx_2022

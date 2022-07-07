@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 date: 20220618137845
 title: 人体
 categories:

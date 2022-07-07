@@ -1,0 +1,1 @@
+---layout: pagedate: 20220412000000title: ulimitcategories:tags: udc:---## ulimit```shulimit -a     #显示当前用户的栈大小ulimit -s 32768     #将当前用户的栈大小设置为32M bytes```

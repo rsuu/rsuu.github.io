@@ -1,0 +1,1 @@
+---layout: pagedate: 20220412000000title: tailcategories:tags: udc:---## tail```bashtail -3 a    # 删除 文件a 的尾三行tail -f log.txt    # 可以实时监控 log.txt 中的内容```

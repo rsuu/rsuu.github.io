@@ -1,0 +1,1 @@
+---layout: pagedate: 20220412000000title: zipcategories:tags:udc:---## zip```bash# 解决中文乱码pacman -S unzip-iconvunzip -O cp936 test.zipzip -r test.zip test    # 压缩目录```	

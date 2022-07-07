@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: news
 date: 20220615617880
 title: 河南村镇银行储户健康码突然变红
 categories: 

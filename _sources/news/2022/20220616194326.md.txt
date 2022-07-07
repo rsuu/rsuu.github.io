@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: news
 date: 20220616194326
 title: 郑州部分停工楼盘业主被赋红码
 categories: 
