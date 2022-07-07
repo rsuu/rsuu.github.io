@@ -9,6 +9,7 @@ language: English
 
 ## other
 
+:octicon:`graph`
 
 ```yaml
 theme:

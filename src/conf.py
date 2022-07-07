@@ -123,7 +123,7 @@ html_theme_options = {
     },
     "site_url": "https://rsuu.github.io",
     "repo_url": "https://github.com/rsuu/rsuu.github.io",
-    "repo_name": "WeatherVane",
+    "repo_name": "Zett",
     "repo_type": "github",
     "edit_uri": "blob/main/src",
     # "google_analytics": ["UA-XXXXX", "auto"],
@@ -182,8 +182,8 @@ html_css_files = [
     'style.css',
 ]
 
-html_last_updated_fmt = ""
-html_title = "RSUU"
+html_last_updated_fmt = "%Y-%m-%d (%H:%M %Z)"
+html_title = "WeatherVane"
 #html_favicon = "_static/svg/logo.svg"
 #html_logo = "_static/svg/logo.svg"
 

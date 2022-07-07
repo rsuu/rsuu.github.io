@@ -1,0 +1,1 @@
+---layout: pagedate: 20220412000000title: gnuplotcategories:tags:udc:---## gnuplot```bashgnuplot -p <file>```	

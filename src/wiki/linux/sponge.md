@@ -1,0 +1,1 @@
+---layout: pagedate: 20220412000000title: spongecategories:tags: udc:---## sponge```shecho "xxx" | cat - xxx.md | sponge xxx.md    # 将 xxx 添加到 xxx.md 的开头```
