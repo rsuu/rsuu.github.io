@@ -65,7 +65,7 @@ extensions = [
     "sphinx_immaterial",
     "sphinx_immaterial.theme_result",
     "sphinx_immaterial.kbd_keys",
-    "sphinx_immaterial.format_signatures",
+    #"sphinx_immaterial.format_signatures",
     "sphinx_immaterial.cppreference",
     "sphinx_immaterial.json_domain",
 
