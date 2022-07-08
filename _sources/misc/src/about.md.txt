@@ -2,9 +2,11 @@
 
 <img src="_static/Svg/rsuu.svg" width="720"></img>
 <img src="./_static/Svg/rsuu.svg" width="720"></img>
+<img src="/_static/Svg/rsuu.svg" width="720"></img>
+<img src="../../_static/Svg/rsuu.svg" width="720"></img>
 
 
-| # | Name | Link |
+| # | Username | Link |
 |:-|:-|:-|
 | Email | rsuu | mail://rsuuyu@gmail.com |
 | IRC | rsuu | https://web.libera.chat/ |
