@@ -44,8 +44,8 @@ async fn get_two_sites_async() {
 
 ### async vec
 
+```rust
 use futures::future::join_all;
-
 
  async fn start_consumers(&self) {
     let mut v = Vec::new();
@@ -55,6 +55,6 @@ use futures::future::join_all;
     join_all(v).await;
  }
 
-### daemonize a process
-[#1]
+```
 
+### daemonize a process
