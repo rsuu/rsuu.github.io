@@ -73,6 +73,7 @@ extensions = [
     #"sphinxcontrib.details.directive",
     #"sphinx_comments",
     "sphinx_design",
+    "sphinx_comments", 
 
 #   "hello",
     "myst_parser",
@@ -104,9 +105,9 @@ myst_enable_extensions = [
 comments_config = {
    "utterances": {
        "repo": "rsuu/rsuu.github.io",
-       "issue-term": "pathname",
+       "issue-term": "zett",
        "label": "comments",
-       "theme": "github-dark",
+       "theme": "gruvbox-dark",
        "crossorigin": "anonymous",
    }
 }

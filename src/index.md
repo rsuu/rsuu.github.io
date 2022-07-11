@@ -16,7 +16,7 @@
 ```
 
 ```{toctree}
-:caption: 📓 Wiki
+:caption: 🗂️ Wiki
 :maxdepth: 1
 
 ./wiki/idx_linux
@@ -24,7 +24,7 @@
 ```
 
 ```{toctree}
-:caption: 📖 Doc
+:caption: 📑 Doc
 :maxdepth: 1
 
 ./doc/idx_doc1
@@ -38,7 +38,7 @@
 ```
 
 ```{toctree}
-:caption: 🗞️ Misc
+:caption: 🗄️ Misc
 :maxdepth: 1
 
 ./misc/idx_misc
