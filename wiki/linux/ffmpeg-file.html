@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('ffmpeg-file'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:25 UTC)'}, 'content': '<h1 id="ffmpeg-file">ffmpeg-file<a class="headerlink" href="#ffmpeg-file" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>ffmpeg -i <span class="m">1</span>.jpg -q:v <span class="m">16</span> -fs 10M output\n    <span class="c1"># 输出前 10M 的数据</span>\n\n\nffmpeg -i <span class="m">1</span>.jpg -f mjpeg pipe:1 <span class="p">|</span> sponge <span class="m">2</span>.jpg\n    <span class="c1"># output to pipe</span>\n    <span class="c1"># e.g. 0 for stdin, 1 for stdout, 2 for stderr</span>\n    <span class="c1"># install sponage with `pacman -S moreutils`</span>\n\nffmpeg -i <span class="m">1</span>.jpg -f mjpeg pipe:1 <span class="p">|</span> cat &gt; <span class="m">2</span>.jpg\n\nffmpeg -i <span class="m">1</span>.jpg -f mjpeg pipe: <span class="p">|</span> cat &gt; <span class="m">2</span>.jpg\n\n\ncat test.wav <span class="p">|</span> ffmpeg -i pipe:0\n    <span class="c1"># read from bytes</span>\n\nffmpeg -i <span class="s2">&quot;1.mp4&quot;</span> -c:v mpe4 -acodec aac -strict experimental <span class="s2">&quot;1.mp4&quot;</span> &lt; /dev/null\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('strace'), 'url': 'strace.html'}, 'previous_page': {'title': Markup('Arch'), 'url': 'Arch.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/ffmpeg-file.md'}
+{'title': Markup('ffmpeg-file'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="ffmpeg-file">ffmpeg-file<a class="headerlink" href="#ffmpeg-file" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>ffmpeg -i <span class="m">1</span>.jpg -q:v <span class="m">16</span> -fs 10M output\n    <span class="c1"># 输出前 10M 的数据</span>\n\n\nffmpeg -i <span class="m">1</span>.jpg -f mjpeg pipe:1 <span class="p">|</span> sponge <span class="m">2</span>.jpg\n    <span class="c1"># output to pipe</span>\n    <span class="c1"># e.g. 0 for stdin, 1 for stdout, 2 for stderr</span>\n    <span class="c1"># install sponage with `pacman -S moreutils`</span>\n\nffmpeg -i <span class="m">1</span>.jpg -f mjpeg pipe:1 <span class="p">|</span> cat &gt; <span class="m">2</span>.jpg\n\nffmpeg -i <span class="m">1</span>.jpg -f mjpeg pipe: <span class="p">|</span> cat &gt; <span class="m">2</span>.jpg\n\n\ncat test.wav <span class="p">|</span> ffmpeg -i pipe:0\n    <span class="c1"># read from bytes</span>\n\nffmpeg -i <span class="s2">&quot;1.mp4&quot;</span> -c:v mpe4 -acodec aac -strict experimental <span class="s2">&quot;1.mp4&quot;</span> &lt; /dev/null\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('strace'), 'url': 'strace.html'}, 'previous_page': {'title': Markup('Arch'), 'url': 'Arch.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/ffmpeg-file.md'}
             
           </span>
         </div>
@@ -2435,7 +2435,7 @@ ffmpeg -i <span class="s2">&quot;1.mp4&quot;</span> -c:v mpe4 -acodec aac -stric
   <small>
     
       Last update:
-      2022-07-11 (11:25 UTC)
+      2022-07-11 (11:27 UTC)
     
   </small>
 </div>
@@ -2536,7 +2536,7 @@ ffmpeg -i <span class="s2">&quot;1.mp4&quot;</span> -c:v mpe4 -acodec aac -stric
 <script src="https://utteranc.es/client.js"
         repo="rsuu/rsuu.github.io"
         issue-term="pathname"
-        theme="github-dark-orange"
+        theme="github-dark"
         crossorigin="anonymous"
         async>
 </script>

@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('gstreamer'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [{'url': '#usage', 'children': [], 'active': False, 'current': False, 'caption_only': False, 'title': '<span title="wiki/linux/gstreamer.md#usage (reference label)" class="md-ellipsis">usage</span>', 'aria_label': 'usage', 'active_or_section_within_active': True}], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:25 UTC)'}, 'content': '<h1 id="gstreamer">gstreamer<a class="headerlink" href="#gstreamer" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># install</span>\npacman -S --needed gst-plugins-<span class="o">{</span>bad,base,good,ugly<span class="o">}</span> gst-libav\n</code></pre></div>\n</div>\n<h2 id="usage">usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>\n<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><code>gst-launch-1.0 audiotestsrc ! audioconvert ! audioresample ! alsasink\n    <span class="c1"># audio test</span>\n  <span class="c1"># [directsoundsink, esdsink, alsasink, osxaudiosink, artsdsink, osssink]</span>\n\n\ngst-launch-1.0 videotestsrc ! ximagesink\n    <span class="c1"># video test</span>\n  <span class="c1"># [xvimagesink, d3dvideosink, ximagesink, sdlvideosink, osxvideosink, aasink]</span>\n\n\ngst-launch-1.0 playbin <span class="nv">uri</span><span class="o">=</span>file:///dev/shm/music.opus\n    <span class="c1"># auto play audio/video</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('vmstat'), 'url': 'vmstat.html'}, 'previous_page': {'title': Markup('tar'), 'url': 'tar.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/gstreamer.md'}
+{'title': Markup('gstreamer'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [{'url': '#usage', 'children': [], 'active': False, 'current': False, 'caption_only': False, 'title': '<span title="wiki/linux/gstreamer.md#usage (reference label)" class="md-ellipsis">usage</span>', 'aria_label': 'usage', 'active_or_section_within_active': True}], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="gstreamer">gstreamer<a class="headerlink" href="#gstreamer" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># install</span>\npacman -S --needed gst-plugins-<span class="o">{</span>bad,base,good,ugly<span class="o">}</span> gst-libav\n</code></pre></div>\n</div>\n<h2 id="usage">usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>\n<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><code>gst-launch-1.0 audiotestsrc ! audioconvert ! audioresample ! alsasink\n    <span class="c1"># audio test</span>\n  <span class="c1"># [directsoundsink, esdsink, alsasink, osxaudiosink, artsdsink, osssink]</span>\n\n\ngst-launch-1.0 videotestsrc ! ximagesink\n    <span class="c1"># video test</span>\n  <span class="c1"># [xvimagesink, d3dvideosink, ximagesink, sdlvideosink, osxvideosink, aasink]</span>\n\n\ngst-launch-1.0 playbin <span class="nv">uri</span><span class="o">=</span>file:///dev/shm/music.opus\n    <span class="c1"># auto play audio/video</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('vmstat'), 'url': 'vmstat.html'}, 'previous_page': {'title': Markup('tar'), 'url': 'tar.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/gstreamer.md'}
             
           </span>
         </div>
@@ -2464,7 +2464,7 @@ gst-launch-1.0 playbin <span class="nv">uri</span><span class="o">=</span>file:/
   <small>
     
       Last update:
-      2022-07-11 (11:25 UTC)
+      2022-07-11 (11:27 UTC)
     
   </small>
 </div>
@@ -2565,7 +2565,7 @@ gst-launch-1.0 playbin <span class="nv">uri</span><span class="o">=</span>file:/
 <script src="https://utteranc.es/client.js"
         repo="rsuu/rsuu.github.io"
         issue-term="pathname"
-        theme="github-dark-orange"
+        theme="github-dark"
         crossorigin="anonymous"
         async>
 </script>

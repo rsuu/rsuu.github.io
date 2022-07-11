@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('find'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:25 UTC)'}, 'content': '<h1 id="find">find<a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>find -name <span class="s2">&quot;*mkv&quot;</span> <span class="p">|</span> parallel rsync -avP <span class="o">{}</span> /destination/directory/\n    <span class="c1"># 删除20分钟前的文件</span>\n\n\nfind /home/prestat/bills/test -type f -mmin +20 -exec rm <span class="o">{}</span> <span class="se">\\;</span>\n    <span class="c1"># 删除20天前的文件</span>\n\n\nfind /home/prestat/bills/test -type f -mtime +20 -exec rm <span class="o">{}</span> <span class="se">\\;</span>\n\n\nfind . -maxdepth <span class="m">1</span> -type f -print0 <span class="p">|</span> head -z -n <span class="m">10</span> <span class="p">|</span> xargs -0 -r -- cp -t <span class="s2">&quot;</span><span class="nv">$destdir</span><span class="s2">&quot;</span> --\n    <span class="c1"># 复制前10个文件</span>\n\n\n\nfind ./ -inum <span class="s2">&quot;68122192&quot;</span>\n    <span class="c1"># Search by inode</span>\n</code></pre></div>\n</div>\n<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><code>-amin n:   查找系统中最后N分钟访问的文件\n-atime n:  查找系统中最后n*24小时访问的文件\n-cmin n:   查找系统中最后N分钟被改变文件状态的文件\n-ctime n:  查找系统中最后n*24小时被改变文件状态的文件\n-mmin n:   查找系统中最后N分钟被改变文件数据的文件\n-mtime n:  查找系统中最后n*24小时被改变文件数据的文件\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('pv'), 'url': 'pv.html'}, 'previous_page': {'title': Markup('ffmpeg-video'), 'url': 'ffmpeg-video.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/find.md'}
+{'title': Markup('find'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="find">find<a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>find -name <span class="s2">&quot;*mkv&quot;</span> <span class="p">|</span> parallel rsync -avP <span class="o">{}</span> /destination/directory/\n    <span class="c1"># 删除20分钟前的文件</span>\n\n\nfind /home/prestat/bills/test -type f -mmin +20 -exec rm <span class="o">{}</span> <span class="se">\\;</span>\n    <span class="c1"># 删除20天前的文件</span>\n\n\nfind /home/prestat/bills/test -type f -mtime +20 -exec rm <span class="o">{}</span> <span class="se">\\;</span>\n\n\nfind . -maxdepth <span class="m">1</span> -type f -print0 <span class="p">|</span> head -z -n <span class="m">10</span> <span class="p">|</span> xargs -0 -r -- cp -t <span class="s2">&quot;</span><span class="nv">$destdir</span><span class="s2">&quot;</span> --\n    <span class="c1"># 复制前10个文件</span>\n\n\n\nfind ./ -inum <span class="s2">&quot;68122192&quot;</span>\n    <span class="c1"># Search by inode</span>\n</code></pre></div>\n</div>\n<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><code>-amin n:   查找系统中最后N分钟访问的文件\n-atime n:  查找系统中最后n*24小时访问的文件\n-cmin n:   查找系统中最后N分钟被改变文件状态的文件\n-ctime n:  查找系统中最后n*24小时被改变文件状态的文件\n-mmin n:   查找系统中最后N分钟被改变文件数据的文件\n-mtime n:  查找系统中最后n*24小时被改变文件数据的文件\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('pv'), 'url': 'pv.html'}, 'previous_page': {'title': Markup('ffmpeg-video'), 'url': 'ffmpeg-video.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/find.md'}
             
           </span>
         </div>
@@ -2443,7 +2443,7 @@ find ./ -inum <span class="s2">&quot;68122192&quot;</span>
   <small>
     
       Last update:
-      2022-07-11 (11:25 UTC)
+      2022-07-11 (11:27 UTC)
     
   </small>
 </div>
@@ -2544,7 +2544,7 @@ find ./ -inum <span class="s2">&quot;68122192&quot;</span>
 <script src="https://utteranc.es/client.js"
         repo="rsuu/rsuu.github.io"
         issue-term="pathname"
-        theme="github-dark-orange"
+        theme="github-dark"
         crossorigin="anonymous"
         async>
 </script>

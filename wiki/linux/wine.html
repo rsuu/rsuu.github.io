@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('wine'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:25 UTC)'}, 'content': '<h1 id="wine">wine<a class="headerlink" href="#wine" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>winetricks d3dx9* msxml3 msxml4 vcrun2003 quartz devenum corefonts lucida tahoma d3dcompiler_43\n</code></pre></div>\n</div>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 关掉 WINEDEBUG</span>\n\n<span class="nv">WINEDEBUG</span><span class="o">=</span>-all game.exe\n</code></pre></div>\n</div>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 32位</span>\n\n某些游戏只支持 32位\n倘若出现打不开游戏的情况\n可以尝试下使用 32位 的 wine\n\n\nwin32<span class="o">()</span> <span class="o">{</span>\n    <span class="nv">WINEARCH</span><span class="o">=</span>win32 <span class="nv">WINEPREFIX</span><span class="o">=</span><span class="nv">$XDG_DATA_HOME</span>/win32 <span class="se">\\</span>\n        <span class="se">\\w</span>ine <span class="nv">$1</span> -force-d3d9\n<span class="o">}</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('wget'), 'url': 'wget.html'}, 'previous_page': {'title': Markup('x265'), 'url': 'x265.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/wine.md'}
+{'title': Markup('wine'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="wine">wine<a class="headerlink" href="#wine" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>winetricks d3dx9* msxml3 msxml4 vcrun2003 quartz devenum corefonts lucida tahoma d3dcompiler_43\n</code></pre></div>\n</div>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 关掉 WINEDEBUG</span>\n\n<span class="nv">WINEDEBUG</span><span class="o">=</span>-all game.exe\n</code></pre></div>\n</div>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 32位</span>\n\n某些游戏只支持 32位\n倘若出现打不开游戏的情况\n可以尝试下使用 32位 的 wine\n\n\nwin32<span class="o">()</span> <span class="o">{</span>\n    <span class="nv">WINEARCH</span><span class="o">=</span>win32 <span class="nv">WINEPREFIX</span><span class="o">=</span><span class="nv">$XDG_DATA_HOME</span>/win32 <span class="se">\\</span>\n        <span class="se">\\w</span>ine <span class="nv">$1</span> -force-d3d9\n<span class="o">}</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('wget'), 'url': 'wget.html'}, 'previous_page': {'title': Markup('x265'), 'url': 'x265.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/wine.md'}
             
           </span>
         </div>
@@ -2436,7 +2436,7 @@ win32<span class="o">()</span> <span class="o">{</span>
   <small>
     
       Last update:
-      2022-07-11 (11:25 UTC)
+      2022-07-11 (11:27 UTC)
     
   </small>
 </div>
@@ -2537,7 +2537,7 @@ win32<span class="o">()</span> <span class="o">{</span>
 <script src="https://utteranc.es/client.js"
         repo="rsuu/rsuu.github.io"
         issue-term="pathname"
-        theme="github-dark-orange"
+        theme="github-dark"
         crossorigin="anonymous"
         async>
 </script>

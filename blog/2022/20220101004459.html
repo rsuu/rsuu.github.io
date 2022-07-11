@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('将正在运行的任务脱离终端运行'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:25 UTC)'}, 'content': '<h1 id="id1">将正在运行的任务脱离终端运行<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>sleep <span class="m">60</span>\n    <span class="c1"># 按 ctrl-z 暂停任务</span>\n<span class="nb">bg</span>\n    <span class="c1"># 让其转入后台继续运行</span>\n<span class="nb">jobs</span> -l\n    <span class="c1"># 获取 jobid</span>\n<span class="nb">disown</span> -h %&lt;jobid&gt;\n    <span class="c1"># 让其脱离终端运行</span>\n<span class="nb">disown</span> -a\n    <span class="c1"># 让多个进程脱离终端运行</span>\n</code></pre></div>\n</div>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nb">kill</span> -s SIGTSTP pid\n    <span class="c1"># 暂停进程</span>\n<span class="nb">kill</span> -s SIGCONT pid\n    <span class="c1"># 放入后台运行</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('每个汉字都是一段句子'), 'url': '20220101004439.html'}, 'previous_page': {'title': Markup('路由器'), 'url': '20220101004489.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/blog/2022/20220101004459.md'}
+{'title': Markup('将正在运行的任务脱离终端运行'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="id1">将正在运行的任务脱离终端运行<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>sleep <span class="m">60</span>\n    <span class="c1"># 按 ctrl-z 暂停任务</span>\n<span class="nb">bg</span>\n    <span class="c1"># 让其转入后台继续运行</span>\n<span class="nb">jobs</span> -l\n    <span class="c1"># 获取 jobid</span>\n<span class="nb">disown</span> -h %&lt;jobid&gt;\n    <span class="c1"># 让其脱离终端运行</span>\n<span class="nb">disown</span> -a\n    <span class="c1"># 让多个进程脱离终端运行</span>\n</code></pre></div>\n</div>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nb">kill</span> -s SIGTSTP pid\n    <span class="c1"># 暂停进程</span>\n<span class="nb">kill</span> -s SIGCONT pid\n    <span class="c1"># 放入后台运行</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('每个汉字都是一段句子'), 'url': '20220101004439.html'}, 'previous_page': {'title': Markup('路由器'), 'url': '20220101004489.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/blog/2022/20220101004459.md'}
             
           </span>
         </div>
@@ -2163,7 +2163,7 @@
   <small>
     
       Last update:
-      2022-07-11 (11:25 UTC)
+      2022-07-11 (11:27 UTC)
     
   </small>
 </div>
@@ -2264,7 +2264,7 @@
 <script src="https://utteranc.es/client.js"
         repo="rsuu/rsuu.github.io"
         issue-term="pathname"
-        theme="github-dark-orange"
+        theme="github-dark"
         crossorigin="anonymous"
         async>
 </script>
