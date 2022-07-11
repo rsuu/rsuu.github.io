@@ -63,9 +63,15 @@
               {{ page.meta.title }} +
 {{ page.meta.tags }}
 {{ page.meta.layout }}
+{{ page.meta.date }}
+{{ page.meta }}
 
             {% else %}
               {{ page.title }}
+{{ page.tags }}
+{{ page.layout }}
+{{ page.date }}
+{{ page }}
             {% endif %}
           </span>
         </div>
