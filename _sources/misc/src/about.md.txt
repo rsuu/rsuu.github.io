@@ -1,10 +1,6 @@
 # About
 
-<img src="_static/Svg/rsuu.svg" width="720"></img>
-<img src="./_static/Svg/rsuu.svg" width="720"></img>
 <img src="/_static/Svg/rsuu.svg" width="720"></img>
-<img src="../../_static/Svg/rsuu.svg" width="720"></img>
-
 
 | # | Username | Link |
 |:-|:-|:-|

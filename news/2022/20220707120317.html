@@ -225,7 +225,7 @@
 
   <li class="md-tabs__item">
     <a href="../../wiki/idx_linux.html" class="md-tabs__link">
-      <span class="md-ellipsis">📓 Wiki</span>
+      <span class="md-ellipsis">🗂️ Wiki</span>
     </a>
   </li>
 
@@ -237,7 +237,7 @@
 
   <li class="md-tabs__item">
     <a href="../../doc/idx_doc1.html" class="md-tabs__link">
-      <span class="md-ellipsis">📖 Doc</span>
+      <span class="md-ellipsis">📑 Doc</span>
     </a>
   </li>
 
@@ -427,14 +427,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          <span class="md-ellipsis">📓 Wiki</span>
+          <span class="md-ellipsis">🗂️ Wiki</span>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="📓 Wiki" data-md-level="1">
+      <nav class="md-nav" aria-label="🗂️ Wiki" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          <span class="md-ellipsis">📓 Wiki</span>
+          <span class="md-ellipsis">🗂️ Wiki</span>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -491,14 +491,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          <span class="md-ellipsis">📖 Doc</span>
+          <span class="md-ellipsis">📑 Doc</span>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="📖 Doc" data-md-level="1">
+      <nav class="md-nav" aria-label="📑 Doc" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          <span class="md-ellipsis">📖 Doc</span>
+          <span class="md-ellipsis">📑 Doc</span>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -726,7 +726,14 @@
 
   <h1 id="gtk-5-x11">开发者考虑 Gtk 5 停止支持 X11<a class="headerlink" href="#gtk-5-x11" title="Permalink to this headline">¶</a></h1>
 <p>2022-07-06 19:37</p>
-<p>GNOME 桌面环境项目的开发者 Emmanuele Bassi 发起讨论，考虑 Gtk 的下一个版本 停止支持 X11。X 视窗系统(X Window System 或 X11) 已经相当陈旧，其最新的稳定版本 X11R7.7 还是在 2012 年发布的，开源社区目前的重心是 Wayland 显示服务器。Gtk 是广泛使用的图形界面开发工具，主要由 GNOME 项目负责开发，最早版本是在 1998 年发布，GTK 4.0 的首个稳定版本是在 2020 年 12 月发布的，Gtk 5 真正发布还早，但如果 Gtk 5 放弃支持 X11，无疑将会标志着 X 视窗生命的结束和加速向 Wayland 的转移，但目前还有数以百万计的机器运行 X11。</p>
+<p>GNOME 桌面环境项目的开发者 Emmanuele Bassi 发起讨论，考虑 Gtk 的下一个版本 停止支持 X11。<br />
+X 视窗系统(X Window System 或 X11) 已经相当陈旧，其最新的稳定版本 X11R7.7 还是在 2012 年发布的，开源社区目前的重心是 Wayland 显示服务器。<br />
+Gtk 是广泛使用的图形界面开发工具，主要由 GNOME 项目负责开发，最早版本是在 1998 年发布，GTK 4.0 的首个稳定版本是在 2020 年 12 月发布的，Gtk 5 真正发布还早，但如果 Gtk 5 放弃支持 X11，无疑将会标志着 X 视窗生命的结束和加速向 Wayland 的转移，但目前还有数以百万计的机器运行 X11。</p>
+<blockquote>
+<div><p>X11 都是看不见的大问题<br />
+Wayland 都是看得见的小问题<br />
+糟心</p>
+</div></blockquote>
 
 
 
@@ -735,7 +742,7 @@
   <small>
     
       Last update:
-      2022-07-08 (04:11 UTC)
+      2022-07-11 (10:02 UTC)
     
   </small>
 </div>
@@ -807,6 +814,40 @@
     
     
       <script src="../../_static/javascripts/bundle.dc1bded0.min.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "rsuu/rsuu.github.io");
+    script.setAttribute("issue-term", "zett");
+    script.setAttribute("theme", "gruvbox-dark");
+    script.setAttribute("label", "comments");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
         <script src="../../_static/design-tabs.js"></script>
     
   </body>
