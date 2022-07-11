@@ -73,7 +73,7 @@ extensions = [
     #"sphinxcontrib.details.directive",
     #"sphinx_comments",
     "sphinx_design",
-    "sphinx_comments", 
+    #"sphinx_comments", 
 
 #   "hello",
     "myst_parser",
