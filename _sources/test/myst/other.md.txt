@@ -1,14 +1,21 @@
 ---
-blogpost: true
-date: Oct 10, 2020
-author: Nabil Freij
-location: World
-category: Manual
-language: English
+myst:
+  substitutions:
+    date: 1234
+    key1: "I'm a **substitution**"
+    key2: |
+      ```{note}
+      {{ key1 }}
+      ```
+    key3: |
+      ```{image} img/fun-fish.png
+      :alt: fishy
+      :width: 200px
+      ```
+    key4: example
 ---
 
-## other
-
+{{ my_name }}
 :octicon:`graph`
 
 ```yaml
