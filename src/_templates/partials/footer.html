@@ -87,6 +87,9 @@
         crossorigin="anonymous"
         async>
 </script>
+{{ page.title }}
+{{ page.date }}
+
 
   <!-- sphinx-immaterial: Define extracopyright block for inclusion in child template -->
   {%- if False %}{%- block extracopyright %}{%- endblock extracopyright %}{% endif %}
@@ -105,15 +108,4 @@
     </div>
     {% endif %}
   </div>
-
-{{ page.tags }}
-{{ page.layout }}
-{{ page.date }}
-{{ page.meta.tags }}
-{{ page.meta.layout }}
-{{ page.meta.date }}
-
-
-{{ page }}
- 
 </footer>
