@@ -15,6 +15,7 @@ import sphinx.util.typing
 
 from sphinx_immaterial import apidoc_formatting
 
+
 logger = sphinx.util.logging.getLogger(__name__)
 
 # -- Project information -----------------------------------------------------
@@ -69,7 +70,7 @@ extensions = [
     #"sphinx_immaterial.cppreference",
     #"sphinx_immaterial.json_domain",
 
-    #"sphinx_jinja",
+    "sphinx_jinja",
     #"sphinxcontrib.details.directive",
     #"sphinx_comments",
     "sphinx_design",
@@ -97,21 +98,13 @@ myst_enable_extensions = [
     #"replacements",
     "smartquotes",
     "strikethrough",
-    #"substitution",
+    "substitution",
     "tasklist",
 ]
 
-
-comments_config = {
-   "utterances": {
-       "repo": "rsuu/rsuu.github.io",
-       "issue-term": "zett",
-       "label": "comments",
-       "theme": "gruvbox-dark",
-       "crossorigin": "anonymous",
-   }
+myst_substitutions = {
+  "my_name": "name"
 }
-
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'sphinx_immaterial'
