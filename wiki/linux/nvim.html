@@ -138,6 +138,10 @@
           <span class="md-ellipsis">
             
               nvim
+
+
+
+{'title': Markup('nvim'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [{'url': '#regex', 'children': [], 'active': False, 'current': False, 'caption_only': False, 'title': '<span title="wiki/linux/nvim.md#regex (reference label)" class="md-ellipsis">regex</span>', 'aria_label': 'regex', 'active_or_section_within_active': True}, {'url': '#folding', 'children': [], 'active': False, 'current': False, 'caption_only': False, 'title': '<span title="wiki/linux/nvim.md#folding (reference label)" class="md-ellipsis">folding</span>', 'aria_label': 'folding', 'active_or_section_within_active': True}], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:25 UTC)'}, 'content': '<h1 id="nvim">nvim<a class="headerlink" href="#nvim" title="Permalink to this headline">¶</a></h1>\n<h2 id="regex">regex<a class="headerlink" href="#regex" title="Permalink to this headline">¶</a></h2>\n<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><code># 交换字符位置 {\n&gt; 处理前\nabcd\n\n:%s/(a)(.*)(c)(d)/\\1\\2\\4\\3\\/g\n    # 每个 () 表示一组\n\n&gt; 处理后\nabdc\n\n# }\n\n\n\n\n\n# 为所有行加上行号 {\n\n:%!cat -n\n\n:%s/^/\\=line(&quot;.&quot;).&quot;,\\t&quot;/\n\n:let i=0|g/^/s//\\=i.&#39;,&#39;/ |let i+=1\n\n:g/^/exec &quot;s/^/&quot;.strpart(line(&quot;.&quot;).&quot;   &quot;, 0, 4)\n\n:g/^/exec &quot;s/^/&quot;.line(&quot;.&quot;).&quot;\\t&quot;\n\n:%s/^/\\=printf(&#39;%04d&#39;, line(&#39;.&#39;))/\n\n# }\n</code></pre></div>\n</div>\n<h2 id="folding">folding<a class="headerlink" href="#folding" title="Permalink to this headline">¶</a></h2>\n<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><code>zc 关闭当前打开的折叠\nzo 打开当前的折叠\nzm 关闭所有折叠\nzM 关闭所有折叠及其嵌套的折叠\nzr 打开所有折叠\nzR 打开所有折叠及其嵌套的折叠\nzd 删除当前折叠\nzE 删除所有折叠\nzj 移动至下一个折叠\nzk 移动至上一个折叠\nzn 禁用折叠\nzN 启用折叠\n</code></pre></div>\n</div>\n<h1 id="global">Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><code>:v/text/d\n    # 删除不包含 text 的行\n\n\n:g!/text/d\n    # 删除不包含 text 的行\n\n\n:g/^\\s\\+&lt;frame&gt;\\(frame\\)\\@!\\_.*&lt;\\/frame&gt;\n xml 相关\n\n\n:g/\\&lt;dog\\&gt;/ .w! &gt;&gt; dog.txt | d\n    提取包含 dog 的行\n\n\n:g/^/m0\n   上下反转文本\n\n\n:g/pattern/d _\n   删除匹配的所有行\n\n\n:v/./,/./-j\n   合并重复的空白行\n\n\n:v_._,/./-1join\n   合并重复的空白行\n\n:g/^$/d\n    # 删除空行\n</code></pre></div>\n</div>\n<h1 id="command">Command<a class="headerlink" href="#command" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><code>q:\n    # 显示使用过命令\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('mv'), 'url': 'mv.html'}, 'previous_page': {'title': Markup('imagemagick'), 'url': 'imagemagick.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/nvim.md'}
             
           </span>
         </div>
@@ -2628,7 +2632,7 @@ zN 启用折叠
   <small>
     
       Last update:
-      2022-07-11 (11:21 UTC)
+      2022-07-11 (11:25 UTC)
     
   </small>
 </div>
