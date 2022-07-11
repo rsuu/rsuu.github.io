@@ -2129,7 +2129,7 @@
   <small>
     
       Last update:
-      2022-07-11 (10:02 UTC)
+      2022-07-11 (11:05 UTC)
     
   </small>
 </div>
@@ -2146,12 +2146,47 @@
         
       </main>
       
-        <footer class="md-footer">
+        <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="Footer"
+    >
+
+      <!-- Link to previous page -->
       
         
-        <a href="20220101004199.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Arch" rel="prev">
+        <a
+          href="20220101004199.html"
+          class="md-footer__link md-footer__link--prev"
+          aria-label="Previous: Arch"
+          rel="prev"
+        >
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2165,9 +2200,16 @@
           </div>
         </a>
       
+
+      <!-- Link to next page -->
       
         
-        <a href="20220616213019.html" class="md-footer__link md-footer__link--next" aria-label="Next: 15歳のテロリスト" rel="next">
+        <a
+          href="20220616213019.html"
+          class="md-footer__link md-footer__link--next"
+          aria-label="Next: 15歳のテロリスト"
+          rel="next"
+        >
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -2184,7 +2226,18 @@
     </nav>
   
   
+
+<script src="https://utteranc.es/client.js"
+        repo="rsuu/rsuu.github.io"
+        issue-term="pathname"
+        theme="gruvbox-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- sphinx-immaterial: Define extracopyright block for inclusion in child template -->
   
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     
     <div class="md-footer-meta__inner md-grid">
@@ -2202,6 +2255,8 @@
     <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
   
 </div>
+
+      <!-- Social links -->
       
     </div>
     
@@ -2216,40 +2271,6 @@
     
     
       <script src="../../_static/javascripts/bundle.dc1bded0.min.js"></script>
-        <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "rsuu/rsuu.github.io");
-    script.setAttribute("issue-term", "zett");
-    script.setAttribute("theme", "gruvbox-dark");
-    script.setAttribute("label", "comments");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
         <script src="../../_static/design-tabs.js"></script>
     
   </body>
