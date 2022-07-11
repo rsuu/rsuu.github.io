@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('ipfs'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="ipfs">ipfs<a class="headerlink" href="#ipfs" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>ipfs add --nocopy --wrap-with-directory file\n    <span class="c1"># add a new file</span>\n\n\nipfs dht findprovs &lt;cid&gt;\n    <span class="c1"># which show what peers in the DHT are still providing the file, if it can find any.</span>\n\n\nipfs repo gc\n    <span class="c1"># clear all repo</span>\n\n\nipfs object get QmPnsQoYZbTS5uednnqWbwwvQohZZw7HS4MpjHnNTABKNR <span class="p">|</span> jq\n    <span class="c1"># show file name</span>\n\n\nipfs filestore ls\n    <span class="c1"># show all files of local</span>\n\n\nipfs pin ls -q --type recursive <span class="p">|</span> xargs ipfs pin rm\n    <span class="c1"># unpin files</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('gnuplot'), 'url': 'gnuplot.html'}, 'previous_page': {'title': Markup('iptables'), 'url': 'iptables.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/ipfs.md'}
+
             
           </span>
         </div>
@@ -2439,7 +2439,7 @@ ipfs pin ls -q --type recursive <span class="p">|</span> xargs ipfs pin rm
   <small>
     
       Last update:
-      2022-07-11 (11:27 UTC)
+      2022-07-11 (11:32 UTC)
     
   </small>
 </div>

@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('xargs'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="xargs">xargs<a class="headerlink" href="#xargs" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># 从文本创建文件</span>\n&lt;files.txt xargs -d<span class="s1">&#39;\\n&#39;</span> touch\nxargs -a files.txt -d<span class="s1">&#39;\\n&#39;</span> touch\n\n\n<span class="c1"># 批量移动</span>\n<span class="k">for</span> f <span class="k">in</span> *<span class="p">;</span> <span class="k">do</span> <span class="nb">cd</span> <span class="nv">$f</span> <span class="o">&amp;&amp;</span> fd . <span class="p">|</span> head -1 <span class="p">|</span> xargs mv -t ~/t/1/t<span class="nv">$f</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ../<span class="p">;</span> <span class="k">done</span>\n    \n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('x265'), 'url': 'x265.html'}, 'previous_page': {'title': Markup('xfs'), 'url': 'xfs.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/xargs.md'}
+
             
           </span>
         </div>
@@ -2425,7 +2425,7 @@ xargs -a files.txt -d<span class="s1">&#39;\n&#39;</span> touch
   <small>
     
       Last update:
-      2022-07-11 (11:27 UTC)
+      2022-07-11 (11:32 UTC)
     
   </small>
 </div>

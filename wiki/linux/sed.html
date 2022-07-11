@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('sed'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="sed">sed<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><code>sed -n <span class="s1">&#39;/foo/{:start /bar/!{N;b start};/your_regex/p}&#39;</span> your_file\n    <span class="c1"># 跨行匹配</span>\n\n\n<span class="nb">echo</span> dog dog dos <span class="p">|</span> sed -e <span class="s1">&#39;s:dog:log:g&#39;</span>\n\n\nsed -n <span class="m">30</span>,40p <span class="k">in</span>.txt\n    <span class="c1"># 显示 30 至 40 行</span>\n\n<span class="c1"># 替换文件中的所有匹配项</span>\nsed -i <span class="s1">&#39;s/原字符串/替换字符串/g&#39;</span> filename\n\n\n<span class="c1"># 同时执行两个替换规则</span>\nsed <span class="s1">&#39;s/^/添加的头部&amp;/g；s/$/&amp;添加的尾部/g&#39;</span> \n\n\n\n\n<span class="c1"># 注意这里的 &quot; &amp; &quot; 符号，如果没有 “&amp;”，就会直接将匹配到的字符串替换掉</span>\nsed <span class="s1">&#39;s/^/添加的头部&amp;/g&#39;</span> \u3000\u3000\u3000\u3000 <span class="c1">#在所有行首添加</span>\nsed <span class="s1">&#39;s/$/&amp;添加的尾部/g&#39;</span> \u3000\u3000\u3000\u3000 <span class="c1">#在所有行末添加</span>\nsed <span class="s1">&#39;2s/原字符串/替换字符串/g&#39;</span>\u3000 <span class="c1">#替换第2行</span>\nsed <span class="s1">&#39;$s/原字符串/替换字符串/g&#39;</span>   <span class="c1">#替换最后一行</span>\nsed <span class="s1">&#39;2,5s/原字符串/替换字符串/g&#39;</span> <span class="c1">#替换2到5行</span>\nsed <span class="s1">&#39;2,$s/原字符串/替换字符串/g&#39;</span> <span class="c1">#替换2到最后一行</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('Rclone'), 'url': 'Rclone.html'}, 'previous_page': {'title': Markup('shnsplit'), 'url': 'shnsplit.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/sed.md'}
+
             
           </span>
         </div>
@@ -2444,7 +2444,7 @@ sed <span class="s1">&#39;2,$s/原字符串/替换字符串/g&#39;</span> <span 
   <small>
     
       Last update:
-      2022-07-11 (11:27 UTC)
+      2022-07-11 (11:32 UTC)
     
   </small>
 </div>

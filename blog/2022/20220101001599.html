@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('Linux'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="linux">Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>\n<blockquote>\n<div><p>linux 中 <br /><br />\n文件名最长为 255个字符 <br /><br />\n文件路径最大长度为 4096个字符 <br /></p>\n</div></blockquote>\n<h1 id="log">log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>/var/log/cron\n    <span class="c1"># 记录crond计划任务产生的事件信息</span>\n\n/var/log/dmesg\n    <span class="c1"># 记录Linux系统在引导过程中的各种事件信息</span>\n\n/var/log/maillog\n    <span class="c1"># 记录进入或发出系统的电子邮件活动</span>\n\n/var/log/lastlog\n    <span class="c1"># 记录每个用户最近的登录时间</span>\n\n/var/log/secure\n    <span class="c1"># 记录用户认证相关的安全事件信息</span>\n\n/var/log/wtmp\n    <span class="c1"># 记录每个用户登录  注销及系统启动和停机事件</span>\n\n/var/log/btmp\n    <span class="c1"># 记录失败的  错误的登录尝试及验证事件</span>\n</code></pre></div>\n</div>\n<h1 id="cache">Cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="m">3</span> &gt; /proc/sys/vm/drop_caches\n    <span class="c1"># 会清理系统的cache</span>\n\n<span class="m">1</span>\n  - free pagecache\n<span class="m">2</span>\n  - free dentries and inodes\n<span class="m">3</span>\n  - free pagecache, dentries and inodes\n</code></pre></div>\n</div>\n<h1 id="id1">时间钟<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">进程的三种状态为</span> <span class="n">阻塞</span> <span class="n">就绪</span> <span class="n">运行</span>\n\n<span class="n">时钟时间</span> <span class="o">=</span> <span class="n">阻塞时间</span> <span class="o">+</span> <span class="n">就绪时间</span> <span class="o">+</span> <span class="n">运行时间</span>\n<span class="n">用户CPU时间</span> <span class="o">=</span> <span class="n">运行状态下用户空间的时间</span>\n<span class="n">系统CPU</span>\n\n</code></pre></div>\n</div>\n<h1 id="ram">RAM<a class="headerlink" href="#ram" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>cat /proc/meminfo\ncat /proc/slabinfo\n\nps -A --sort -rss -o comm,pmem <span class="p">|</span> head -n <span class="m">11</span>\nps auxf\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('TPT'), 'url': '20220101001399.html'}, 'previous_page': {'title': Markup('Utility Argument Syntax'), 'url': '20220101004039.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/blog/2022/20220101001599.md'}
+
             
           </span>
         </div>
@@ -2234,7 +2234,7 @@ ps auxf
   <small>
     
       Last update:
-      2022-07-11 (11:27 UTC)
+      2022-07-11 (11:32 UTC)
     
   </small>
 </div>

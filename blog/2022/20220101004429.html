@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('rust slice and array'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [{'url': '#vla', 'children': [], 'active': False, 'current': False, 'caption_only': False, 'title': '<span title="blog/2022/20220101004429.md#vla (reference label)" class="md-ellipsis">VLA</span>', 'aria_label': 'VLA', 'active_or_section_within_active': True}], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="rust-slice-and-array">rust slice and array<a class="headerlink" href="#rust-slice-and-array" title="Permalink to this headline">¶</a></h1>\n<ul class="simple">\n<li><p>slice</p>\n<ul>\n<li><p>&amp;</p></li>\n</ul>\n</li>\n<li><p>array</p>\n<ul>\n<li><p>[T; n]</p></li>\n</ul>\n</li>\n</ul>\n<p>slice 和 array 的区别很坑人<br />\n&amp;[0, 0] 和 [0; 2] 完全不同<br />\n前者是 slice<br />\n后者是 array</p>\n<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><code><span class="c1">// array to slice</span>\n<span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="mi">2</span><span class="p">].</span><span class="n">as_slice</span><span class="p">()</span><span class="w"></span>\n</code></pre></div>\n</div>\n<h2 id="vla">VLA<a class="headerlink" href="#vla" title="Permalink to this headline">¶</a></h2>\n<p>可变长数组</p>\n', 'next_page': {'title': Markup('路由器'), 'url': '20220101004489.html'}, 'previous_page': {'title': Markup('选择陷阱'), 'url': '20220101004299.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/blog/2022/20220101004429.md'}
+
             
           </span>
         </div>
@@ -2197,7 +2197,7 @@
   <small>
     
       Last update:
-      2022-07-11 (11:27 UTC)
+      2022-07-11 (11:32 UTC)
     
   </small>
 </div>

@@ -141,7 +141,7 @@
 
 
 
-{'title': Markup('espeak-ng'), 'is_homepage': False, 'toc': [], 'integrated_local_toc': [], 'meta': {'hide': [], 'revision_date': '2022-07-11 (11:27 UTC)'}, 'content': '<h1 id="espeak-ng">espeak-ng<a class="headerlink" href="#espeak-ng" title="Permalink to this headline">¶</a></h1>\n<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>pacman -S espeak-ng\n\n\n\n\n<span class="c1"># 整点报时 {</span>\n<span class="nb">echo</span> <span class="s1">&#39;espeak-ng -v zh &quot;现在时间是 `\\date +&quot;%H时%t%M分%t%S秒&quot;`&quot;&#39;</span> &gt; xxx.sh\nchmod <span class="m">777</span> xxx.sh\nfcrontab -e\n<span class="m">0</span> * * * * xxx.sh\n<span class="o">}</span>\n\n\n\n\nespeak-ng -v en-us+f4 <span class="s1">&#39;today is a good day&#39;</span>\n    <span class="c1"># 使用美式英语+女声</span>\n\n\nespeak-ng --voices<span class="o">=</span>zh\n    <span class="c1"># 查看所有可用的中文语音</span>\n</code></pre></div>\n</div>\n', 'next_page': {'title': Markup('echo'), 'url': 'echo.html'}, 'previous_page': {'title': Markup('exec'), 'url': 'exec.html'}, 'edit_url': 'https://github.com/rsuu/rsuu.github.io/blob/main/src/wiki/linux/espeak-ng.md'}
+
             
           </span>
         </div>
@@ -2438,7 +2438,7 @@ espeak-ng --voices<span class="o">=</span>zh
   <small>
     
       Last update:
-      2022-07-11 (11:27 UTC)
+      2022-07-11 (11:32 UTC)
     
   </small>
 </div>
