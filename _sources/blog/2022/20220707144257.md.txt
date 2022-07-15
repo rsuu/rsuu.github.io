@@ -1,0 +1,18 @@
+---
+layout: post
+date: 20220707144257
+title: 为文件添加行号
+categories: 
+tags: []
+udc: []
+---
+
+## 为文件添加行号
+
+```bash
+nl xxx.txt
+less -N xxx.txt | cat
+cat -b xxx.txt
+
+```
+

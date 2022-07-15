@@ -1,0 +1,31 @@
+---
+layout: post
+date: 20220709115359
+title: Linux权限
+categories: 
+tags: []
+udc: []
+---
+
+## Linux权限
+
+```bash
+# r  w  x
+# 4  2  1
+# 读 写 执行
+
+chmod 765 file
+    # 7: user | 7 = 4 + 2 + 1
+    # 6: group | 6 = 4 + 2
+    # 5: other | 5 = 2 + 1
+
+
+chown -R user1:group1 ./dir
+    # 递归修改 dir 的 user 为 user1
+    # 递归修改 dir 的 group 为 group1
+
+chown -R :group1 ./dir
+    # 递归修改 dir 的 group 为 group1
+
+```
+

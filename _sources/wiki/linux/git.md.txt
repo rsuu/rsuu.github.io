@@ -257,15 +257,47 @@ git branch -m develop master
 git push -f origin master
 
 
-### Tag
+### 代码管理
 
-#### tag
+#### branch
 
 ```bash
 git branch <new-branch-name> <tag-name>
-删除tag
-1
-2
-git tag -d [tag];
-git push origin :[tag]
+
+
 ```
+#### tag
+
+```bash
+git tag v0.1.0
+    # 轻量标签
+    # 用于小版本更新
+
+git tag -a v1.0.0 -m "tag version"
+    # 附注标签
+    # 用于大版本更新
+
+git tag -d [tag]
+    # 删除tag
+
+
+# 为已提交的内容打标签
+git log --pretty=oneline
+git tag -a v1.2 <hash>
+
+
+git push origin <tag>
+    # 推送指定的标签
+
+git push origin --tags
+    # 推送所有标签
+    # 推送标签的命令并不会区分轻量标签和附注标签
+
+
+git checkout -b version2 v2.0.0
+    # 通过标签创建新分支
+```
+
+[^12]
+
+[^12]:https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE

@@ -1,0 +1,35 @@
+---
+layout: post
+date: 20220715150713
+title: asciidoc
+categories: 
+tags: []
+udc: []
+---
+
+## asciidoc
+
+本来打算使用 asciidoc 的原因是因为这个功能
+```text
+[%hardbreaks]
+Ruby is red.
+Java is black.
+```
+markdown 不支持直接换行  太糟心了
+
+但 asciidoc 的语法实在是太乱了
+有人也做过评价 
+> https://www.eclipse.org/lists/asciidoc-wg/msg00003.html
+
+hacknews 上也有相关讨论
+> https://news.ycombinator.com/item?id=27744509
+
+目前还是选择使用 markdown-it 
+后续再看看 reStructuredText
+
+暂时放弃 reStructuredText 
+虽然他的功能挺不错的  但目前并不是特别需要
+
+最后还是选了 shpinx + myst
+自己修改了下 myst 的代码让他支持了硬换行
+
