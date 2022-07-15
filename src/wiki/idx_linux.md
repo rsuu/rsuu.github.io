@@ -1,4 +1,10 @@
-## Linux ```{toctree} :caption: Linux :maxdepth: 2 linux/Arch.md
+## Linux
+
+```{toctree}
+:caption: Linux
+:maxdepth: 2
+
+linux/Arch.md
 linux/IRC.md
 linux/OOM.md
 linux/Rclone.md
@@ -96,4 +102,5 @@ linux/wine.md
 linux/x265.md
 linux/xargs.md
 linux/xfs.md
-linux/zip.md ```
+linux/zip.md
+```
