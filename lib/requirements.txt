@@ -19,6 +19,7 @@ linkify-it-py
 markupsafe
 pydantic
 typing-extensions
+yasfb
 
 git+https://github.com/rsuu/MyST-Parser@rsuu_main#egg=myst_parser
 

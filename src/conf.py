@@ -76,8 +76,9 @@ extensions = [
     "sphinx_design",
     #"sphinx_comments", 
 
-#   "hello",
+    # "hello",
     "myst_parser",
+    "yasfb", # rss feed
 ]
 
 
@@ -180,6 +181,10 @@ html_last_updated_fmt = "%Y-%m-%d (%H:%M %Z)"
 html_title = "WeatherVane"
 #html_favicon = "_static/svg/logo.svg"
 #html_logo = "_static/svg/logo.svg"
+
+# yasfb
+feed_base_url = 'https://rsuu.github.io'
+feed_author = 'RSUU'
 
 
 
