@@ -1,13 +1,10 @@
 ---
 layout: page
 date: 20220101000000
-title:
+title: 鼠标笔
 categories:
-tags:
-- idea
-udc: 
-- 411
-
+tags: [idea]
+udc: [411]
 ---
 
 ## 鼠标笔
@@ -16,16 +13,3 @@ udc:
 
 类似这个
 https://www.kickstarter.com/projects/529738175/gstick-the-mouse-you-hold-like-a-pen-for-pcs-and-m/comments
-
-
-
-
----
-
-
-
-
-
-
-
-	

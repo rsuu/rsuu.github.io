@@ -30,4 +30,5 @@ udc: [413]
     + 1. 喜欢开头插广告
     + 2. 女性喜欢谈论女权相关内容
  
-AniMimi |女性 + 动画 + 德语 |https://letscast.fm/podcasts/animimi-c91c11a8/feed
++ 罕见的
+  + AniMimi |女性 + 动画 + 德语 |https://letscast.fm/podcasts/animimi-c91c11a8/feed

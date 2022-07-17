@@ -1,16 +1,13 @@
 ---
 layout: page
 date: 20220101000000
-title:
+title: Linux 防止修改文件
 categories:
-tags:
-- linux, password
+tags: [ linux, password]
 udc: 
-
- 
 ---
 
-## Linux 防止修改密码
+## Linux 防止修改文件
 
 ```bash
 # 设置文件为只读(防止修改密码)
@@ -22,8 +19,3 @@ chattr -i /etc/passwd
 chattr -i /etc/shadow
 
 ```
-
-
-
-
-	

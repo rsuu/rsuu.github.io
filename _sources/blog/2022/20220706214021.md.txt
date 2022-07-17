@@ -29,3 +29,222 @@ udc: []
 + 光影
 + 色彩
 
+### 人
+
+- 全身
+    - https://m.youtube.com/watch?v=_CDxTAToZJw&list=PL3MxkMIAeuf36McqpjrpzvttMkaYFAIP_&index=9
+    - https://m.youtube.com/watch?v=_WxVdfUxMrA
+- 头
+    - https://m.youtube.com/watch?v=T0KNh2xDq6E
+- 头发
+    - https://m.youtube.com/watch?v=0lOZtaL_qg8
+    - https://m.youtube.com/watch?v=y6DHisBFaK8
+    - https://ichi-up.net/2021/14
+- 五官
+    - https://m.youtube.com/watch?v=iy1dsxdmB7E
+- 脸
+    - https://m.youtube.com/watch?v=aZP3FCY347A
+    - https://m.youtube.com/watch?v=q3kfG7_8Mbg
+- 眼
+    - https://m.youtube.com/watch?v=MslUUgU_HQA
+    - https://m.youtube.com/watch?v=I1TAOiACMZQ
+- 耳
+    - https://m.youtube.com/watch?v=255qesXttXA
+- 口
+- 鼻
+- 肩
+- 臂
+- 手
+    - https://m.youtube.com/watch?v=Z7xUBeu83zY
+- 背
+    - https://m.youtube.com/watch?v=KGvlKp4nBEs
+- 腰
+- 臀
+- 腿
+    - https://m.youtube.com/watch?v=z0If8RzEiiE
+- 足
+
+
+脚 地面
+https://m.youtube.com/watch?v=-nE9d-SPCQg
+
+
+
+### 装饰
+
+- 衣服
+    - https://m.youtube.com/watch?v=U57e8qDR6gc
+
+### 透视
+
+- 一点
+    - https://m.youtube.com/watch?v=a1Ds6A8iLD4
+- 两点
+    - https://m.youtube.com/watch?v=f8Xkpxmpg6E&pp=QAFIAQ%3D%3D
+- 三点
+- 多点
+
+
+### 景物
+
+- 石头
+    - https://ichi-up.net/2018/049
+    - https://m.youtube.com/watch?v=HG7YO5D_4mI
+- 树
+    - https://m.youtube.com/watch?v=q_DSE4J3X8U
+    - https://m.youtube.com/watch?v=RvEyBu9XXuk
+
+- 花
+    - https://m.youtube.com/watch?v=A0Z60qMZRqQ
+    - https://m.youtube.com/watch?v=jJaGr5imH-k
+- 叶
+    - https://m.youtube.com/watch?v=zdtIEl6xZGo
+
+### 其他
+
+- 线稿
+    - https://m.youtube.com/watch?v=-6F5q_5HC3o
+
+- 阴影
+    - https://m.youtube.com/watch?v=zI2fNfO8BBM#menu
+
+- 练习
+    - https://m.youtube.com/watch?v=qmnWuK80Nvg
+    - https://m.youtube.com/watch?v=33J4Cmdm-Mk
+
+
+
++ 男
+    + 肩
+        + 外肩稍宽于臀宽
+    + 胸
+        + 略宽于内肩
+    + 腰
+        + 稍微窄于胸宽
+    + 臀
+        + 上下宽度一致  类似横向长方形  
++ 女
+    + 肩
+        + 外肩略窄于臀宽
+    + 胸
+        + 略宽于内肩
+    + 腰
+        + 窄于胸宽
+    + 臀
+        + 上窄下宽 类似横向正梯形
+
+### 人体比例 
+
+#### 头身比
+
++ 成年人
+    + 高 7-9
+    + 宽 3-4
++ 青少年
+    + 高 6-7
+    + 宽 2-3
+
+以肚脐为分界
+下肢与身高比要接近1：1.618的黄金比例
+
+#### 维特鲁威人
+
+身高 == 臂展
+
+### 透视
+
++ 视点 
+    + 观察者眼睛所在的位置
++ 心点
+    + 视点对画面的垂直落点, 即画面主视觉的焦点, 也是平行透视中的灭点
++ 余点
+    + 成角透视中心点两侧的灭点
++ 天点
+    + 竖直方向的顶灭点
++ 地点
+    + 竖直方向的底灭点。
++ 视线 
+    + 视点与被观察物体间的连线
++ 视中线
+    + 视点与心点的连线, 是最短的一条中心视线
++ 水平线
+    + 与地面平行朝向的直线
++ 竖直线
+    + 与地面垂直朝向的直线
++ 视平线
+    + 过心点的水平线, 代表视点的高度, 是上下分割画面的基准线
++ 正中线
+    + 过心点的竖直线, 与视平线互相垂直, 是左右分割画面的基准线
++ 地平线
+    + 视域最远处天空与地（海）面的交界线, 平视时与视平线重合
+
+### 一点透视
+
++ 近大远小的规律
++ 近处斜棱要向上延伸
++ 远处斜棱要向下延伸
+
+
+### 绘画方式
+
+#### 斜二测画法
+
+先画出 x 和 y 轴 <br />
+之后以任意一轴为底 <br />
+由 (0, 0) 为起始点 <br />
+按 45° 角的大小延伸出 z 轴 <br />
+
+
+视角67度, 视距为心点到画幅最远角的1.5倍；
+
+视角60度, 视距为心点到画幅最远角的1.7倍；
+
+视角53度, 视距为心点到画幅最远角的2.0倍。
+
+视角在90度～67度之间, 称为特近视距；
+
+视角在67度～53度之间, 称为近视距；
+
+视角在53度～37度之间, 称为中视距；
+
+视角小于37度, 称为远视距。
+
+通常作图, 均采用2倍视距构图, 便于计算, 也可以采用1.5倍视距, 便于作图。
+
+因为实际作图时, 画纸都不会很大, 而透视图往往需要很大的空间, 主体物则会显得很小, 因此视距如果越近的话, 透视图就能够画得越大, 便于分析和标注复杂的透视关系。
+
+
+## 学习
+
++ https://helloartsy.com
+    + 1. https://helloartsy.com/2pt-perspective
++ https://artwithmark.wordpress.com
++ https://www.pixiv.net/users/16776564
+
++ 两点透视
+    + https://helloartsy.com/perspective-drawing-exercises/
++ 三点透视
+    + https://helloartsy.com/three-point-perspective/
+
+
++ 人体各部分
+    + https://m.youtube.com/playlist?list=PL3MxkMIAeuf36McqpjrpzvttMkaYFAIP_
++ 全身
+    + https://m.youtube.com/watch?v=FSbkXohD4Zc
++ 头部
+    + https://m.youtube.com/watch?v=dSf0UYDi9sA
+    + https://m.youtube.com/watch?v=Auo71VJbWcM
++ 手部
+    + https://m.youtube.com/watch?v=XjVzpl7Jlbo
++ 透视
+    + https://m.youtube.com/watch?v=W20Ks157pkc
+
+## 立体
+
++ 立方体
+    + 平视
+        + 111.11
+    + 俯视
+        + 121.41
+    + 仰视
+        + 121.14

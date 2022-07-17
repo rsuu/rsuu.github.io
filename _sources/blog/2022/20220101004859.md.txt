@@ -1,14 +1,10 @@
 ---
 layout: page
 date: 20220101000000
-title:
+title: Zettelkästen
 categories:
-- misc
-tags:
-- ing
-- zettelkästen
+tags: [ zettelkästen]
 udc:
-reference:
 ---
 
 ## Zettelkästen
@@ -30,17 +26,4 @@ reference:
     + 对笔记的整理
 + 索引卡[index notes]
     + 存放索引信息
-
-
-
-
-
----
-
-
-
-
-
-
-
 

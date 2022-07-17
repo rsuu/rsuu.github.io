@@ -1,15 +1,10 @@
 ---
-
 layout: page
 date: 20220101000000
-title:
+title: path
 categories:
 tags: 
 udc: 
-
- 
-
-
 ---
 
 ## path
@@ -21,15 +16,3 @@ udc:
 /etc/passwd
     # 旧的存放密码的路径
 ```
-
-
-
----
-
-
-
-
-
-
-
-	

@@ -1,15 +1,10 @@
 ---
 layout: page
 date: 20220101000000
-title:
-categories:
-- linux
-tags:
-- ing
-- arch
+title: Arch
+categories: linux
+tags: [todo]
 udc:
-reference:
-
 ---
 
 ## Arch
@@ -21,9 +16,3 @@ reference:
 pacman -S pacman-static
     # 防止 pacman 出问题
 ```
-
-
-
-
-
-

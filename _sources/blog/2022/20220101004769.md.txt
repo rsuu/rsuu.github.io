@@ -1,15 +1,10 @@
 ---
 layout: page
 date: 20220101000000
-title:
+title: 数据类型
 categories:
-tags: 
-- ing
-- struct
-- type
-- binary 
+tags: [struct]
 udc: 
-
 ---
 
 ## 数据类型

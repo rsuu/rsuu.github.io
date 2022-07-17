@@ -1,21 +1,15 @@
 ---
 layout: page
 date: 20220101000000
-title:
-categories:
-- linux
-tags:
-- tty
-- font
+title: tty fonts
+categories: linux
+tags: [font, tty]
 udc:
-reference:
-
-1|https://bbs.archlinux.org/viewtopic.php?id=134370
-
-
 ---
 
-## set tty fonts
+## tty fonts
+
+https://bbs.archlinux.org/viewtopic.php?id=134370
 
 ### 临时更改
 
@@ -30,7 +24,3 @@ setfont <font_name>
 ```
 
 ### 永久更改
-
-
-
-
