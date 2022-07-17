@@ -78,7 +78,7 @@ extensions = [
 
     # "hello",
     "myst_parser",
-    "yasfb", # rss feed
+    #"yasfb", # rss feed
 ]
 
 
