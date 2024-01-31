@@ -1,0 +1,241 @@
+/*@import "reset.css";*/
+@import "popup.css";
+@import "comment.css";
+@import "fonts.css";
+@import "toolkit.css";
+@import "h.css";
+@import "main.css";
+@import "blockquote.css";
+@import "code.css";
+@import "tabs.css";
+
+/*
+ 05px 06px 07px 08px 09px
+ 10px 12px 14px 16px 18px
+ 20px 24px 30px 32px 36px
+*/
+
+:root {
+  --font-size-main: 1.6rem;
+  --font-size-meta: 1.2rem;
+
+  --line-height-main: 3rem;
+
+  --color-fg-green: #bbbb22;
+  --color-body: #223344;
+  /*--color-body: #333333;*/
+  --color-headings: #111827;
+  --color-lead: #4b5563;
+  --color-links: #111827;
+  --color-bold: #111827;
+  --color-counters: #6b7280;
+  --color-bullets: #d1d5db;
+  --color-hr: #e5e7eb;
+  --color-quotes: #111827;
+  --color-quote-borders: #e5e7eb;
+  --color-captions: #6b7280;
+  --color-code: #111827;
+  --color-pre-code: #e5e7eb;
+  --color-pre-bg: #1f2937;
+  --color-th-borders: #d1d5db;
+  --color-td-borders: #e5e7eb;
+
+  --color-invert-body: #d1d5db;
+  --color-invert-headings: #fff;
+  --color-invert-lead: #9ca3af;
+  --color-invert-links: #fff;
+  --color-invert-bold: #fff;
+  --color-invert-counters: #9ca3af;
+  --color-invert-bullets: #4b5563;
+  --color-invert-hr: #374151;
+  --color-invert-quotes: #f3f4f6;
+  --color-invert-quote-borders: #374151;
+  --color-invert-captions: #9ca3af;
+  --color-invert-code: #fff;
+  --color-invert-pre-code: #d1d5db;
+  --color-invert-pre-bg: rgb(0 0 0 / 50%);
+  --color-invert-th-borders: #4b5563;
+  --color-invert-td-borders: #374151;
+}
+
+/* TODO: dark theme */
+/*
+@media (prefers-color-scheme: dark) {
+  body[theme="auto"] {
+    filter: invert(1);
+  }
+
+  body[theme="auto"] img {
+    filter: invert(1);
+  }
+
+  body[theme="auto"] img.ioda {
+    filter: invert(0);
+  }
+}
+
+body[theme="dark"] {
+  filter: invert(1);
+}
+
+body[theme="dark"] img {
+  filter: invert(1);
+}
+
+body[theme="dark"] img.ioda {
+  filter: invert(0);
+}
+*/
+
+html,
+body {
+  /* REFS: https://www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick */
+  font-size: 62.5%;
+  /*background: white;*/
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  z-index: 0;
+  /*color: black;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  min-height: 100%;
+  overflow-wrap: break-word;
+ */
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+*:target {
+  background: yellow;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: thin solid black;
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+label {
+  visibility: hidden;
+}
+
+input:checked + label {
+  visibility: visible;
+}
+
+input[type="checkbox"]:checked {
+}
+
+/* Style the input to look like a link */
+input .link-like {
+  border: none;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  padding: none;
+  width: auto;
+}
+
+/*
+.ul {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(auto-fill, 50px);
+  justify-content: center;
+}
+
+.li {
+  width: 50px;
+  height: 50px;
+  background: #111;
+}
+*/
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: 0.3em;
+  right: 0.2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: #bbb;
+  font-size: 0.8em;
+  padding: 0 0.5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.2);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover {
+  color: inherit;
+  text-decoration: none;
+}

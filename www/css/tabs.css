@@ -1,0 +1,75 @@
+.tabs {
+  background: #fff;
+  position: relative;
+  margin-bottom: 50px;
+
+  & > .title {
+    & > input,
+    & > span {
+      height: 60px;
+      line-height: 60px;
+      position: absolute;
+      top: 0;
+    }
+
+    & > input {
+      cursor: pointer;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      position: absolute;
+      z-index: 10;
+    }
+
+    & > span {
+      background: #f0f0f0;
+      text-align: center;
+      overflow: hide;
+    }
+
+    & > span i,
+    & > span {
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    & > input:hover + span {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    & > input:checked + span {
+      background: #fff;
+    }
+
+    & > input:checked + span,
+    & > input:hover + span {
+      color: #3498db;
+    }
+  }
+}
+
+.tab-content {
+  padding: 80px 20px 20px;
+
+  min-height: 340px;
+}
+
+.tab-content section {
+  display: none;
+}
+
+.effect-3 .line {
+  background: #3498db;
+  width: 20%;
+  height: 4px;
+  position: absolute;
+  top: 56px;
+}
+
+.ease {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}

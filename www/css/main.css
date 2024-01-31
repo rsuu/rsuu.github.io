@@ -1,0 +1,12 @@
+main {
+  color: var(--color-body);
+  font-size: var(--font-size-main);
+  line-height: var(--line-height-main);
+
+  text-justify: auto;
+  min-width: 85vw;
+  width: 85vw;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0.5rem 0.3rem;
+}

@@ -1,0 +1,38 @@
+blockquote {
+  /*
+  border: thin solid black;
+*/
+
+  font-style: italic;
+  /* font-synthesis 控制浏览器合成粗体或斜体 */
+  font-synthesis: none;
+
+  position: relative;
+  padding: 0.5rem 0.733rem 0.5rem 0.9rem;
+  margin-left: 1.233rem;
+  margin-right: 1.333rem;
+  width: 80%; /* create space for the quotes */
+  margin: 0 auto;
+
+  text-align: center;
+  color: rgba(55, 65, 81, 0.8);
+  /*
+  padding: 1rem 0.8rem 1rem 0.3rem;
+  */
+
+  background:
+    linear-gradient(to right, var(--color-quote-borders) 4px, transparent 4px) 0
+      100%,
+    linear-gradient(to left, var(--color-quote-borders) 4px, transparent 4px)
+      100% 0,
+    linear-gradient(to bottom, var(--color-quote-borders) 4px, transparent 4px)
+      100% 0,
+    linear-gradient(to top, var(--color-quote-borders) 4px, transparent 4px) 0
+      100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+
+  & p {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,106 @@
+:root {
+  --color-yellow-fg: #e78f21;
+  --color-yellow-bg: #e78f21;
+
+  --color-yellow-fg-comment: #5c3c01;
+  --color-yellow-bg-comment: #fffbe7;
+}
+
+#vec-comment {
+  position: relative;
+
+  display: block;
+  margin: 0 auto;
+
+  font-size: 2rem;
+
+  & > .comment {
+    margin-top: 1rem;
+
+    background: #ddd;
+
+    & > .footer {
+      display: flex;
+      justify-content: space-between;
+
+      & > .nkkk {
+        margin-left: 0.7rem;
+      }
+      & > .btn {
+        color: #321;
+        background: #000;
+      }
+
+      & > .nkkk,
+      & > .btn {
+        & > div {
+          display: inline-block;
+        }
+      }
+    }
+
+    & > .header {
+      margin-left: 0.3rem;
+      border-bottom: 0.05em solid #ccc;
+      padding: 0 0.3rem;
+
+      & > a {
+        text-decoration: none;
+      }
+    }
+
+    & > .body {
+      padding: 0 2rem;
+    }
+  }
+}
+
+.header > .thread-info {
+  display: inline;
+  float: right;
+
+  & > .thread-id {
+    color: green;
+
+    &::after {
+      content: "-";
+    }
+  }
+
+  & > .reply-to {
+    color: gray;
+  }
+}
+
+.--comment-header-hide {
+  opacity: 0.5;
+}
+
+.--comment-body-hide {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.--comment-btn-hide {
+  visibility: hidden;
+  display: none;
+}
+
+.--comment-footer-hide {
+  visibility: hidden;
+  display: none;
+}
+
+.--comment-marl {
+  margin-left: 2rem;
+}
+
+.--yellow {
+  background: var(color-yellow-bg-comment) !important;
+}
+.icons {
+  fill: var(--color-yellow-fg);
+  width: 1rem;
+  height: 1rem;
+}

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+
+@font-face {
+  font-family: "Noto Sans";
+  unicode-range: U+2E80-A4CF, U+F900-FAFF, U+FE30-FE4F;
+}
+
+:root {
+  --font-sans-serif: Helvetica, "Noto Sans", "Noto Sans CJK SC", sans-serif;
+
+  --font-serif: "Noto Serif", "Noto Serif SC", "Noto Serif CJK", serif;
+
+  --font-mono: "SF Mono", "Source Code Pro", monospace;
+}
+
+/* REFS: https://stackoverflow.com/questions/20490704/combine-calc-with-attr-in-css */
+:root {
+  --letter-size: 3;
+
+  [--letter-size="4"] {
+    --letter-size: 4;
+  }
+
+  [--letter-size="5"] {
+    --letter-size: 5;
+  }
+}
+
+body {
+  font-family: var(--font-sans-serif);
+  font-size: 1.6rem;
+}
+
+article {
+  display: block;
+}
+
+article > p {
+  display: block;
+  text-indent: 2em;
+
+  &:first-of-type {
+    text-indent: 0;
+
+    &::first-letter {
+      float: left;
+      margin-top: 0.4rem;
+      margin-right: 0.5rem;
+      line-height: 1em;
+      right: 0;
+      color: #c33;
+      font-size: calc(var(--font-size-main) * var(--letter-size));
+    }
+  }
+}
+
+.--first-letter {
+  /* no ident */
+  text-indent: 0;
+
+  &::first-letter {
+    float: left;
+    margin-top: 0.7rem;
+    margin-right: 0.7rem;
+    line-height: 1em;
+    color: #c33;
+
+    /* css4
+    font-size: calc(1.6rem * attr(--letter-size number, 2)));
+    */
+    font-size: calc(var(--font-size-main) * var(--letter-size));
+    /*js: font-size: attr(--letter-font-size);*/
+  }
+}
