@@ -13,7 +13,7 @@ jobs:
       with: 
         lfs: true
     - name: shalzz/zola-deploy-action
-      uses: shalzz/zola-deploy-action@master
+      uses: shalzz/zola-deploy-action@v0.18.0
       env:
         PAGES_BRANCH: gh-pages
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
