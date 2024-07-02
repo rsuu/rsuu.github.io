@@ -9,7 +9,7 @@ tags = ["midi","lilypond","staff","audio"]
 
 ## Staff
 
-制谱这块我们用[LilyPond],虽然用的是`LaTeX`那样的语法(还混入了`LISP`),但除此之外也没什么好的选择了,能在终端里使用还坚固着这么完美的质量...
+制谱这块我们用[LilyPond],虽然用的是`LaTeX`那样的语法(还混入了`LISP`),但除此之外也没什么好的选择了,能在终端里使用还兼顾着这么完美的质量...
 
 
 ```lilypond
