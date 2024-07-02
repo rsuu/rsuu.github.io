@@ -1,0 +1,37 @@
+{% extends "section.html" %}
+
+{% block content %}
+
+<!-- <h1 class="blog-title">{{ section.title | safe }}</h1> -->
+
+<div class="blog">
+  <div class="blog-content">
+
+    {% set year = "-1" %}
+    {% for page in section.pages %}
+      <div class="atom-flex">
+        {% set this_year = page.date | date(format="%Y") %}
+        {% if year != this_year %}
+        {% set_global year = this_year %}
+          <span class="init-year year-ch">::</span>
+          <div class="space"></div>
+          <span class="init-year year">{{ year }}</span>
+        {% endif %}
+      </div>
+  
+      <ul>
+        <li>
+            <div class="atom-flex">
+              <span class="date">{{ page.date| date(format="%b %d") }}</span>
+              <span class="pound"></span>
+              <a class="title" href="{{page.permalink | safe }}">{{ page.title }}</a>
+              <div class="space"></div>
+          </div>
+        </li>
+      </ul>
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock content %}

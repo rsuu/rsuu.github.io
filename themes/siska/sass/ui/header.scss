@@ -1,0 +1,89 @@
+header {
+  font-size: var(--size-header);
+  margin: 0 0.777rem 2.333rem 0;
+  padding: 1rem;
+}
+.header-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  // flex-wrap: wrap;
+  cap: 1.333rem;
+  vertical-align: middle;
+}
+.header-flex > .toggle-theme {
+  align-self: flex-start;
+  flex-shrink: 1;
+  margin-right: auto;
+
+  & > .themeButton {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    position: relative;
+    margin-left: -2.111rem;
+  }
+
+  .dark .themeButton.dark,
+  .themeButton.light {
+    display: none;
+  }
+  .dark .themeButton.light {
+    display: block;
+  }
+
+  .themeButton,
+  hr,
+  textarea {
+    color: var(--primary);
+  }
+
+  /* Icons settings */
+  .icons {
+    width: 1.8rem;
+    height: 1.8rem;
+    aspect-ratio: 1/1;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--fg);
+    fill: var(--fg);
+    background-color: transparent;
+  }
+  .icons__background:hover {
+    background-color: transparent;
+    color: var(--primary);
+  }
+}
+// TODO: improve
+.header-flex > .search {
+  display: none;
+  flex-shrink: 1;
+  margin-top: 0.233rem;
+
+  & > input {
+    height: 1rem;
+    max-width: 10rem;
+  }
+}
+.header-flex > .nav > nav {
+  align-self: flex-start;
+  flex-shrink: 1;
+  margin-right: -2.333rem;
+
+  & > .links {
+    color: var(--nav-fg);
+    margin: 0.133rem auto;
+
+    & > a {
+      font: normal small-caps 600 1.4rem / 0.9 var(--font-meta);
+      text-decoration: underline solid var(--header-underline) 0.2rem;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+author = "rsuu"
+base_url = "https://rsuu.github.io"
+theme = "siska"
+taxonomies = [
+    { name = "set", feed = true},
+    { name = "tags", feed = true},
+]
+generate_feed = true
+feed_filenames = ["atom.xml"]
+compile_sass = true
+minify_html = true
+build_search_index = false
+
+[markdown]
+highlight_code = true
+highlight_theme = "gruvbox-dark"
+lazy_async_image = true
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+# truncate_content_length = 100
+index_format = "elasticlunr_javascript"
+
+[extra]
+default_theme = "light"
+default_language = "en"
+accent_color = "pink"
+background_color = "dark"
+title = "(#--#___++++)"
+toc = false
+display_author = true
+header_nav = [
+    { url = "/", name_en = "home" },
+    { url = "/blog", name_en = "blog" },
+    { url = "/series", name_en = "series" },
+    { url = "/journal", name_en = "journal"},
+    { url = "/about", name_en = "about" },
+]

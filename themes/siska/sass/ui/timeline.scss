@@ -1,0 +1,51 @@
+.timeline {
+  display: block;
+  position: relative;
+  margin: 2rem 0 2rem -2.111rem;
+
+  & li {
+    list-style-type: none;
+    font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
+
+    // dot
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 6px;
+      height: 6px;
+      top: 0.999rem;
+      left: 2.133rem;
+      border-radius: 50%;
+      background: var(--color-pink-200);
+    }
+
+    // line
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 2px;
+      // min-height: 3rem;
+      height: 100%;
+      top: 0.433rem;
+      left: 2.333rem;
+      border-radius: 2px;
+      background: var(--color-pink-200);
+    }
+  }
+
+  & .txt {
+    margin-right: -1.555rem;
+  }
+
+  & .date {
+    display: flex;
+    justify-content: flex-end;
+
+    & span {
+      font: normal normal 600 1rem / 1 var(--font-meta);
+      color: var(--color-gray-700);
+    }
+  }
+}

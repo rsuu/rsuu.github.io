@@ -1,0 +1,51 @@
+{% set current_lang = config.default_language %} {% if page %} {% set
+current_lang = page.lang %} {% elif section %} {% set current_lang =
+section.lang %} {% endif %} {% if config.extra.header_nav %}
+
+<div class="header-flex">
+  <div class="toggle-theme">
+    <button
+      class="themeButton light"
+      onclick="setTheme('light')"
+      title="Light mode"
+    >
+      <svg class="icons icons__background">
+        <use
+          href="{{ get_url(path='icons.svg#lightMode', trailing_slash=false) | safe }}"
+        ></use>
+      </svg>
+    </button>
+    <button
+      class="themeButton dark"
+      onclick="setTheme('dark')"
+      title="Dark mode"
+    >
+      <svg class="icons icons__background">
+        <use
+          href="{{ get_url(path='icons.svg#darkMode', trailing_slash=false) | safe }}"
+        ></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="search">
+    <input type="" name="search" value="" />
+  </div>
+
+  <div class="nav">
+    <nav>
+      <div class="links">
+        {% for nav_item in config.extra.header_nav %}
+        <a
+          href="{{ nav_item.url }}"
+          class="{% if nav_item.url == current_url %}active{% endif %}"
+        >
+          {% set language_key = 'name_' ~ current_lang %} {{
+          nav_item[language_key] }}
+        </a>
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</div>
+{% endif %}

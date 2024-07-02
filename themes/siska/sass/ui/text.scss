@@ -1,0 +1,108 @@
+@use "../fn" as *;
+
+p {
+  display: block;
+  font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
+  color: var(--fg);
+  text-wrap: pretty;
+  font-feature-settings: "palt" 1;
+  // letter-spacing: 0.12em;
+  max-inline-size: 50ch;
+  font-kerning: auto;
+  @media (max-width: 540px) {
+    & {
+      max-inline-size: 40ch;
+    }
+  }
+  @media (max-width: 860px) {
+    & {
+      max-inline-size: 50ch;
+    }
+  }
+  @media (max-width: 1024px) {
+    & {
+      max-inline-size: 55ch;
+    }
+  }
+
+  margin-bottom: calc(var(--main-font-size) * 1.2);
+
+  & a {
+    color: var(--a-fg);
+  }
+}
+// p:first-of-type {
+//   text-indent: 2em;
+// }
+
+a,
+p > code {
+  font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
+  color: var(--a-fg);
+  text-decoration: none;
+  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+
+  display: inline-block;
+  position: relative;
+  padding: 0 0.333rem;
+
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.5s;
+  transition-property: color;
+  -webkit-transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-property: color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: white;
+  }
+
+  &:before {
+    content: "";
+    background: var(--a-bg-hover);
+    border-radius: 1px;
+    padding: 0.777rem;
+
+    position: absolute;
+    z-index: -1;
+    @include float(0, 0, 0, 0);
+
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition-duration: 500ms;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    -webkit-transform-origin: 100% 50%;
+    -webkit-transform: scaleX(0);
+    -webkit-transition-duration: 500ms;
+    -webkit-transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+  }
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    -webkit-transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  }
+}
+
+// inline code
+p > code {
+  background: var(--color-pink-25);
+  border-radius: 2px;
+}
+
+main {
+  // URL
+  p a[href] {
+    text-decoration: underline;
+  }
+}
+
+// REFS: https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-east-asian

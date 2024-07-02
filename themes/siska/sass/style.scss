@@ -1,0 +1,73 @@
+@use "fn" as *;
+
+@use "theme";
+
+@use "ui/anim";
+@use "ui/blog";
+@use "ui/code";
+@use "ui/footer";
+@use "ui/header";
+@use "ui/img";
+@use "ui/layout";
+@use "ui/meta";
+@use "ui/misc";
+@use "ui/quote";
+@use "ui/space";
+@use "ui/table";
+@use "ui/text";
+@use "ui/timeline";
+@use "ui/title";
+
+// @use "ui/masonry";
+
+:root {
+  font-size: 62.5%;
+  // scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  // scrollbar-color: var(--dimGrey) var(--bg);
+
+  // ::-webkit-scrollbar {
+  //   width: 3px;
+  //   height: 8px;
+  //   background-color: red;
+  // }
+
+  ::selection {
+    color: white;
+    background: var(--color-soft-pink);
+  }
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+body {
+  max-width: var(--max-page-width);
+  background: var(--body-bg);
+  padding: 0.333rem 0;
+
+  @include center;
+}
+
+/* Site Specific Styling */
+.wrapper {
+  position: relative;
+  padding: 0 3.333rem 2rem 3.777rem;
+  color: var(--fg);
+  background: var(--bg);
+  border-radius: 2px;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  word-break: break-all;
+
+  @include media("desktop") {
+    text-align: justify;
+  }
+}
+
+// REFS: https://edu.gcfglobal.org/en/beginning-graphic-design/

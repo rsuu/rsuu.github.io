@@ -1,0 +1,108 @@
+@use "../theme";
+@use "../fn" as *;
+
+.code-bar {
+  display: block;
+  background: #333;
+  border-radius: var(--pre-code-br) var(--pre-code-br) 0 0;
+  width: var(--pre-code-width);
+
+  position: relative;
+  padding: var(--pre-code-padding);
+  margin: 0 auto;
+  margin-bottom: -0.111rem;
+
+  & > div {
+    font: normal normal 500 1.4rem / 1.4 var(--font-code);
+    color: var(--code-bar-fg);
+    background: var(--codeblock-bg);
+    border-radius: var(--pre-code-br) 0 0 0;
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.777rem;
+  }
+}
+
+// pre {
+//   /* border: 1px solid var(--primary); */
+//   width: var(--pre-code-width);
+//   max-height: 24rem;
+//   // border-radius: 0 0 var(--pre-code-br) var(--pre-code-br);
+//   border-radius: var(--pre-code-br);
+//
+//   position: relative;
+//   padding: var(--pre-code-padding);
+//   margin: 0 auto;
+//   margin-bottom: 2rem;
+//
+//   counter-reset: line 0;
+//   display: grid;
+//   grid-template-columns: min-content 1fr;
+//   gap: 0.3rem;
+//
+//   overflow: scroll;
+//   scrollbar-width: none;
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
+//
+//   & > code {
+//     font: normal normal 400 1.4rem / 1.4 var(--font-code);
+//   }
+//
+//   & > code > span {
+//     font: normal normal 400 1.4rem / 1.4 var(--font-text);
+//   }
+//
+//   &[data-linenos] > code > table {
+//     table-layout: fixed;
+//   }
+//
+//   /* Line Number */
+//   // &[data-linenos] > code > table > tbody > tr > td::before {
+//   //   color: var(--linenos-fg);
+//   //   counter-increment: line;
+//   //   content: counter(line);
+//   // }
+//   &[data-linenos] > code > table > tbody > tr > td {
+//     display: inline-block;
+//     line-height: 1.2;
+//   }
+//   &[data-linenos] > code > table > tbody > tr > td:nth-of-type(1) {
+//     text-align: right;
+//     min-width: 2.999rem;
+//     padding-right: 1.333rem;
+//     overflow: scroll;
+//   }
+//   // &[data-linenos] > code > table > tbody > tr > td {
+//   //   padding-left: 1rem;
+//   //   line-height: 1.4;
+//   // }
+// }
+// pre > code {
+//   & > table {
+//     margin: 0 auto;
+//     border-collapse: collapse;
+//   }
+//   & > table td {
+//     padding: 0;
+//   }
+//   & > table td mark {
+//   }
+// }
+
+pre {
+  display: block;
+  font: normal normal 400 var(--size-code) / 1.4 var(--font-code);
+  background-color: var(--color-gray-200);
+  overflow: scroll;
+  max-height: 70vh;
+  @include embed;
+
+  // &[data-lang="txt"] {
+  //   font: normal normal 400 1.6rem/1.4 var(--font-text);
+  // }
+}

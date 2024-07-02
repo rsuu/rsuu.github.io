@@ -1,0 +1,56 @@
+@use "sass:map";
+
+@function media-map($key) {
+  $map: (
+    "desktop": 1024px,
+    "tablet": 768px,
+    "mobile": 540px,
+  );
+
+  @return map.get($map, $key);
+}
+
+@mixin float($top, $right, $buttom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $buttom;
+  left: $left;
+}
+
+@mixin center() {
+  margin: 0 auto;
+}
+
+@mixin embed() {
+  width: calc(100% + 0.777rem);
+  margin: 1rem -3.777rem;
+  padding: 2.333rem 2.555rem 2.333rem 3.777rem;
+}
+
+// $name: { desktop, tablet, mobile }
+@mixin media($name) {
+  $width: media-map($name);
+
+  $query: "(min-width: #{$width})";
+
+  @media #{$query} {
+    @content;
+  }
+}
+
+/// @include animateKeyframe($name: spin360, $duration: 2s, $count: infinite);
+@mixin animateKeyframe(
+  $name,
+  $duration: 1s,
+  $delay: 0s,
+  $timing: linear,
+  $count: 1,
+  $direction: normal
+) {
+  animation-name: $name;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-iteration-count: $count;
+  animation-direction: $direction;
+}

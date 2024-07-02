@@ -1,0 +1,10 @@
+<div class="timeline">
+  <ul>
+    <li>
+      <div class="txt">{{ body | markdown | safe }}</div>
+      <div class="date">
+        <span> {% if date %} {{ date }} {% endif %} </span>
+      </div>
+    </li>
+  </ul>
+</div>

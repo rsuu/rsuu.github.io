@@ -1,0 +1,13 @@
+name = "siska"
+description = "Fork of simonask"
+license = "MIT"
+homepage = "https://github.com/rsuu/rsuu.github.io/themes/siska"
+min_version = "0.4.0"
+demo = "https://rsuu.github.io"
+
+[extra]
+
+
+[author]
+name = "RSUU"
+homepage = "https://rsuu.github.io"

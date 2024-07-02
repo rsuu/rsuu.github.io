@@ -1,0 +1,28 @@
+.atom-flex {
+  display: flex;
+  justify-content: center;
+
+  > .space {
+    /* REFS: https://stackoverflow.com/posts/51791674 */
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+
+    &[style] {
+      flex-grow: var(--grow);
+      height: var(--h);
+    }
+  }
+}
+
+.box {
+  background: #aaa;
+  width: 3rem;
+  height: 3rem;
+
+  &[style] {
+    width: var(--w);
+    height: var(--h);
+  }
+}
