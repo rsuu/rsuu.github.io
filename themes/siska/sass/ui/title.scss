@@ -22,18 +22,9 @@ h1 {
 
   margin: -2rem 0 0 -0.7rem;
 }
-h2 {
-  font-size: calc(var(--h2-scale) * var(--size-title));
-}
-h3 {
-  font-size: calc(var(--h3-scale) * var(--size-title));
-}
-h4 {
-  font-size: calc(var(--h4-scale) * var(--size-title));
-}
-h5 {
-  font-size: calc(var(--h5-scale) * var(--size-title));
-}
-h6 {
-  font-size: calc(var(--h6-scale) * var(--size-title));
+
+@for $i from 2 through 6 {
+  h#{$i} {
+    font-size: calc(var(--h#{$i}-scale) * var(--size-title));
+  }
 }

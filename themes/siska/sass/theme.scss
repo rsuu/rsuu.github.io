@@ -1,17 +1,23 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: "ChillRoundF";
-  src: url("/fonts/ChillRoundFRegular.otf");
+@mixin ff($name, $path) {
+  $root: "/fonts/";
+
+  @font-face {
+    font-family: $name;
+    @if $path != "" {
+      src: url($root + $path + ".otf");
+    }
+  }
 }
 
-@font-face {
-  font-family: "ChillRoundFB";
-  src: url("/fonts/ChillRoundFBold.otf");
-}
+$fonts:
+  [("ChillRoundF", "ChillRoundFRegular"),
+  ("ChillRoundFB", "ChillRoundFBold"),
+  ("Noto Sans", "")];
 
-@font-face {
-  font-family: "Noto Sans";
+@each $name, $path in $fonts {
+  @include ff($name, $path);
 }
 
 :root {
@@ -64,6 +70,7 @@
   --color-hard-blue: oklch(62.72% 0.142 256.1);
 
   --color-purple-50: oklch(93.76% 0.026 321.94);
+  --color-purple-100: oklch(84.37% 0.116 321.55);
   --color-purple-200: oklch(74.37% 0.116 321.55);
   --color-purple-300: oklch(64.55% 0.162 321.61);
   --color-purple-400: oklch(57.63% 0.194 321.59);
@@ -78,6 +85,7 @@
   --color-pink-300: oklch(68.78% 0.18 1.96);
   --color-pink-400: oklch(63.92% 0.185 5.28);
   --color-pink-500: oklch(60.62% 0.225 9.63);
+  --color-pink-500-A60: oklch(60.62% 0.225 9.63 / 60%);
   --color-pink-600: oklch(57.37% 0.218 7.85);
   --color-pink-700: oklch(63.13% 0.202 5.62);
   --color-pink-800: oklch(48.98% 0.187 2.53);

@@ -1,3 +1,7 @@
+@use "sass:color";
+
+@use "../fn";
+
 table {
   display: block;
   font: normal normal 500 var(--size-table) / 1 var(--font-text);

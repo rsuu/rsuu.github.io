@@ -38,7 +38,7 @@
   }
 }
 
-/// @include animateKeyframe($name: spin360, $duration: 2s, $count: infinite);
+/// USAGE: @include animateKeyframe($name: spin360, $duration: 2s, $count: infinite);
 @mixin animateKeyframe(
   $name,
   $duration: 1s,
