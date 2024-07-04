@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <link rel="self" type="application/atom+xml" href="https://rsuu.github.io/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rsuu.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-01T00:00:00+00:00</updated>
+    <id>https://rsuu.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>The Little MIDI</title>
+        <published>2024-07-01T00:00:00+00:00</published>
+        <updated>2024-07-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/midi/"/>
+        <id>https://rsuu.github.io/blog/midi/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/midi/">&lt;h2 id=&quot;staff&quot;&gt;Staff&lt;&#x2F;h2&gt;
+&lt;p&gt;制谱这块我们用&lt;a href=&quot;https:&#x2F;&#x2F;lilypond.org&quot;&gt;LilyPond&lt;&#x2F;a&gt;,虽然用的是&lt;code&gt;LaTeX&lt;&#x2F;code&gt;那样的语法(还混入了&lt;code&gt;LISP&lt;&#x2F;code&gt;),但除此之外也没什么好的选择了,能在终端里使用还兼顾着这么完美的质量...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;lilypond&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-lilypond &quot;&gt;&lt;code class=&quot;language-lilypond&quot; data-lang=&quot;lilypond&quot;&gt;&lt;span&gt;% test.ly
+&lt;&#x2F;span&gt;&lt;span&gt;\version &amp;quot;2.24.3&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;\language &amp;quot;english&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;\score {
+&lt;&#x2F;span&gt;&lt;span&gt;    \midi   {} 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    \relative {
+&lt;&#x2F;span&gt;&lt;span&gt;        c d e f g a b
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后轻轻地编译一下: &lt;code&gt;lilypond test.ly&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;player&quot;&gt;Player&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;FluidSynth&#x2F;fluidsynth&quot;&gt;FluidSynth&lt;&#x2F;a&gt;在&lt;a href=&quot;https:&#x2F;&#x2F;termux.dev&quot;&gt;Termux&lt;&#x2F;a&gt;上不知道为啥没声音,所以只能用&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mpv-player&#x2F;mpv&quot;&gt;MPV&lt;&#x2F;a&gt;来播放,绕了个小圈子.&lt;&#x2F;p&gt;
+&lt;p&gt;虽然&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Timidity++&quot;&gt;TiMidity++&lt;&#x2F;a&gt;也可以播放&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;MIDI&quot;&gt;MIDI&lt;&#x2F;a&gt;,但他本身指定字体的方式过于繁琐(只能通过配置文件来指定),所以这里就选择了FluidSynth.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;zsh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-zsh &quot;&gt;&lt;code class=&quot;language-zsh&quot; data-lang=&quot;zsh&quot;&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;midi-play&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;500-soundfonts-full-gm-sets
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_NAME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;Arachno.sf2&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_FONT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;HOME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&#x2F;soundfonts&#x2F;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_NAME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_FORMAT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;s16le
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_RATIO&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;44100
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fluidsynth -nli -o synth.cpu-cores=8 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -r $_RATIO -g 2 -T raw -F - \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -i $_FONT $1 \
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;mpv \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;rawaudio \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer-rawaudio-format&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;$_FORMAT \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer-rawaudio-rate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;$_RATIO \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;DONE: &lt;code&gt;midi-play test.midi&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Girls Band Cry</title>
+        <published>2024-06-29T00:00:00+00:00</published>
+        <updated>2024-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/gbc/"/>
+        <id>https://rsuu.github.io/blog/gbc/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/gbc/">&lt;pre data-lang=&quot;txt&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-txt &quot;&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;&lt;span&gt;01:
+&lt;&#x2F;span&gt;&lt;span&gt;   终于知道为什么要用3D了,因为可以用光追呀,而且Live本身工作量就很大,要么3D要么2D.
+&lt;&#x2F;span&gt;&lt;span&gt;   可如果在用2D的情况下突然来个3D又显得突兀,而且这也是用烂了的做法. 
+&lt;&#x2F;span&gt;&lt;span&gt;   与其如此倒不如全程3D,而不是2&#x2F;3D混着来. 
+&lt;&#x2F;span&gt;&lt;span&gt;   加上光追的加持,气氛特效整个就上来啦!!! YES
+&lt;&#x2F;span&gt;&lt;span&gt;   而且ED的漫画风我也很喜欢,YES XDDD
+&lt;&#x2F;span&gt;&lt;span&gt;   当然,缺点就是歌不好听,486捧读,剧情有待观察
+&lt;&#x2F;span&gt;&lt;span&gt;05: 
+&lt;&#x2F;span&gt;&lt;span&gt;   486的捧读消失了?!剧情也开始上正轨了?运镜nice
+&lt;&#x2F;span&gt;&lt;span&gt;   歌曲还是要加把劲啊 :|
+&lt;&#x2F;span&gt;&lt;span&gt;   最好别出第二季 X
+&lt;&#x2F;span&gt;&lt;span&gt;06:
+&lt;&#x2F;span&gt;&lt;span&gt;   键盘加入后歌上来了 :)
+&lt;&#x2F;span&gt;&lt;span&gt;07:
+&lt;&#x2F;span&gt;&lt;span&gt;   说什么呢 :&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;   好!!!
+&lt;&#x2F;span&gt;&lt;span&gt;10:
+&lt;&#x2F;span&gt;&lt;span&gt;   稳~~~~
+&lt;&#x2F;span&gt;&lt;span&gt;11: 
+&lt;&#x2F;span&gt;&lt;span&gt;   nina的气场完全变了 XXXX
+&lt;&#x2F;span&gt;&lt;span&gt;12:
+&lt;&#x2F;span&gt;&lt;span&gt;   花田你这样是不行的
+&lt;&#x2F;span&gt;&lt;span&gt;13:
+&lt;&#x2F;span&gt;&lt;span&gt;   平稳落地啊...好吧...
+&lt;&#x2F;span&gt;&lt;span&gt;   如果有第二季那是一回事,没有就是另一回事是了...而且第二季这种东西嘛...不太可能不是吗?
+&lt;&#x2F;span&gt;&lt;span&gt;   但我认为通过降格的方式来搞第二季不是很好啊,是吧
+&lt;&#x2F;span&gt;&lt;span&gt;   而且最后一画那种这是最后的演出,已经散伙了的感觉已经拉满了不是吗?
+&lt;&#x2F;span&gt;&lt;span&gt;   虽然这样调子的结尾也不是不行...好吧...意犹未尽是吧......
+&lt;&#x2F;span&gt;&lt;span&gt;   最后,问题还是相当多的,遗憾加期待吧...
+&lt;&#x2F;span&gt;&lt;span&gt;   最后最后,我认为吉野家出现的次数太多了!!!
+&lt;&#x2F;span&gt;&lt;span&gt;   哦知道了,懂吧,那种被腰斩的感觉.
+&lt;&#x2F;span&gt;&lt;span&gt;   唉
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;手島:&lt;&#x2F;p&gt;
+&lt;p&gt;死んだら棺桶にガールズバンドクライのBlu-rayとCD入れてもらお&lt;&#x2F;p&gt;
+&lt;p&gt;edは13話後のエピローグとして描かせていただいとります&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;虽然刚开始我也不屑于3D,但是等等,封面挺好的,好些人喜欢,背靠东映应该不会太差吧?
+于是在第二集出来后就去瞄了下,结果一发不可收拾.&lt;&#x2F;p&gt;
+&lt;p&gt;各种意义上的违背传统,&lt;code&gt;不看就可惜了&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Braille</title>
+        <published>2024-05-01T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/braille/"/>
+        <id>https://rsuu.github.io/blog/braille/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/braille/">&lt;p&gt;TODO:&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>About</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/about/"/>
+        <id>https://rsuu.github.io/about/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/about/">&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rsuu&quot;&gt;Github&lt;&#x2F;a&gt; &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2024-06</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/journal/2024-06/"/>
+        <id>https://rsuu.github.io/journal/2024-06/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/journal/2024-06/">&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;当情感开始交织,平静的海面将激荡出无垠的浪花,汹涌的波涛之下,于暗流中消碎的生命将再次肆意迸发.&lt;&#x2F;p&gt;
+&lt;p&gt;在时间抛下钩锚坠入海面打破黑夜的刹那,有如飘渺的碎沫抽离出一般,湮于死寂......&lt;&#x2F;p&gt;
+&lt;p&gt;太阳坐落之处,万物青虹.&lt;&#x2F;p&gt;
+&lt;p&gt;GBC 赢了吗?&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-06-29  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;GBC 能赢吗? 从十一集开始的滑坡究竟只是匆匆的过渡还是烂尾的前奏呢,花田?&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-06-28  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;老子也是会大横按的人了 XD&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-06-27  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2024-07</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/journal/2024-07/"/>
+        <id>https://rsuu.github.io/journal/2024-07/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/journal/2024-07/">&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;绝区零真的不行,打击感不如战双的玩意,打斗系统也还是这么迂腐.
+界面UI设计混乱,对比度差的一笔,布局没有一点层次感,塞满塞满,再搭配这昏暗的界面和字体...完美!
+跳过剧情居然二级菜单还要我点击确认,但凡你们学一丁点GalGame的剧情回顾模式都不至于这么弱智.
+而且主界面居然是3D视角,我的天哪,你们真的是疯了.
+浪费我感情,浪费我流量.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-07-04  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;发现粉色和其他颜色都不怎么搭配.
+然后我又看了看火烈鸟🦩,嗯...
+以后找配色直接去看鸟得了...&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-07-03  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Draw-2024</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/series/draw-2024/"/>
+        <id>https://rsuu.github.io/series/draw-2024/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/series/draw-2024/">&lt;p&gt;&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-06-27.avif&quot; alt=&quot;2024-06-27&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-06-16_01.avif&quot; alt=&quot;2024-06-16_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-06-16.avif&quot; alt=&quot;2024-06-16&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-06-14.avif&quot; alt=&quot;2024-06-14&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-06-11.avif&quot; alt=&quot;2024-06-11&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-06-08_01.avif&quot; alt=&quot;2024-06-08_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-06-08.avif&quot; alt=&quot;2024-06-08&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-28.avif&quot; alt=&quot;2024-05-28&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-23_02.avif&quot; alt=&quot;2024-05-23_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-23_01.avif&quot; alt=&quot;2024-05-23_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-23.avif&quot; alt=&quot;2024-05-23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-21_03.avif&quot; alt=&quot;2024-05-21_03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-21_02.avif&quot; alt=&quot;2024-05-21_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-21_01.avif&quot; alt=&quot;2024-05-21_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-05-21.avif&quot; alt=&quot;2024-05-21&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-04-03.avif&quot; alt=&quot;2024-04-03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-04_01.avif&quot; alt=&quot;2024-04_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-04-01_02.avif&quot; alt=&quot;2024-04-01_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-04-01_01.avif&quot; alt=&quot;2024-04-01_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2024&#x2F;2024-03-01.avif&quot; alt=&quot;2024-03-01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Show-2024</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/series/show-2024/"/>
+        <id>https://rsuu.github.io/series/show-2024/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/series/show-2024/">&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Title&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Title-CN&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Notes&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Shōgun&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;居然是一年一季放三年???你确定可以狗三年???&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;俺の话は长い&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;我的事说来话长&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;草(从种子开始发芽🌱)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Breaking Bad&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;老白该死了&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;フェンス&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;围栏&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;你讲了什么???&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;ブラッシュアップライフ&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;重启人生&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;我在路边看到的原来是鸽子 XD&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;家売るオンナ&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;理解不能&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;The Truman Show&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Book-2023</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/series/book-2023/"/>
+        <id>https://rsuu.github.io/series/book-2023/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/series/book-2023/">&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Title&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Title-CN&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Notes&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Jonathan Balcombe ] What a Fish Knows&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Marah J. Hardt] Sex in the Sea&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Daniel Whiteson &amp;amp; Jorge Cham] We Have No Idea&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Paul Theroux] An Area of Darkness&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Jennifer Ackerman] The Genius of Bird&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;鸟类的天赋&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;给 我 看&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Helen Scales] Eye of the Shoal&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[James Nestor] Deep&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;深海&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Paul Theroux] Riding the Iron Rooster&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;騎乘鐵公雞&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;啊,山珍海味&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[有间カオル] 魔法使いのハーブティー&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;魔法使的香草茶&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[三浦 しをん] 神去なあなあ日常&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;挺有意思&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[辻村 深月] ツナグ&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[辻村 深月] 水底フェスタ&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;我 狗血 喜欢&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[辻村 深月] 鍵のない夢を見る&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[辻村 深月] かがみの孤城&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;镜之孤城&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;居然是温馨故事&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[三島 由紀夫] 豊饒の海&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;春雪挺好的,我讨厌转世的玩法&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[三島 由紀夫] 金阁寺&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;莫名的吸引人,好奇怪&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[重松 清] 流星ワゴン&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;流星休旅車&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;日本人这么喜欢写出轨嘛&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[生井 英考] 空の帝国 アメリカの20世紀&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[村田 沙耶香] 地球星人&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[村上 春樹] 騎士団長殺し&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;叼毛&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Draw-2023</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/series/draw-2023/"/>
+        <id>https://rsuu.github.io/series/draw-2023/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/series/draw-2023/">&lt;p&gt;&lt;img src=&quot;&#x2F;Assets&#x2F;2023&#x2F;2023-01-01.avif&quot; alt=&quot;2023-01-01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Draw-2022</title>
+        <published>2022-01-01T00:00:00+00:00</published>
+        <updated>2022-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/series/draw-2022/"/>
+        <id>https://rsuu.github.io/series/draw-2022/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/series/draw-2022/">&lt;p&gt;&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-26.avif&quot; alt=&quot;2022-12-26&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-24_03.avif&quot; alt=&quot;2022-12-24_03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-24_02.avif&quot; alt=&quot;2022-12-24_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-24_01.avif&quot; alt=&quot;2022-12-24_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-24.avif&quot; alt=&quot;2022-12-24&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-23_01.avif&quot; alt=&quot;2022-12-23_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-23.avif&quot; alt=&quot;2022-12-23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-16_02.avif&quot; alt=&quot;2022-12-16_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-16_01.avif&quot; alt=&quot;2022-12-16_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-16.avif&quot; alt=&quot;2022-12-16&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-06.avif&quot; alt=&quot;2022-12-06&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-05.avif&quot; alt=&quot;2022-12-05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-04.avif&quot; alt=&quot;2022-12-04&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-12-01.avif&quot; alt=&quot;2022-12-01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-11-30_01.avif&quot; alt=&quot;2022-11-30_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-11-30.avif&quot; alt=&quot;2022-11-30&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-11-29_03.avif&quot; alt=&quot;2022-11-29_03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-11-29_02.avif&quot; alt=&quot;2022-11-29_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-11-29_01.avif&quot; alt=&quot;2022-11-29_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-11-29.avif&quot; alt=&quot;2022-11-29&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-10-23.avif&quot; alt=&quot;2022-10-23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-10-22.avif&quot; alt=&quot;2022-10-22&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-10-16.avif&quot; alt=&quot;2022-10-16&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-10-13.avif&quot; alt=&quot;2022-10-13&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-10-05.avif&quot; alt=&quot;2022-10-05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-10-04.avif&quot; alt=&quot;2022-10-04&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-10-03.avif&quot; alt=&quot;2022-10-03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-28_01.avif&quot; alt=&quot;2022-09-28_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-28.avif&quot; alt=&quot;2022-09-28&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-26.avif&quot; alt=&quot;2022-09-26&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-24.avif&quot; alt=&quot;2022-09-24&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-23.avif&quot; alt=&quot;2022-09-23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-22.avif&quot; alt=&quot;2022-09-22&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-09_01.avif&quot; alt=&quot;2022-09-09_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-09.avif&quot; alt=&quot;2022-09-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-08.avif&quot; alt=&quot;2022-09-08&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-09-07.avif&quot; alt=&quot;2022-09-07&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-08-12.avif&quot; alt=&quot;2022-08-12&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-08-07.avif&quot; alt=&quot;2022-08-07&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-07-13.avif&quot; alt=&quot;2022-07-13&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-06-08.avif&quot; alt=&quot;2022-06-08&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-06-07.avif&quot; alt=&quot;2022-06-07&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-06-05.avif&quot; alt=&quot;2022-06-05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-04-10.avif&quot; alt=&quot;2022-04-10&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_38.avif&quot; alt=&quot;2022-03-28_38&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_37.avif&quot; alt=&quot;2022-03-28_37&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_36.avif&quot; alt=&quot;2022-03-28_36&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_35.avif&quot; alt=&quot;2022-03-28_35&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_34.avif&quot; alt=&quot;2022-03-28_34&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_33.avif&quot; alt=&quot;2022-03-28_33&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_32.avif&quot; alt=&quot;2022-03-28_32&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_31.avif&quot; alt=&quot;2022-03-28_31&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_30.avif&quot; alt=&quot;2022-03-28_30&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_29.avif&quot; alt=&quot;2022-03-28_29&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_28.avif&quot; alt=&quot;2022-03-28_28&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_27.avif&quot; alt=&quot;2022-03-28_27&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_26.avif&quot; alt=&quot;2022-03-28_26&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_25.avif&quot; alt=&quot;2022-03-28_25&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_24.avif&quot; alt=&quot;2022-03-28_24&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_23.avif&quot; alt=&quot;2022-03-28_23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_22.avif&quot; alt=&quot;2022-03-28_22&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_21.avif&quot; alt=&quot;2022-03-28_21&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_20.avif&quot; alt=&quot;2022-03-28_20&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_19.avif&quot; alt=&quot;2022-03-28_19&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_18.avif&quot; alt=&quot;2022-03-28_18&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_17.avif&quot; alt=&quot;2022-03-28_17&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_16.avif&quot; alt=&quot;2022-03-28_16&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_15.avif&quot; alt=&quot;2022-03-28_15&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_14.avif&quot; alt=&quot;2022-03-28_14&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_13.avif&quot; alt=&quot;2022-03-28_13&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_12.avif&quot; alt=&quot;2022-03-28_12&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_11.avif&quot; alt=&quot;2022-03-28_11&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_10.avif&quot; alt=&quot;2022-03-28_10&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_09.avif&quot; alt=&quot;2022-03-28_09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_08.avif&quot; alt=&quot;2022-03-28_08&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_06.avif&quot; alt=&quot;2022-03-28_06&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_05.avif&quot; alt=&quot;2022-03-28_05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_04.avif&quot; alt=&quot;2022-03-28_04&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_02.avif&quot; alt=&quot;2022-03-28_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28_01.avif&quot; alt=&quot;2022-03-28_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-28.avif&quot; alt=&quot;2022-03-28&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-03-06.avif&quot; alt=&quot;2022-03-06&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2022&#x2F;2022-02-10.avif&quot; alt=&quot;2022-02-10&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Draw-2021</title>
+        <published>2021-01-01T00:00:00+00:00</published>
+        <updated>2021-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/series/draw-2021/"/>
+        <id>https://rsuu.github.io/series/draw-2021/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/series/draw-2021/">&lt;p&gt;&lt;img src=&quot;&#x2F;Assets&#x2F;2021&#x2F;2021-12-09.avif&quot; alt=&quot;2021-12-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2021&#x2F;2021-09-09.avif&quot; alt=&quot;2021-09-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;Assets&#x2F;2021&#x2F;2021-08-09.avif&quot; alt=&quot;2021-08-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Draw-2020</title>
+        <published>2020-01-01T00:00:00+00:00</published>
+        <updated>2020-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/series/draw-2020/"/>
+        <id>https://rsuu.github.io/series/draw-2020/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/series/draw-2020/">&lt;p&gt;&lt;img src=&quot;&#x2F;Assets&#x2F;2020&#x2F;rsuu.svg&quot; alt=&quot;rsuu&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
