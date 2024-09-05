@@ -5,7 +5,8 @@
 table {
   display: block;
   font: normal normal 500 var(--size-table) / 1 var(--font-text);
-  width: 100%;
+  width: auto;
+  margin: 0 auto;
   max-height: 100vh;
   overflow: scroll;
   border: 2px solid var(--color-gray-500);

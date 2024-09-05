@@ -1,26 +1,24 @@
 @use "../fn" as *;
 
 p {
+  position: relative;
   display: block;
-  font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
   color: var(--fg);
   text-wrap: pretty;
+  font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
   font-feature-settings: "palt" 1;
   // letter-spacing: 0.12em;
-  max-inline-size: 50ch;
   font-kerning: auto;
-  @media (max-width: 540px) {
-    & {
+
+  & > :not(img) {
+    max-inline-size: 50ch;
+    @include media("mobile") {
       max-inline-size: 40ch;
     }
-  }
-  @media (max-width: 860px) {
-    & {
+    @include media("tablet") {
       max-inline-size: 50ch;
     }
-  }
-  @media (max-width: 1024px) {
-    & {
+    @include media("desktop") {
       max-inline-size: 55ch;
     }
   }
@@ -31,6 +29,7 @@ p {
     color: var(--a-fg);
   }
 }
+
 // p:first-of-type {
 //   text-indent: 2em;
 // }
@@ -101,7 +100,7 @@ p > code {
 main {
   // URL
   p a[href] {
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 }
 

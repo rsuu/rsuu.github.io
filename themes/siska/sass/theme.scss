@@ -42,6 +42,7 @@ $fonts:
 
 :root {
   --color-red-50: oklch(95.68% 0.022 7.17);
+  --color-red-100: oklch(89.31% 0.057 11.54);
   --color-red-400: oklch(65.39% 0.193 25.14);
   --color-hard-red: oklch(60.45% 0.186 19.16);
 
@@ -52,9 +53,15 @@ $fonts:
   --color-deep-orange-400: oklch(71.24% 0.185 37.77);
   --color-hard-orange: oklch(65% 0.211 32);
 
+  --color-yellow-50: oklch(99% 0.029 102.67);
+  --color-yellow-100: oklch(97.39% 0.068 102.19);
   --color-soft-yellow: oklch(87.27% 0.146 86.73);
   --color-hard-yellow: oklch(83.2% 0.151 78.99);
 
+  // TODO:
+  --color-green-25: oklch(91.31% 0.03 148.21);
+  --color-green-50: oklch(95.71% 0.021 147.64);
+  --color-green-100: oklch(89.52% 0.05 146.04);
   --color-green-500: oklch(67.31% 0.162 144.21);
   --color-soft-green: oklch(81.01% 0.149 130.36);
   --color-hard-green: oklch(75.03% 0.153 130.66);
@@ -65,12 +72,15 @@ $fonts:
   --color-soft-aqua: oklch(76.19% 0.116 224.79);
   --color-hard-aqua: oklch(70.8% 0.118 227.19);
 
+  --color-blue-50: oklch(95.32% 0.022 239.43);
+  --color-blue-100: oklch(88.48% 0.055 243.39);
   --color-soft-blue: oklch(68.56% 0.136 255.18);
   --color-light-blue-500: oklch(69.91% 0.157 238.99);
   --color-hard-blue: oklch(62.72% 0.142 256.1);
 
+  --color-purple-25: oklch(97.68% 0 321.94);
   --color-purple-50: oklch(93.76% 0.026 321.94);
-  --color-purple-100: oklch(84.37% 0.116 321.55);
+  --color-purple-100: oklch(84.44% 0.068 321.36);
   --color-purple-200: oklch(74.37% 0.116 321.55);
   --color-purple-300: oklch(64.55% 0.162 321.61);
   --color-purple-400: oklch(57.63% 0.194 321.59);

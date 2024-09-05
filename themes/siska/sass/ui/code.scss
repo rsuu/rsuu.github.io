@@ -1,6 +1,10 @@
 @use "../theme";
 @use "../fn" as *;
 
+code {
+  word-break: break-all;
+}
+
 .code-bar {
   display: block;
   background: #333;
@@ -96,13 +100,50 @@
 
 pre {
   display: block;
+  position: relative;
   font: normal normal 400 var(--size-code) / 1.4 var(--font-code);
   background-color: var(--color-gray-200);
   overflow: scroll;
   max-height: 70vh;
-  @include embed;
+  width: auto;
+  padding: 1rem 3.777rem;
+
+  // FIXME:
+  &::before {
+    content: attr(data-lang);
+    display: inline-block;
+    color: gray;
+    position: sticky;
+    width: 0;
+    left: 88%;
+  }
 
   // &[data-lang="txt"] {
   //   font: normal normal 400 1.6rem/1.4 var(--font-text);
   // }
+}
+
+/* For browsers that support `scrollbar-*` properties */
+@supports (scrollbar-color: auto) {
+  pre {
+    // scrollbar-color: gray white;
+  }
+}
+
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+  pre::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  pre::-webkit-scrollbar-thumb {
+    background: rgba(200, 200, 200, 0.2);
+    border-radius: 5px;
+  }
+  pre::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  pre::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 }

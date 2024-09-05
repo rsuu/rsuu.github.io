@@ -16,27 +16,27 @@
   }
 
   .year-ch {
-    letter-spacing: -0.02rem;
-    margin-left: -0.333rem;
+    letter-spacing: -0.03rem;
+    margin-left: -1.333rem;
     margin-bottom: 0.333rem;
   }
 }
 .blog-content ul {
   list-style-type: none;
-  margin-left: -3.555rem;
+  margin-left: -3.777rem;
   margin-top: -0.333rem;
 }
 .blog-content li {
   .date {
     font: italic small-caps 500 1.2rem / 1.8 var(--font-meta);
-    width: 4rem; // align
+    min-width: 4rem; // align
     white-space: nowrap;
   }
 
   .pound {
     margin: 0.888rem 0.333rem auto 0.555rem;
-    height: 0.333rem;
-    width: 0.333rem;
+    min-height: 3px;
+    min-width: 3px;
     border-radius: 50%;
     background-color: var(--pound-fg);
     vertical-align: middle;

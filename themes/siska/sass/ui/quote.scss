@@ -5,5 +5,7 @@ blockquote {
   // text-indent: 2em;
   font: normal normal 400 var(--size-quote) / 1.3 var(--font-quote);
   background-color: var(--color-gray-200);
-  @include embed;
+  width: auto;
+  margin: 0 auto;
+  padding: 1rem 3.777rem;
 }

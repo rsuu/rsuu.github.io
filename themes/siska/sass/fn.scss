@@ -2,9 +2,9 @@
 
 @function media-map($key) {
   $map: (
-    "desktop": 1024px,
-    "tablet": 768px,
-    "mobile": 540px,
+    "desktop": 75em,
+    "tablet": 50em,
+    "mobile": 30em,
   );
 
   @return map.get($map, $key);
@@ -27,13 +27,33 @@
   padding: 2.333rem 2.555rem 2.333rem 3.777rem;
 }
 
+$mobile-width: 540px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile() {
+  @media (min-aspect-ratio: 9/16) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 // $name: { desktop, tablet, mobile }
 @mixin media($name) {
-  $width: media-map($name);
+  $size: media-map($name);
 
-  $query: "(min-width: #{$width})";
-
-  @media #{$query} {
+  @media (min-width: $size) and (max-width: $size * 1.25) {
     @content;
   }
 }

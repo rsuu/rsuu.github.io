@@ -5,8 +5,7 @@
 }
 
 footer {
-  @include center;
-  margin-top: 30vh;
+  margin: 30vh 3.333rem 0 3.777rem;
 
   & > .footnote-definition {
     margin: 0 0 0 2rem;
@@ -45,6 +44,8 @@ footer > .footer-meta {
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0 0 -0.555rem;
+  width: 100%;
+  text-wrap: nowrap;
 
   & a {
     &::before {
@@ -59,6 +60,8 @@ footer > .footer-meta {
   }
 
   & > .tags {
+    width: 60%;
+    overflow: scroll;
     & > a {
       &::before {
         content: "#";
