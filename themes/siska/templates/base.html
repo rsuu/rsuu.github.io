@@ -1,0 +1,18 @@
+<!doctype html>
+<html
+  lang="{% if page %}{{ page.lang }}{% else %}{{ config.default_language }}{% endif %}"
+  theme="light"
+>
+  <head>
+    {% include "head.html" %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>{% include "header.html" %}</header>
+      <main>{% block content %} {% endblock content %}</main>
+
+      <footer>{% include "footer.html" %}</footer>
+      {% include "js.html" %}
+    </div>
+  </body>
+</html>

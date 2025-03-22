@@ -1,0 +1,25 @@
+{% set path= page.path ~ f %} {% set data = load_data(path=path)%}
+<table class="books">
+  <thead>
+    <tr>
+      <th style="text-align: left">title</th>
+      <th style="text-align: left">title-CN</th>
+      <th style="text-align: left">notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for v in data["vec"] %}
+    <tr>
+      <td style="text-align: left">
+        {{ v["title"] | markdown(inline=true) | safe }}
+      </td>
+      <td style="text-align: left">
+        {{ v["title-CN"] | markdown(inline=true) | safe }}
+      </td>
+      <td style="text-align: left">
+        {{ v["notes"] | markdown(inline=true) | safe }}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,56 @@
+.dict {
+  * {
+    all: unset;
+  }
+  div {
+    display: block;
+  }
+
+  .wrap {
+    display: flex;
+    margin-bottom: 1rem;
+
+    counter-reset: section;
+
+    .left {
+      margin-right: 1rem;
+      opacity: 0.4;
+    }
+    .right {
+    }
+  }
+}
+
+.dict .examples {
+  .idx {
+    counter-reset: subsection;
+
+    &:before {
+      counter-increment: section;
+      content: counter(section);
+    }
+  }
+
+  .from {
+    opacity: 1;
+  }
+
+  .to {
+    opacity: 0.6;
+  }
+}
+.dict .synonyms {
+  .type {
+    &:before {
+      content: attr(type);
+    }
+  }
+
+  .from {
+    color: black;
+  }
+
+  .to {
+    color: blue;
+  }
+}

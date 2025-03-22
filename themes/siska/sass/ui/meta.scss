@@ -1,0 +1,76 @@
+.post-meta {
+  display: flex;
+
+  & div {
+    // `auto`: right start
+    margin: 0.333rem 0 auto auto;
+  }
+
+  & .styled-date {
+    color: var(--color-gray-700);
+    font: italic small-caps 400 var(--size-meta-date) / 1 var(--font-title);
+    text-transform: capitalize;
+    vertical-align: middle;
+  }
+
+  & .dividing {
+    display: inline-block;
+    width: 0.333rem;
+    height: 1.333rem;
+    background-color: var(--color-purple-300);
+    margin: 0 0.111rem 0 0.555rem;
+    vertical-align: middle;
+  }
+
+  & .set {
+    font: normal normal 600 var(--size-meta-set) / 1 var(--font-title);
+    color: var(--color-gray-900);
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+}
+
+.tags {
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    gap: 0.333rem 0.555rem;
+  }
+
+  & .tag {
+    border-radius: 1px;
+    padding: 0.333rem 0.333rem;
+
+    background: #272727;
+    color: #ccc;
+  }
+}
+
+.tags-one-line {
+  & div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    overflow: scroll;
+    gap: 0 0.555rem;
+    z-index: 1;
+  }
+
+  & .tag {
+    display: block;
+    border-radius: 1px;
+
+    padding: 0.333rem 0.333rem;
+    background: #282828;
+    color: #ccc;
+    white-space: nowrap;
+  }
+
+  // TODO:
+  // .blur {
+  //     filter: blur(4px);
+  // }
+}
+
+// hyphens: auto

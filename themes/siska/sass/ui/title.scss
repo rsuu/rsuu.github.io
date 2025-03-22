@@ -1,0 +1,45 @@
+@for $i from 1 through 6 {
+  h#{$i} {
+    font: normal
+      normal
+      400
+      calc(var(--h#{$i}-scale) * var(--size-title) * 1.133) /
+      1
+      var(--font-ex);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: left;
+  text-rendering: optimizeLegibility;
+  text-wrap: balance;
+  word-break: break-word;
+  color: var(--title-fg);
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: calc(1ex / 0.42);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h2 {
+  line-height: calc(1ex / 0.42);
+  margin: calc(1ex / 0.42) 0;
+}
+
+h3 {
+  line-height: calc(1ex / 0.38);
+  margin: calc(1ex / 0.38) 0;
+}
+
+h4 {
+  line-height: calc(1ex / 0.37);
+  margin: calc(1ex / 0.37) 0;
+}

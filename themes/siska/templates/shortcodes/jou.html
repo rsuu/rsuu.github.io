@@ -1,0 +1,34 @@
+<box>
+  <div
+    class="jou"
+    {%
+    if
+    color
+    %}
+    color="{{ color }}"
+    {%
+    else
+    %}
+    color="green"
+    {%
+    endif
+    %}
+  >
+    <div class="left">
+      <div class="txt">{{ body | markdown | safe }}</div>
+    </div>
+    <div class="right">
+      <div class="side">
+        <!-- <div class="article-date-outer"> -->
+        <!--   <span class="article-month">2024.08</span> -->
+        <!--   <span class="article-date">18</span> -->
+        <!-- </div> -->
+        {% if title %}
+        <a name="{{ title }}" href="#{{ title }}">{{ title }}</a>
+        {% else %}
+        <a> &nbsp </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</box>

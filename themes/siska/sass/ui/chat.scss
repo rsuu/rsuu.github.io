@@ -1,0 +1,59 @@
+.chat {
+  $maw: 60vw;
+
+  font: normal normal 400 1.2rem / 1.4 var(--font-text);
+  margin-bottom: 1.7rem;
+
+  .left,
+  .right {
+    margin-bottom: 1rem;
+  }
+
+  .left {
+    display: flex;
+
+    .name {
+      margin-right: 0.333rem;
+
+      &::after {
+        content: ":";
+      }
+    }
+    .msg {
+      max-width: $maw;
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+
+    .reply {
+      $p: 0.555rem;
+
+      * {
+        all: unset;
+      }
+
+      max-width: $maw;
+      padding: $p;
+      background: #eee;
+      border-radius: 0.3rem;
+    }
+  }
+}
+
+.qa-chat {
+  border-radius: 10px;
+  border: 2px dashed var(--color-pink-200);
+  padding: 2rem;
+
+  .list {
+    border-radius: 6px;
+    border: 2px dotted var(--color-gray-300);
+    padding: 1rem;
+    margin-top: 3rem;
+    max-height: 60vh;
+    overflow: scroll;
+  }
+}

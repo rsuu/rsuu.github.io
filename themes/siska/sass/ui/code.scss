@@ -1,0 +1,45 @@
+@use "../theme";
+@use "../fn" as *;
+
+pre {
+  width: auto;
+  padding: 0.3rem 0;
+
+  // TODO:
+  .code-bar {
+    display: flex;
+    // background: var(--color-pink-200);
+    // width: auto;
+    // height: 3rem;
+
+    .lang {
+    }
+    .copy {
+    }
+  }
+
+  code {
+    display: block;
+    width: auto;
+    max-height: 70vh;
+    font: normal normal 400 var(--size-code) / 1.4 var(--font-code);
+    margin: 1rem 2rem;
+    overflow: scroll;
+  }
+}
+
+@supports selector(::-webkit-scrollbar) {
+  code::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+  }
+  code::-webkit-scrollbar-thumb {
+    background: rgba(200, 200, 200, 0.2);
+  }
+  code::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  code::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

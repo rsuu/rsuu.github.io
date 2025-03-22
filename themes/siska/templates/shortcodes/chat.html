@@ -1,0 +1,12 @@
+<div class="chat">
+  <div class="left">
+    <span class="name">{{ name }}</span>
+    <div class="msg">{{ txt }}</div>
+  </div>
+
+  {% if body %}
+  <div class="right">
+    <div class="reply">{{ body | markdown | safe }}</div>
+  </div>
+  {% endif %}
+</div>

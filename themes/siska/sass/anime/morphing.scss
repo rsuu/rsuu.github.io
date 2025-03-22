@@ -1,0 +1,102 @@
+$bg: var(--color-pink-300);
+
+.play {
+  padding: 1rem;
+  border: 2px dashed $bg;
+}
+
+.eg-clip-path {
+  min-width: 8rem;
+  min-height: 8rem;
+  position: relative;
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    background: $bg;
+    opacity: 0.1;
+  }
+
+  .fg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $bg;
+
+    &[ty="circle"] {
+      clip-path: circle(30% at center);
+    }
+    &[ty="rect"] {
+      clip-path: inset(20%);
+    }
+    &[ty="rect-round"] {
+      clip-path: inset(10% 13% round 5px 0 9px 0);
+    }
+  }
+}
+
+.test-box {
+  width: 10rem;
+  height: 10rem;
+  background: blue;
+  opacity: 0.6;
+}
+.test-circle {
+  width: 70px;
+  height: 50px;
+  background: blue;
+  opacity: 0.6;
+  clip-path: path("M0 0V0H0V0H10V9");
+  &:hover {
+    clip-path: path("M28.736 30.271C16.72 1.227 72.288 46.53 61.113 16.344");
+  }
+}
+
+.a-trc {
+  animation:
+    trc 1s ease-in-out infinite alternate,
+    rot 1s ease-in-out infinite alternate;
+  // animation: a, b;
+  // animation-duration: 2s, 2s;
+  // animation-delay: 0s, 4s;
+}
+
+@keyframes trc {
+  0% {
+    clip-path: polygon(
+      0 0,
+      50% 0,
+      100% 0,
+      100% 50%,
+      100% 100%,
+      50% 100%,
+      0 100%,
+      0 50%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 25%,
+      50% 50%,
+      75% 50%,
+      50% 50%,
+      50% 75%,
+      50% 50%,
+      25% 50%
+    );
+  }
+}
+
+.morphing {
+  background: orange;
+  width: 50%;
+  aspect-ratio: 1/1;
+
+  clip-path: circle(75%);
+  animation:
+    circle 3s ease-in-out infinite,
+    rot 3s ease-in-out infinite;
+}

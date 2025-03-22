@@ -1,0 +1,122 @@
+@use "../fn" as *;
+
+img {
+  min-width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  margin: 1rem auto;
+}
+
+svg {
+  max-width: 100%;
+}
+
+.thumb {
+  object-fit: contain;
+}
+
+.photo {
+  $left-w: 3rem;
+
+  margin-top: 1rem;
+
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .side {
+      width: $left-w;
+
+      div {
+        display: flex;
+        justify-content: center;
+        font: normal small-caps 600 1rem / 1 var(--font-meta);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        margin: 0 auto;
+
+        span {
+          margin: 0.333rem 0;
+        }
+        .tag {
+        }
+      }
+    }
+
+    .img {
+      flex: 1;
+      object-position: top right;
+      border: 0.1px solid #eee;
+
+      img {
+        margin: 0 0;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+
+    .empty {
+      width: $left-w;
+    }
+
+    .desc {
+      flex: 1;
+
+      a {
+        font-weight: bold;
+        background: linear-gradient(transparent 50%, #cfd8dc 50%);
+        color: #000;
+      }
+    }
+  }
+}
+
+.photo-box {
+  $p: 2rem;
+
+  max-width: 100%;
+  max-height: 100%;
+  padding: $p $p 2.3rem 1.9rem;
+  border: 0.1px solid #eee;
+  border-radius: 1px;
+  box-shadow:
+    0 0 #000,
+    0 0 #000,
+    0 1px 2px rgba(0, 0, 0, 0.04);
+
+  img {
+    margin: 0 auto;
+    border: 1px solid #eee;
+  }
+}
+
+.photo-box2 {
+  margin: 1rem auto;
+
+  .bg {
+    background: var(--color-pink-100);
+    padding: 7px 7px;
+    padding-left: 7.111px;
+    margin: 0 auto;
+  }
+
+  .bg2 {
+    background: white;
+    padding: 5px 5px;
+    margin: 0 auto;
+    box-shadow:
+      0 0 #000,
+      0 0 #000,
+      0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  img,
+  canvas {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 0.01px solid #eee;
+  }
+}

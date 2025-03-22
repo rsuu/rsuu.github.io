@@ -1,0 +1,53 @@
+{% extends "section.html" %}
+
+{% block content %}
+
+<div class="wrap-vec-pcard">
+  <div class="vec-pcard">
+
+    {% include "home_cards.html" %}
+
+<div class="more">
+  <a class="link" href="/blog">
+    <i data-lucide="circle-arrow-right"></i>
+  </a>
+</div>
+  </div>
+</div>
+
+<div class="blog">
+  <div class="home">
+    {%- set posts = section.pages | sort(attribute="date") -%}
+
+    {# Group posts by year. #}
+    {% set posts_by_year = posts | group_by(attribute="year") %}
+    {% set years = [] %}
+    {% for year, ignored in posts_by_year %}
+        {% set_global years = years | concat(with=[year]) %}
+    {% endfor %}
+    {% set years = years | reverse -%}
+
+    {% for year in years %}
+      {% set posts = posts_by_year[year] | reverse %}
+        <section>
+          <div class="head">
+            <div class="zodiac" year={{ year }}></div>
+            <span class="year">{{ year }}</span>
+        </div>
+  
+        {% for page in posts %}
+          {% set year = page.date | date(format="%Y") %}
+          <div class="flex-x">
+            <span class="pound"></span>
+            <a class="title" href="{{page.permalink | safe }}">{{ page.title }}</a>
+          </div>
+        {% endfor %}
+                
+       </section>
+     {% endfor %}
+  </div>
+</div>
+
+
+
+{% endblock content %}

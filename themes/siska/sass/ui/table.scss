@@ -1,0 +1,49 @@
+@use "sass:color";
+@use "../fn";
+
+table {
+  $br: 9px;
+
+  display: block;
+  font: normal normal 500 var(--size-table) / 1 var(--font-text);
+  max-height: 100vh;
+  overflow: scroll;
+  scrollbar-width: none;
+  border-radius: $br;
+  border: 2px solid var(--color-gray-500);
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow:
+    0 0 #000,
+    0 0 #000,
+    0 1px 2px rgba(0, 0, 0, 0.04);
+  word-break: keep-all;
+
+  thead,
+  tbody {
+  }
+
+  th,
+  td {
+    width: 100%;
+    // max-width: 30%;
+    padding: 0.777rem;
+  }
+
+  th {
+    position: sticky;
+    top: 0;
+    border-bottom: solid 2px var(--dimGrey);
+    background: var(--color-gray-200);
+  }
+
+  tr:nth-child(odd) {
+    background: var(--color-gray-100);
+  }
+}
+
+.books {
+  th {
+    text-transform: capitalize;
+  }
+}

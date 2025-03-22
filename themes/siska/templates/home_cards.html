@@ -1,0 +1,29 @@
+{% for page in section.pages %} {% if page.taxonomies.set and
+page.taxonomies.set[0] == "journal" %} {% continue %} {% endif %}
+
+<div class="pcard">
+  <div class="title">
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+  </div>
+
+  <div class="desc">
+    {% if page.description %}
+    <p>{{ page.description }}</p>
+    {% endif %}
+  </div>
+
+  <div class="meta">
+    {% if page.taxonomies.tags %}
+    <div class="vec">
+      {% if page.taxonomies.set %}
+      <a class="set" href="/set/{{ page.taxonomies.set[0] }}">
+        {{ page.taxonomies.set[0] }}
+      </a>
+      {% endif %} {% for tag in page.taxonomies.tags %}
+      <a href="/tags/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}

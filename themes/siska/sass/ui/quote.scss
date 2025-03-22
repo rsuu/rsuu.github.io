@@ -1,0 +1,11 @@
+@use "../theme";
+@use "../fn" as *;
+
+blockquote {
+  // text-indent: 2em;
+  font: normal normal 400 var(--size-quote) / 1.3 var(--font-quote);
+  background-color: var(--color-gray-200);
+  width: auto;
+  margin: 1rem auto;
+  padding: 1rem 3rem 3rem 3rem;
+}

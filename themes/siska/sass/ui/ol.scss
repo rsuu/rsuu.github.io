@@ -1,0 +1,8 @@
+ol {
+  font: normal normal 500 var(--size-text) / 1.4 var(--font-text);
+
+  & ::marker {
+    font-weight: 600;
+    color: var(--color-gray-400);
+  }
+}

@@ -1,0 +1,100 @@
+@use "../fn" as *;
+
+p {
+  position: relative;
+  display: block;
+  color: var(--fg);
+  text-wrap: pretty;
+  font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
+  // font-size: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+  font-feature-settings: "palt" 1;
+  // letter-spacing: 0.12em;
+
+  & :not(> img) {
+    max-inline-size: 50ch;
+
+    @include mobile() {
+      max-inline-size: 40ch;
+    }
+    @include tablet() {
+      max-inline-size: 50ch;
+    }
+    @include desktop() {
+      max-inline-size: 55ch;
+    }
+  }
+
+  margin-bottom: calc(var(--main-font-size) * 1.2);
+
+  & a {
+    color: var(--a-fg);
+  }
+}
+
+// p:first-of-type {
+//   text-indent: 2em;
+// }
+
+a,
+p > code {
+  display: inline-block;
+  position: relative;
+  padding: 0 0.333rem;
+
+  font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
+  color: var(--a-fg);
+  text-decoration: none;
+  // word-break: break-all;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: inherit;
+    background: var(--a-bg-hover);
+    @include float(0, 0, 0, 0);
+  }
+
+  &:hover {
+    // background-image: linear-gradient(to right, black 50%, transparent 0);
+    // background-size: 200% 100%;
+    // background-position: right;
+    color: white !important;
+    animation: _ 500ms ease-in-out forwards;
+
+    @keyframes _ {
+      // 100% {
+      //   background-position: 0;
+      // }
+      0% {
+      }
+      1% {
+        clip-path: inset(0 0 0 100%);
+      }
+      25% {
+        clip-path: inset(0 0 0 0);
+      }
+      50% {
+        clip-path: inset(0 0 0 15%);
+      }
+      100% {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+  }
+}
+
+// inline code
+p > code {
+  background: var(--color-pink-25);
+  border-radius: 2px;
+}
+
+main {
+  // URL
+  p a[href] {
+    // text-decoration: underline;
+  }
+}
+
+// REFS: https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-east-asian

@@ -1,0 +1,19 @@
+{% set path = page.path %} {% set file = path ~ f %} {% set data =
+load_data(path=file)%}
+
+<div class="gallery">
+  <div class="carousel-card">
+    <div class="carousel">
+      {% for v in data["vec"] %} {% set src = path ~ v["src"] %} {% set alt =
+      v["alt"] %}
+      <img src="{{ src }}" alt="{{ alt }}" />
+      {% endfor %}
+    </div>
+
+    <div class="wrap-scrollbar">
+      <div class="scrollbar">
+        <div class="thumb"></div>
+      </div>
+    </div>
+  </div>
+</div>

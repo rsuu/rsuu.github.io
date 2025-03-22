@@ -1,0 +1,311 @@
+@use "fn" as *;
+
+@use "theme";
+
+@use "page/blog";
+
+@use "anime/lib";
+@use "anime/morphing";
+
+@use "ui/vg";
+@use "ui/carousel_card";
+@use "ui/gallery";
+@use "ui/dict";
+@use "ui/star";
+@use "ui/review";
+@use "ui/desc";
+@use "ui/chat";
+@use "ui/music_card";
+@use "ui/jou";
+@use "ui/qa";
+@use "ui/code";
+@use "ui/footer";
+@use "ui/icons";
+@use "ui/ol";
+@use "ui/header";
+@use "ui/img";
+@use "ui/home";
+@use "ui/meta";
+@use "ui/misc";
+@use "ui/quote";
+@use "ui/space";
+@use "ui/table";
+@use "ui/text";
+@use "ui/timeline";
+@use "ui/title";
+@use "ui/pcard";
+
+// @use "layout/masonry";
+
+:root {
+  font-size: 62.5%;
+  font-size-adjust: 0.5;
+  // scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--color-pink-300) transparent;
+
+  color-scheme: light dark;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+
+  font-feature-settings:
+    "case" on,
+    "zero",
+    "halt",
+    "ccmp",
+    "kern" off;
+
+  ::selection {
+    color: white;
+    background: var(--color-soft-pink);
+  }
+}
+
+.-text {
+  font: normal normal 600 var(--size-text) / 1 var(--font-text);
+}
+
+.-text-title {
+  font: normal normal 600 var(--size-title) / 1 var(--font-title);
+}
+
+.f-nalt5 {
+  font-feature-settings: "nalt" 5;
+}
+
+body {
+  // background: ld(body-bg);
+  background: var(--body-bg);
+
+  margin: 5px 3px;
+  @include mobile() {
+    margin: 3px 1px;
+  }
+}
+
+.wrapper {
+  display: block;
+  width: 100%;
+  max-width: var(--max-page-width);
+  position: relative;
+  color: var(--fg);
+  background: var(--bg);
+  border-radius: 2px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem 0;
+  min-height: 100vh;
+
+  &
+    > main
+    > :not(pre, blockquote, ol, ul, box, h2, h3, h4, h5, h6, header, .blog),
+  & > main > box2,
+  & > footer {
+    margin: 1rem 2.333rem 0 2.555rem;
+
+    @include mobile() {
+      margin: 1rem 1.777rem 0 2rem;
+    }
+  }
+
+  & > main > p:has(> img),
+  .jou,
+  .timeline {
+    margin: 1rem auto !important;
+  }
+
+  main {
+    display: block;
+    position: relative;
+    margin-bottom: 30vh;
+
+    @for $i from 2 through 6 {
+      & > h#{$i} {
+        display: inline-block;
+        width: auto;
+        margin: 3.333rem 0 0 0;
+        padding: 0 2.333rem 0 1.333rem;
+        border-radius: 0 9px 9px 0;
+        color: var(--color-purple-500);
+        background: var(--color-purple-50);
+
+        // ? dot leaders
+      }
+    }
+
+    @include desktop() {
+      text-align: justify;
+    }
+  }
+
+  .wrap-giscus {
+    width: auto;
+    padding: 1rem 2.999rem;
+    margin-top: 10rem;
+
+    .giscus {
+      iframe {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.jchart {
+  padding: 3rem 1rem;
+
+  .header {
+  }
+  .bar {
+    .l1,
+    .l2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+      }
+      .center {
+        .count {
+          background: #eee;
+          padding: 0.333rem 1rem;
+          border-radius: 1rem;
+        }
+      }
+      .right {
+      }
+    }
+  }
+  .chart {
+    position: relative;
+
+    .line {
+      position: absolute;
+      height: 9rem;
+      top: 0;
+      left: 50%;
+      border-right: 1px dashed #000;
+    }
+    .half {
+      position: absolute;
+      top: 10rem;
+      left: 45%;
+    }
+    .cur {
+      display: flex;
+
+      .red {
+        background: red;
+        width: 46.3%;
+        height: 6rem;
+        // border: 1px solid #000;
+      }
+      .blue {
+        background: blue;
+        width: 53.7%;
+        height: 6rem;
+      }
+    }
+
+    .prev {
+      display: flex;
+      opacity: 60%;
+
+      .red {
+        background: red;
+        width: 60%;
+        height: 3rem;
+      }
+      .blue {
+        background: blue;
+        width: 40%;
+        height: 3rem;
+      }
+    }
+  }
+  .table {
+  }
+}
+
+.fishway {
+  width: 10rem;
+  height: 10rem;
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+  .circle {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    scale: 0.96;
+  }
+  .wave {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #0099ff;
+    clip-path: path(
+      "m0 100 100 0v-44.5h-3.456c-3.456 0-10.368 0-17.28.7668-6.912.7812-13.824 2.2932-20.736 1.9224-3.232-.1252-10.144-2.4292-17.056-3.5812s-13.824-1.152-20.736-.3852c-6.912.7812-13.824 2.2932-17.28 3.0744l-3.456.7668z"
+    );
+  }
+}
+
+.ssr {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background: linear-gradient(90deg in oklch longer hue, #fec57e, #5ff8dc);
+}
+
+.set-box {
+  fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+
+    &:has(> textarea:focus) {
+      border: 1px solid rgba(0, 0, 0, 1);
+    }
+  }
+
+  legend {
+    display: none;
+
+    &:not(:has(+ textarea:placeholder-shown)),
+    &:has(+ textarea:focus) {
+      display: block;
+    }
+  }
+
+  textarea {
+    min-width: 100%;
+    border: 0;
+    background: inherit;
+    opacity: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /* Hide radio buttons */
+  .menu input[type="radio"] {
+    display: none;
+  }
+
+  /* Hide all tab divs and keep them below the tab buttons */
+  .menu > div {
+    display: none;
+  }
+
+  /* Show the tab whose sibling radio button is checked */
+  .menu input:checked + label + div {
+    display: block;
+  }
+}
+
+// REFS: https://edu.gcfglobal.org/en/beginning-graphic-design/

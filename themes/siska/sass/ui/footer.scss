@@ -1,0 +1,81 @@
+@use "../fn" as *;
+
+#footnotes {
+  font-size: 1.6rem;
+}
+
+footer {
+  & > .footnote-definition {
+    margin: 0 0 0 2rem;
+  }
+
+  & > .footnote-definition-label {
+    color: var(--primary);
+  }
+
+  & > .footnote-definition p {
+    display: inline;
+    padding: 0 0 0 1rem;
+  }
+}
+
+footer > .foot-container {
+  color: var(--dimGrey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & foot-left {
+  }
+
+  & foot-right {
+  }
+
+  & svg {
+    width: 2.333rem;
+    height: 2.333rem;
+  }
+}
+
+footer > .footer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50vh 0 0 -0.555rem;
+  width: 100%;
+  text-wrap: nowrap;
+
+  a {
+    &::before {
+      all: unset;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--color-pink-300);
+    }
+  }
+
+  & > .tags {
+    width: 60%;
+    overflow: scroll;
+
+    & > a {
+      &::before {
+        content: "#";
+      }
+    }
+  }
+
+  & > .author {
+    align-self: flex-end;
+    margin-right: -0.555rem;
+
+    & > a {
+      &::before {
+        content: "@";
+      }
+    }
+  }
+}

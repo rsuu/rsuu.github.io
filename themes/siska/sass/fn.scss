@@ -1,0 +1,89 @@
+@use "sass:map";
+
+@function media-map($key) {
+  $map: (
+    "desktop": 75em,
+    "tablet": 50em,
+    "mobile": 30em,
+  );
+
+  @return map.get($map, $key);
+}
+
+@mixin float($top, $right, $buttom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $buttom;
+  left: $left;
+}
+
+@mixin center() {
+  margin: 0 auto;
+}
+
+@mixin embed() {
+  width: calc(100% + 0.777rem);
+  margin: 1rem -3.777rem;
+  padding: 2.333rem 2.555rem 2.333rem 3.777rem;
+}
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile() {
+  // @media (min-width: 0) and (max-width: $mobile-width) {
+  //   @content;
+  // }
+  @media (max-aspect-ratio: 1/1) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  // @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  //   @content;
+  // }
+  @media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 16/10) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-aspect-ratio: 16/10) {
+    @content;
+  }
+  // @media (min-width: $tablet-width) {
+  //   @content;
+  // }
+}
+
+@function ld($v) {
+  @return light-dark(var(-- + #{$v}), var(--dark- + #{$v}));
+}
+
+// $name: { desktop, tablet, mobile }
+@mixin media($name) {
+  $size: media-map($name);
+
+  @media (min-width: $size) and (max-width: $size * 1.25) {
+    @content;
+  }
+}
+
+/// USAGE: @include animateKeyframe($name: spin360, $duration: 2s, $count: infinite);
+@mixin animateKeyframe(
+  $name,
+  $duration: 1s,
+  $delay: 0s,
+  $timing: linear,
+  $count: 1,
+  $direction: normal
+) {
+  animation-name: $name;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-iteration-count: $count;
+  animation-direction: $direction;
+}
