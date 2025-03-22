@@ -1,0 +1,97 @@
+<!doctype html><html lang=en theme=light><head><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="text/html; charset=UTF-8" http-equiv=content-type><meta content="width=device-width,initial-scale=1" name=viewport><meta content="index, follow" name=robots><title>keyword args</title><meta content="keyword args" name=title><meta content=website property=og:type><meta content=https://rsuu.github.io/blog/kw-args/ property=og:url><meta property=og:site_name><meta content="keyword args" property=og:title><meta content=summary_large_image property=twitter:card><meta content=https://rsuu.github.io/blog/kw-args/ property=twitter:url><meta content="keyword args" property=twitter:title><link href=https://rsuu.github.io/blog/kw-args/ rel=canonical><link href=https://rsuu.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><link href=https://rsuu.github.io/style.css rel=stylesheet><link href=https://fonts.googleapis.com rel=preconnect><link crossorigin href=https://fonts.gstatic.com rel=preconnect><link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" onload="this.onload=null;this.rel='stylesheet'" as=style rel=preload><body><div class=wrapper><header><div class=header-flex><div class=toggle-theme><button class="themeButton light" onclick="setTheme('light')" title="Light mode"><i data-lucide=sun></i></button><button class="themeButton dark" onclick="setTheme('dark')" title="Dark mode"><i data-lucide=moon></i></button></div><div class=search><input name=search></div><div class=nav><div class=links><a href=/blog> home </a></div></div></div></header><main><h1>keyword args</h1><div class=post-meta><div><span class=styled-date datetime=2025-03-20>March 20, 2025</span><span class=dividing></span><span class=set> idea </span></div></div><h2 id=kw-struct>kw-struct</h2><pre class=language-rust data-lang=rust style=color:#fdf4c1aa;background-color:#282828><code class=language-rust data-lang=rust><span style=color:#928374;font-style:italic>// 语法糖
+</span><span style=color:#fa5c4b>fn </span><span style=color:#8ec07c>f</span><span>(
+</span><span>    </span><span style=color:#fdf4c1>v1</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, </span><span style=color:#fdf4c1>v2</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, 
+</span><span>    struct s {
+</span><span>        </span><span style=color:#fdf4c1>r</span><span>: </span><span style=color:#fa5c4b>u8</span><span>,
+</span><span>        </span><span style=color:#fdf4c1>g</span><span>: </span><span style=color:#fa5c4b>u8</span><span>,
+</span><span>        </span><span style=color:#fdf4c1>b</span><span>: </span><span style=color:#fa5c4b>u8</span><span>,
+</span><span>    }: impl Default,
+</span><span>) {
+</span><span>    </span><span style=color:#928374;font-style:italic>// ...
+</span><span>}
+</span><span>
+</span><span style=color:#928374;font-style:italic>// 脱糖后 
+</span><span style=color:#fa5c4b>fn </span><span style=color:#8ec07c>f</span><span>(
+</span><span>    </span><span style=color:#fdf4c1>v1</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, </span><span style=color:#fdf4c1>v2</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, 
+</span><span>    </span><span style=color:#928374;font-style:italic>// 注意: 有无实现 Default 是在编译时判断的
+</span><span>    </span><span style=color:#fdf4c1>r</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, 
+</span><span>    </span><span style=color:#fdf4c1>g</span><span>: </span><span style=color:#fa5c4b>u8</span><span>,
+</span><span>    </span><span style=color:#fdf4c1>b</span><span>: </span><span style=color:#fa5c4b>u8</span><span>,
+</span><span>) {
+</span><span>    </span><span style=color:#fa5c4b>let</span><span> s </span><span style=color:#fe8019>= </span><span>(r, g, b);
+</span><span>    </span><span style=color:#928374;font-style:italic>// ...
+</span><span>}
+</span><span>
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#d3869b>1</span><span>, </span><span style=color:#d3869b>2</span><span>, </span><span style=color:#fa5c4b>struct </span><span style=color:#8ec07c>s </span><span>{
+</span><span>    </span><span style=color:#fdf4c1>r</span><span>: 1,
+</span><span>    </span><span style=color:#fdf4c1>g</span><span>: 2,
+</span><span>    </span><span style=color:#fdf4c1>b</span><span>: 3,
+</span><span>});
+</span><span>
+</span><span>
+</span><span style=color:#fa5c4b>let</span><span> opt </span><span style=color:#fe8019>=</span><span> StructA {
+</span><span>    r: </span><span style=color:#d3869b>1</span><span>, 
+</span><span>    g: </span><span style=color:#d3869b>2</span><span>, 
+</span><span>    b: </span><span style=color:#d3869b>3</span><span>, 
+</span><span>    a: </span><span style=color:#d3869b>4</span><span>,
+</span><span>};
+</span><span>
+</span><span style=color:#928374;font-style:italic>// 自动收集 fields
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#d3869b>1</span><span>, </span><span style=color:#d3869b>2</span><span>, </span><span style=color:#fa5c4b>struct </span><span style=color:#8ec07c>s </span><span>{ ..opt });
+</span><span>
+</span></code></pre><h2 id=kw-enum>kw-enum</h2><pre class=language-rust data-lang=rust style=color:#fdf4c1aa;background-color:#282828><code class=language-rust data-lang=rust><span style=color:#928374;font-style:italic>// 对 enum 也是有效的
+</span><span style=color:#928374;font-style:italic>// ? 如何脱糖
+</span><span style=color:#928374;font-style:italic>// ? Default
+</span><span style=color:#fa5c4b>fn </span><span style=color:#8ec07c>f</span><span>(
+</span><span>    </span><span style=color:#fdf4c1>v1</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, </span><span style=color:#fdf4c1>v2</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, 
+</span><span>    enum e {
+</span><span>        #[default]
+</span><span>        Unit,
+</span><span>        Unnamed(</span><span style=color:#fdf4c1>u8</span><span>),
+</span><span>        Named { </span><span style=color:#fdf4c1>r</span><span>: </span><span style=color:#fa5c4b>u8</span><span> },
+</span><span>    }: impl Default,
+</span><span>) {
+</span><span>    </span><span style=color:#928374;font-style:italic>// ...
+</span><span>}
+</span><span>
+</span><span>
+</span><span style=color:#928374;font-style:italic>// 太奇怪
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#d3869b>1</span><span>, </span><span style=color:#d3869b>2</span><span>, </span><span style=color:#fa5c4b>enum </span><span style=color:#8ec07c>e</span><span>::Unit);
+</span><span>f(1, 2, enum e::Unnamed(1));
+</span><span>f(1, 2, enum e::Named { r: </span><span style=color:#d3869b>1 </span><span>} );
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#d3869b>1</span><span>, </span><span style=color:#d3869b>2</span><span>, </span><span style=color:#fa5c4b>enum </span><span style=color:#8ec07c>e</span><span>::Default::default());
+</span><span>
+</span></code></pre><pre class=language-rust data-lang=rust style=color:#fdf4c1aa;background-color:#282828><code class=language-rust data-lang=rust><span>
+</span><span style=color:#928374;font-style:italic>// ? 允许 kw-arg 出现在 unnamed arg 之前
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#d3869b>1</span><span>, </span><span style=color:#fa5c4b>struct </span><span style=color:#8ec07c>s </span><span>{
+</span><span>    </span><span style=color:#fdf4c1>r</span><span>: 1,
+</span><span>    </span><span style=color:#fdf4c1>g</span><span>: 2,
+</span><span>    </span><span style=color:#fdf4c1>b</span><span>: 3,
+</span><span>}, </span><span style=color:#d3869b>2</span><span>);
+</span><span>
+</span><span style=color:#928374;font-style:italic>// ? 哪个好
+</span><span style=color:#fa5c4b>match</span><span> s {
+</span><span>    </span><span style=color:#fa5c4b>struct </span><span style=color:#8ec07c>s </span><span>{ ... } </span><span style=color:#fe8019>=> </span><span>{ </span><span style=color:#fe8019>... </span><span>},
+</span><span>    (</span><span style=color:#fe8019>...</span><span>) </span><span style=color:#fe8019>=> </span><span>{ </span><span style=color:#fe8019>... </span><span>},
+</span><span>}
+</span><span>
+</span></code></pre><h2 id=fin>fin</h2><p>或许还是这样最好,只要命名参数而不要可选参数和自动收集,这样就是单纯的允许手动添加参数名注释了<pre class=language-rust data-lang=rust style=color:#fdf4c1aa;background-color:#282828><code class=language-rust data-lang=rust><span style=color:#fa5c4b>fn </span><span style=color:#8ec07c>f</span><span>(</span><span style=color:#fdf4c1>r</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, </span><span style=color:#fdf4c1>g</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, </span><span style=color:#fdf4c1>b</span><span>: </span><span style=color:#fa5c4b>u8</span><span>) {}
+</span><span>
+</span><span style=color:#fabd2f>f</span><span>(a </span><span style=color:#fe8019>= </span><span style=color:#d3869b>1</span><span>, </span><span style=color:#d3869b>2</span><span>, b </span><span style=color:#fe8019>= </span><span style=color:#d3869b>3</span><span>);
+</span><span>
+</span><span style=color:#928374;font-style:italic>// 脱糖,少即是多(LESS IS MORE) 🤣
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#928374;font-style:italic>/* a = */ </span><span style=color:#d3869b>1</span><span>, </span><span style=color:#d3869b>2</span><span>, </span><span style=color:#928374;font-style:italic>/* b = */ </span><span style=color:#d3869b>3</span><span>);
+</span></code></pre><pre class=language-rust data-lang=rust style=color:#fdf4c1aa;background-color:#282828><code class=language-rust data-lang=rust><span style=color:#fa5c4b>fn </span><span style=color:#8ec07c>f</span><span>(</span><span style=color:#fdf4c1>r</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, </span><span style=color:#fdf4c1>g</span><span>: </span><span style=color:#fa5c4b>u8</span><span>, </span><span style=color:#fdf4c1>b</span><span>: </span><span style=color:#fa5c4b>u8</span><span>) {}
+</span><span>
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#d3869b>7</span><span>, </span><span style=color:#d3869b>6</span><span>, </span><span style=color:#d3869b>5</span><span>);
+</span><span style=color:#fabd2f>f</span><span>(r </span><span style=color:#fe8019>= </span><span style=color:#d3869b>7</span><span>, b </span><span style=color:#fe8019>= </span><span style=color:#d3869b>5</span><span>, g </span><span style=color:#fe8019>= </span><span style=color:#d3869b>6</span><span>); </span><span style=color:#928374;font-style:italic>// stage 1
+</span><span style=color:#fabd2f>f</span><span>(b </span><span style=color:#fe8019>= </span><span style=color:#d3869b>5</span><span>, g </span><span style=color:#fe8019>= </span><span style=color:#d3869b>6</span><span>, </span><span style=color:#fe8019>..</span><span style=color:#fabd2f>Default</span><span>::default()); </span><span style=color:#928374;font-style:italic>// stage 2
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#fe8019>..</span><span style=color:#fabd2f>Default</span><span>::default());
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#fe8019>..</span><span>opts); 
+</span><span>
+</span><span style=color:#928374;font-style:italic>// error
+</span><span style=color:#fabd2f>f</span><span>(</span><span style=color:#d3869b>6</span><span>, </span><span style=color:#d3869b>5</span><span>, </span><span style=color:#fe8019>..</span><span style=color:#fabd2f>Default</span><span>::default()); </span><span style=color:#928374;font-style:italic>// mix unnamed args and `..`
+</span><span style=color:#fabd2f>f</span><span>(r </span><span style=color:#fe8019>= </span><span style=color:#d3869b>7</span><span>, </span><span style=color:#d3869b>6</span><span>, </span><span style=color:#d3869b>5</span><span>); </span><span style=color:#928374;font-style:italic>// mix unnamed and named args.
+</span><span style=color:#fabd2f>f</span><span>() </span><span style=color:#928374;font-style:italic>// empty args
+</span><span>
+</span></code></pre><div class=footnote-definition id=03221733><sup class=footnote-definition-label>1</sup><p>https://github.com/rust-lang/rfcs/issues/323</div></main><footer><div class=footer-meta><div class=tags><a href=/tags/rust>rust</a></div><div class=author><a href=https://github.com/rsuu>rsuu</a></div></div><hr><div class=foot-container><div class=foot-left><p>License: <a rel="noopener noreferrer" href=https://en.wikipedia.org/wiki/MIT_License target=_blank>MIT</a><br> Built with <a rel="noopener noreferrer" href=https://www.getzola.org target=_blank>Zola</a>, theme based on <a href=https://github.com/Speyll/anemone>anemone</a>.</div><div class=foot-right><a rel="noopener noreferrer" title="Subscribe via RSS for updates." class=icons__background href=https://rsuu.github.io/atom.xml target=_blank> <svg class="icons icons__background"><use href=https://rsuu.github.io/icons.svg#rss></use></svg> </a></div></div></footer><script defer src=https://rsuu.github.io/js/script.js></script><script defer src=https://rsuu.github.io/js/code_bar.js></script><script defer src=https://rsuu.github.io/js/icons.js type=module></script><script defer src=https://rsuu.github.io/js/heif.js type=module></script><script defer src=https://rsuu.github.io/js/carousel_card.js type=module></script><script defer src=https://rsuu.github.io/js/anim.js type=module></script><script defer src=https://rsuu.github.io/js/mermaid.js type=module></script><script defer src=https://cdn.jsdelivr.net/npm/d3@latest></script><script defer src=https://esm.sh/css-doodle/css-doodle.min.js?raw></script><script src=https://unpkg.com/lucide></script><script defer>lucide.createIcons();</script><div class=wrap-giscus><script crossorigin data-category=General data-category-id=DIC_kwDOMPkDCs4CjHDF data-emit-metadata=0 data-input-position=top data-lang=en data-loading=lazy data-mapping=pathname data-reactions-enabled=1 data-repo=rsuu/rsuu.github.io data-repo-id=R_kgDOMPkDCg data-strict=0 data-theme=preferred_color_scheme defer src=https://giscus.app/client.js></script></div></div>
