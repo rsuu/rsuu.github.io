@@ -5,77 +5,98 @@
 }
 
 footer {
-  & > .footnote-definition {
-    margin: 0 0 0 2rem;
-  }
+  margin: 1rem 2rem;
 
-  & > .footnote-definition-label {
-    color: var(--primary);
-  }
+  .foot-container {
+    color: var(--dimGrey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  & > .footnote-definition p {
-    display: inline;
-    padding: 0 0 0 1rem;
-  }
-}
-
-footer > .foot-container {
-  color: var(--dimGrey);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  & foot-left {
-  }
-
-  & foot-right {
-  }
-
-  & svg {
-    width: 2.333rem;
-    height: 2.333rem;
-  }
-}
-
-footer > .footer-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 50vh 0 0 -0.555rem;
-  width: 100%;
-  text-wrap: nowrap;
-
-  a {
-    &::before {
-      all: unset;
+    .left {
+      p {
+        margin: 1rem 0;
+      }
     }
 
-    &:active,
-    &:focus,
-    &:hover {
-      color: var(--color-pink-300);
+    .right {
+    }
+
+    .ti {
+      font-size: 2.4rem;
     }
   }
 
-  & > .tags {
-    width: 60%;
-    overflow: scroll;
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50vh 0 0 -0.555rem;
+    width: 100%;
+    text-wrap: nowrap;
 
-    & > a {
+    a {
       &::before {
-        content: "#";
+        all: unset;
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--color-pink-300);
+      }
+    }
+
+    .tags {
+      width: 60%;
+      overflow: scroll;
+
+      a {
+        &::before {
+          content: "#";
+        }
+      }
+    }
+
+    .author {
+      align-self: flex-end;
+      margin-right: -0.555rem;
+
+      a {
+        &::before {
+          content: "@";
+        }
       }
     }
   }
+}
 
-  & > .author {
-    align-self: flex-end;
-    margin-right: -0.555rem;
+.footnote-definition {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin: 3rem 2rem;
 
-    & > a {
-      &::before {
-        content: "@";
-      }
+  .footnote-definition-label {
+    display: block;
+    color: var(--color-gray-500);
+    font-size: 1.5rem;
+  }
+
+  p {
+    display: block;
+  }
+}
+
+.card {
+  .left {
+  }
+
+  .right {
+    .prev {
+    }
+
+    .next {
     }
   }
 }

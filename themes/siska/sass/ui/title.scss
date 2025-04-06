@@ -43,3 +43,16 @@ h4 {
   line-height: calc(1ex / 0.37);
   margin: calc(1ex / 0.37) 0;
 }
+
+@for $i from 2 through 6 {
+  h#{$i} {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 0 2rem 0 1rem;
+    margin: 4rem 0 0.3rem 0;
+    border-radius: 0 5px 5px 0;
+    color: var(--color-purple-500);
+    background: var(--color-purple-50);
+  }
+}

@@ -5,12 +5,20 @@ p {
   display: block;
   color: var(--fg);
   text-wrap: pretty;
+  word-break: auto-phrase;
+  text-autospace: normal;
+  text-spacing-trim: normal;
   font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
   // font-size: clamp(1rem, 0.5rem + 2.5vw, 3rem);
   font-feature-settings: "palt" 1;
   // letter-spacing: 0.12em;
+  margin: 1rem 2rem;
 
-  & :not(> img) {
+  &:has(img) {
+    margin: 1rem 0;
+  }
+
+  &:not(> img) {
     max-inline-size: 50ch;
 
     @include mobile() {
@@ -25,10 +33,6 @@ p {
   }
 
   margin-bottom: calc(var(--main-font-size) * 1.2);
-
-  & a {
-    color: var(--a-fg);
-  }
 }
 
 // p:first-of-type {
@@ -41,10 +45,9 @@ p > code {
   position: relative;
   padding: 0 0.333rem;
 
-  font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
+  font: normal normal 500 var(--size-text) / 1.45 var(--font-text);
   color: var(--a-fg);
   text-decoration: none;
-  // word-break: break-all;
 
   &:before {
     content: "";
@@ -59,7 +62,7 @@ p > code {
     // background-image: linear-gradient(to right, black 50%, transparent 0);
     // background-size: 200% 100%;
     // background-position: right;
-    color: white !important;
+    color: white;
     animation: _ 500ms ease-in-out forwards;
 
     @keyframes _ {
@@ -86,14 +89,23 @@ p > code {
 
 // inline code
 p > code {
-  background: var(--color-pink-25);
-  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  padding: 0 0.333rem;
+
+  background: var(--color-pink-50);
+  border-top: 2px solid var(--color-pink-25);
+  border-bottom: 2px solid var(--color-pink-25);
+  word-break: break-all;
 }
 
-main {
-  // URL
-  p a[href] {
-    // text-decoration: underline;
+// URL
+main > p > a[href] {
+  &:hover {
+    color: var(--a-fg);
+    text-decoration: underline solid var(--header-underline) 0.2rem;
+    text-underline-offset: 0.255rem;
+    animation: none;
   }
 }
 

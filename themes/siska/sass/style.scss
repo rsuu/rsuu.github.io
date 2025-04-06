@@ -25,6 +25,7 @@
 @use "ui/header";
 @use "ui/img";
 @use "ui/home";
+@use "ui/home_cards";
 @use "ui/meta";
 @use "ui/misc";
 @use "ui/quote";
@@ -33,7 +34,6 @@
 @use "ui/text";
 @use "ui/timeline";
 @use "ui/title";
-@use "ui/pcard";
 
 // @use "layout/masonry";
 
@@ -58,9 +58,13 @@
     "kern" off;
 
   ::selection {
-    color: white;
-    background: var(--color-soft-pink);
+    color: white !important;
+    background: var(--color-pink-200);
   }
+}
+
+@view-transition {
+  navigation: auto;
 }
 
 .-text {
@@ -76,7 +80,7 @@
 }
 
 body {
-  // background: ld(body-bg);
+  position: relative;
   background: var(--body-bg);
 
   margin: 5px 3px;
@@ -86,53 +90,21 @@ body {
 }
 
 .wrapper {
+  position: relative;
   display: block;
   width: 100%;
   max-width: var(--max-page-width);
-  position: relative;
+  min-height: 100vh;
   color: var(--fg);
   background: var(--bg);
   border-radius: 2px;
-  margin: 0 auto;
   padding: 1rem 0 2rem 0;
-  min-height: 100vh;
-
-  &
-    > main
-    > :not(pre, blockquote, ol, ul, box, h2, h3, h4, h5, h6, header, .blog),
-  & > main > box2,
-  & > footer {
-    margin: 1rem 2.333rem 0 2.555rem;
-
-    @include mobile() {
-      margin: 1rem 1.777rem 0 2rem;
-    }
-  }
-
-  & > main > p:has(> img),
-  .jou,
-  .timeline {
-    margin: 1rem auto !important;
-  }
+  margin: 0 auto;
 
   main {
-    display: block;
     position: relative;
+    display: block;
     margin-bottom: 30vh;
-
-    @for $i from 2 through 6 {
-      & > h#{$i} {
-        display: inline-block;
-        width: auto;
-        margin: 3.333rem 0 0 0;
-        padding: 0 2.333rem 0 1.333rem;
-        border-radius: 0 9px 9px 0;
-        color: var(--color-purple-500);
-        background: var(--color-purple-50);
-
-        // ? dot leaders
-      }
-    }
 
     @include desktop() {
       text-align: justify;
@@ -146,6 +118,7 @@ body {
 
     .giscus {
       iframe {
+        min-width: 100%;
         max-width: 100%;
       }
     }
@@ -157,6 +130,7 @@ body {
 
   .header {
   }
+
   .bar {
     .l1,
     .l2 {
@@ -166,6 +140,7 @@ body {
 
       .left {
       }
+
       .center {
         .count {
           background: #eee;

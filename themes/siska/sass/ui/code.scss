@@ -3,7 +3,6 @@
 
 pre {
   width: auto;
-  padding: 0.3rem 0;
 
   // TODO:
   .code-bar {
@@ -22,9 +21,9 @@ pre {
     display: block;
     width: auto;
     max-height: 70vh;
-    font: normal normal 400 var(--size-code) / 1.4 var(--font-code);
-    margin: 1rem 2rem;
+    padding: 1rem 2rem;
     overflow: scroll;
+    font: normal normal 400 var(--size-code) / 1.4 var(--font-code);
   }
 }
 

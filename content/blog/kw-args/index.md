@@ -2,9 +2,10 @@
 title = "keyword args"
 date = "2025-03-20"
 template = "page.html"
+description = "又是没有命名参数的一天"
 
 [taxonomies]
-set = ["idea"]
+category = ["idea"]
 tags = ["rust"]
 +++
 

@@ -1,14 +1,14 @@
 .timeline {
-  display: block;
   position: relative;
+  display: block;
   padding: 0 3.333rem 0 0;
+  margin: 3rem auto;
 
-  & li {
+  li {
     list-style-type: none;
-    font: normal normal 500 var(--size-text) / 1.65 var(--font-text);
 
     // dot
-    &::before {
+    &:before {
       content: "";
       position: absolute;
       display: block;
@@ -21,7 +21,7 @@
     }
 
     // line
-    &::after {
+    &:after {
       content: "";
       position: absolute;
       display: block;
@@ -35,16 +35,17 @@
     }
   }
 
-  & .txt {
+  .txt {
+    margin-left: -2.555rem;
   }
 
-  & .date {
+  .date {
     display: flex;
     justify-content: flex-end;
 
-    & span {
-      font: normal normal 600 1rem / 1 var(--font-meta);
-      color: var(--color-gray-700);
+    span {
+      font: normal normal 400 1rem / 1.2 var(--font-title);
+      color: var(--color-gray-500);
     }
   }
 }

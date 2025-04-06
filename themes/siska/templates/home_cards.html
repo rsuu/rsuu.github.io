@@ -1,5 +1,5 @@
-{% for page in section.pages %} {% if page.taxonomies.set and
-page.taxonomies.set[0] == "journal" %} {% continue %} {% endif %}
+{% for page in section.pages %} {% if page.taxonomies.category and
+page.taxonomies.category[0] == "journal" %} {% continue %} {% endif %}
 
 <div class="pcard">
   <div class="title">
@@ -15,9 +15,10 @@ page.taxonomies.set[0] == "journal" %} {% continue %} {% endif %}
   <div class="meta">
     {% if page.taxonomies.tags %}
     <div class="vec">
-      {% if page.taxonomies.set %}
-      <a class="set" href="/set/{{ page.taxonomies.set[0] }}">
-        {{ page.taxonomies.set[0] }}
+      {% if page.taxonomies.category %} {% set category =
+      page.taxonomies.category[0] %}
+      <a class="category" ctx="{{ category }}" href="/category/{{ category }}">
+        {{ category }}
       </a>
       {% endif %} {% for tag in page.taxonomies.tags %}
       <a href="/tags/{{ tag }}">{{ tag }}</a>

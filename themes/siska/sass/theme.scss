@@ -45,7 +45,7 @@ $fonts-ttf:
   --size-table: 1.375rem;
   --size-header: 1.2rem;
   --size-meta-date: 0.9rem;
-  --size-meta-set: 1rem;
+  --size-meta-category: 1rem;
 
   --size-title: 1.6rem;
 }
@@ -54,17 +54,21 @@ $fonts-ttf:
   --color-red-50: oklch(95.68% 0.022 7.17);
   --color-red-100: oklch(89.31% 0.057 11.54);
   --color-red-400: oklch(65.39% 0.193 25.14);
+  --color-red-500: oklch(64.27% 0.215 28.81);
   --color-hard-red: oklch(60.45% 0.186 19.16);
 
+  --color-orange-50: oklch(94.78% 0.02 25.17);
   --color-orange-200: oklch(87.41% 0.11 76.47);
   --color-orange-300: oklch(82.87% 0.145 73.54);
   --color-orange-400: oklch(68.75% 0.142 21.46);
+  --color-orange-500: oklch(67.92% 0.213 36.53);
   --color-deep-orange-300: oklch(75.46% 0.151 38.46);
   --color-deep-orange-400: oklch(71.24% 0.185 37.77);
   --color-hard-orange: oklch(65% 0.211 32);
 
   --color-yellow-50: oklch(99% 0.029 102.67);
   --color-yellow-100: oklch(97.39% 0.068 102.19);
+  --color-yellow-500: oklch(92.85% 0.18 102.5);
   --color-soft-yellow: oklch(87.27% 0.146 86.73);
   --color-hard-yellow: oklch(83.2% 0.151 78.99);
 
@@ -85,11 +89,12 @@ $fonts-ttf:
 
   --color-blue-50: oklch(95.32% 0.022 239.43);
   --color-blue-100: oklch(88.48% 0.055 243.39);
+  --color-blue-500: oklch(65.82% 0.169 248.81);
   --color-soft-blue: oklch(68.56% 0.136 255.18);
   --color-light-blue-500: oklch(69.91% 0.157 238.99);
   --color-hard-blue: oklch(62.72% 0.142 256.1);
 
-  --color-purple-25: oklch(97.68% 0 321.94);
+  --color-purple-25: oklch(97.68% 0 322.11);
   --color-purple-50: oklch(93.76% 0.026 321.94);
   --color-purple-100: oklch(84.44% 0.068 321.36);
   --color-purple-200: oklch(74.37% 0.116 321.55);
@@ -103,7 +108,7 @@ $fonts-ttf:
   --color-hard-purple: oklch(64.76% 0.144 295.24);
 
   --color-pink-25: oklch(98.15% 0.025 354.44);
-  --color-pink-50: oklch(94.05% 0.028 355.44);
+  --color-pink-50: oklch(94.66% 0.028 355.11);
   --color-pink-100: oklch(85.33% 0.075 356.33);
   --color-pink-200: oklch(76.57% 0.222 358.96);
   --color-pink-300: oklch(68.78% 0.18 1.96);
@@ -142,7 +147,7 @@ $fonts-ttf:
 
   --color-gray-25: oklch(99.15% 0 89.88);
   --color-gray-50: oklch(98.51% 0 89.88);
-  --color-gray-100: oklch(97.02% 0 89.88);
+  --color-gray-100: oklch(98.02% 0 89.88);
   --color-gray-200: oklch(94.91% 0 89.88);
   --color-gray-300: oklch(90.67% 0 89.88);
   --color-gray-310: oklch(95.04% 0 89.88);
@@ -176,7 +181,7 @@ $fonts-ttf:
 }
 
 :root {
-  --bg: var(--color-gray-25);
+  --bg: var(--color-gray-50);
   --fg: var(--color-gray-800);
 
   --body-bg: var(--color-pink-200);
@@ -231,6 +236,6 @@ $fonts-ttf:
   }
 }
 
-// REFS: https://huetone.ardov.me/
+// REFS(theme): https://huetone.ardov.me/
 // REFS(theme): https://codepen.io/rodriguesmarcos/pen/wvyMoO
 // REFS(oklch): https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl#comparing-oklch-with-other-css-color-formats

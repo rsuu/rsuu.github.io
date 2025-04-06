@@ -2,43 +2,41 @@
 @use "../fn";
 
 table {
-  $br: 9px;
+  $br: 0.9rem;
 
   display: block;
   font: normal normal 500 var(--size-table) / 1 var(--font-text);
-  max-height: 100vh;
-  overflow: scroll;
-  scrollbar-width: none;
-  border-radius: $br;
-  border: 2px solid var(--color-gray-500);
+  max-height: 80vh;
+  margin: 1rem 0;
+  border-top: 1px solid var(--color-gray-400);
+  border-bottom: 1px solid var(--color-gray-400);
+  // border-radius: $br;
   border-collapse: separate;
   border-spacing: 0;
-  box-shadow:
-    0 0 #000,
-    0 0 #000,
-    0 1px 2px rgba(0, 0, 0, 0.04);
+  overflow: scroll;
+  scroll-snap-type: both mandatory;
   word-break: keep-all;
-
-  thead,
-  tbody {
-  }
+  scrollbar-width: none;
 
   th,
   td {
     width: 100%;
-    // max-width: 30%;
-    padding: 0.777rem;
+    padding: 1rem 2rem;
+    scroll-snap-align: end start;
   }
 
   th {
     position: sticky;
     top: 0;
-    border-bottom: solid 2px var(--dimGrey);
     background: var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-300);
   }
 
-  tr:nth-child(odd) {
-    background: var(--color-gray-100);
+  td {
+  }
+
+  tr:nth-child(even) {
+    background: var(--color-gray-200);
   }
 }
 

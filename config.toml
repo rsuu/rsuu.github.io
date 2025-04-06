@@ -2,7 +2,7 @@ author = "rsuu"
 base_url = "https://rsuu.github.io"
 theme = "siska"
 taxonomies = [
-    { name = "set", feed = true},
+    { name = "category", feed = true},
     { name = "tags", feed = true},
 ]
 generate_feeds = true 

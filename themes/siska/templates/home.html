@@ -9,7 +9,7 @@
 
 <div class="more">
   <a class="link" href="/blog">
-    <i data-lucide="circle-arrow-right"></i>
+    <i class="ti ti-circle-arrow-right"></i>
   </a>
 </div>
   </div>
@@ -39,7 +39,16 @@
           {% set year = page.date | date(format="%Y") %}
           <div class="flex-x">
             <span class="pound"></span>
-            <a class="title" href="{{page.permalink | safe }}">{{ page.title }}</a>
+            <a class="title" href="{{page.permalink | safe }}">{{ page.title }}
+
+            {% if page.taxonomies.category %}
+              {% set category = page.taxonomies.category[0] %} 
+              {% if category == "adult" %}
+
+                <i class="ti ti-rating-18-plus"></i>
+              {% endif %}
+            {% endif %}
+            </a>
           </div>
         {% endfor %}
                 

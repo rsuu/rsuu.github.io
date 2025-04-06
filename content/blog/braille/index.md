@@ -4,7 +4,7 @@ template = "page.html"
 date="2024-05-01"
 
 [taxonomies]
-set = ["accessibility"]
+category = ["accessibility"]
 tags = ["font"]
 +++
 

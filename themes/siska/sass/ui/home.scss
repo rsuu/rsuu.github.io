@@ -2,23 +2,25 @@
 }
 
 .home {
+  margin: 1rem 2rem;
+
   section {
     margin: 2rem 0;
   }
 
   .head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     overflow: clip;
     z-index: 9;
-    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     .zodiac {
       width: 2rem;
       height: auto;
+      // background: transparent;
       background: var(--bg);
     }
 
@@ -32,6 +34,7 @@
 .home .flex-x {
   position: relative;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 
   .pound {
@@ -39,7 +42,7 @@
     height: 5px;
     border-radius: 99vw;
     background-color: var(--pound-fg);
-    margin: 0 1.333rem 0 1.777rem;
+    margin: 0 1.333rem 0 0.777rem;
   }
 
   .title {
@@ -49,6 +52,12 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    // TODO:
+    .ti {
+      opacity: 0;
+      color: var(--color-orange-500);
+    }
   }
 }
 

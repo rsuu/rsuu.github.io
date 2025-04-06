@@ -1,10 +1,11 @@
 +++
 title = "The Little MIDI"
-template = "page.html"
 date="2024-07-01"
+template = "page.html"
+description = "贫民 MIDI 还是简陋了点"
 
 [taxonomies]
-set = ["media"]
+category = ["media"]
 tags = ["midi","lilypond","staff","audio"]
 +++
 

@@ -1,19 +1,19 @@
 .post-meta {
   display: flex;
+  margin: 1rem 1.555rem;
 
-  & div {
-    // `auto`: right start
-    margin: 0.333rem 0 auto auto;
+  div {
+    margin-left: auto;
   }
 
-  & .styled-date {
+  .styled-date {
     color: var(--color-gray-700);
     font: italic small-caps 400 var(--size-meta-date) / 1 var(--font-title);
     text-transform: capitalize;
     vertical-align: middle;
   }
 
-  & .dividing {
+  .dividing {
     display: inline-block;
     width: 0.333rem;
     height: 1.333rem;
@@ -22,8 +22,8 @@
     vertical-align: middle;
   }
 
-  & .set {
-    font: normal normal 600 var(--size-meta-set) / 1 var(--font-title);
+  .category {
+    font: normal normal 600 var(--size-meta-category) / 1 var(--font-title);
     color: var(--color-gray-900);
     vertical-align: middle;
     text-transform: uppercase;
@@ -31,14 +31,14 @@
 }
 
 .tags {
-  & div {
+  div {
     display: flex;
     flex-wrap: wrap;
     overflow-x: scroll;
     gap: 0.333rem 0.555rem;
   }
 
-  & .tag {
+  .tag {
     border-radius: 1px;
     padding: 0.333rem 0.333rem;
 
@@ -48,7 +48,7 @@
 }
 
 .tags-one-line {
-  & div {
+  div {
     display: flex;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -57,7 +57,7 @@
     z-index: 1;
   }
 
-  & .tag {
+  .tag {
     display: block;
     border-radius: 1px;
 

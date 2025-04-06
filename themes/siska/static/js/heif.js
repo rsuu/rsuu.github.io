@@ -1,5 +1,10 @@
 import initLibheif from "https://unpkg.com/libheif-js/libheif-wasm/libheif-bundle.mjs";
 
+function main() {
+  window.addEventListener("load", decode_all_heif);
+}
+main();
+
 async function decode_heif(elem) {
   async function inner(elem) {
     let imageUrl = elem.src;
@@ -86,5 +91,3 @@ async function decode_all_heif() {
 function open_canvas(canvas) {
   canvas.toBlob((blob) => window.open(URL.createObjectURL(blob), "_blank"));
 }
-
-window.addEventListener("load", decode_all_heif);

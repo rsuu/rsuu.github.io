@@ -5,7 +5,7 @@ template = "page.html"
 description = "Girls Band Cry 采用全 3D 制作，光追增强氛围，剧情渐入佳境，音乐表现提升，结局留有余韵，整体突破传统但仍有不足。"
 
 [taxonomies]
-set = ["acgn"]
+category = ["acgn"]
 tags = ["anime", "love"]
 +++
 

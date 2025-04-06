@@ -4,10 +4,11 @@ date="2022-01-01"
 template = "page.html"
 
 [taxonomies]
-set = ["journal"]
+category = ["journal"]
 tags = ["art"]
 +++
 
+![2022-12-26_01](2022-12-26_01.avif)
 ![2022-12-26](2022-12-26.avif)
 ![2022-12-24_03](2022-12-24_03.avif)
 ![2022-12-24_02](2022-12-24_02.avif)

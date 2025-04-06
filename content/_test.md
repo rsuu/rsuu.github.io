@@ -3,9 +3,8 @@ title = "test"
 template = "page.html"
 date="2024-01-01"
 +++
-
-
-
+<i class="ti ti-brand-tabler"></i>
+<i class="ti ti-rating-18-plus"></i>
 <div class="carousel-card">
     <div class="carousel">
         <img src="/blog/2201/2022-02-10.avif" alt="1">

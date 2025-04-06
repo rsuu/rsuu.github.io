@@ -4,7 +4,7 @@ template = "page.html"
 date="2024-07-01"
 
 [taxonomies]
-set = ["journal"]
+category = ["journal"]
 tags = ["game"]
 +++
 
