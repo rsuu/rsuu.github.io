@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <link rel="self" type="application/atom+xml" href="https://rsuu.github.io/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rsuu.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-04-01T00:00:00+00:00</updated>
+    <id>https://rsuu.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Shintaro Kago</title>
+        <published>2025-04-01T00:00:00+00:00</published>
+        <updated>2025-04-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/shintaro-kago/"/>
+        <id>https://rsuu.github.io/blog/shintaro-kago/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/shintaro-kago/">&lt;h2 id=&quot;manga&quot;&gt;manga&lt;&#x2F;h2&gt;
+&lt;p&gt;『輝け!大東亜共栄圏』&lt;&#x2F;p&gt;
+&lt;p&gt;『殺殺草紙・大江戸奇騒天外』&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>the debut of H.266</title>
+        <published>2025-03-24T00:00:00+00:00</published>
+        <updated>2025-03-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/h266-img/"/>
+        <id>https://rsuu.github.io/blog/h266-img/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/h266-img/">&lt;h2 id=&quot;build-vvenc-on-termux&quot;&gt;build vvenc on termux&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;zsh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-zsh &quot;&gt;&lt;code class=&quot;language-zsh&quot; data-lang=&quot;zsh&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;pkg install binutils-gold llvmgold
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;git clone --depth 1 https:&#x2F;&#x2F;github.com&#x2F;fraunhoferhhi&#x2F;vvenc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; vvenc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;mkdir build               cd build              cmake ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;cmake --build . --config Release
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; ..&#x2F;bin
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;en266&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;ffmpeg -i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; -pix_fmt yuv420p10le -strict -1 -f yuv4mpegpipe - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&#x2F;vvencapp -i - --y4m --format yuv420_10 --hdr hdr10_2020 -t 4 -o &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;}.266&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;de266&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&#x2F;vvdecapp -b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; -f 1 --y4m -o - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;ffmpeg -f yuv4mpegpipe -i - -c:v libwebp -lossless 1 -y &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;}.webp&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;en266 test.jpg
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;de266 test.266
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fin&quot;&gt;fin&lt;&#x2F;h2&gt;
+&lt;p&gt;今天简单地测试了一下 &lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩图片效果，直接说结论：低码率下，&lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩率相比 &lt;code&gt;H.265&lt;&#x2F;code&gt; 略有提升；高压缩比情况下，画质和 &lt;code&gt;AV1&lt;&#x2F;code&gt; 一样差（涂抹严重）；而 &lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩速度已经下降到 &lt;code&gt;AV1&lt;&#x2F;code&gt; 和 &lt;code&gt;JXL&lt;&#x2F;code&gt; 这样的级别了（笑）。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;H.265&lt;&#x2F;code&gt; 作为上一代编码算法，质量依然很强。你们 &lt;code&gt;AV1&lt;&#x2F;code&gt; 就别老去碰瓷老前辈了，你们真正的竞争对手是 &lt;code&gt;H.266&lt;&#x2F;code&gt; 啊！！！&lt;&#x2F;p&gt;
+&lt;p&gt;目前我这边仍然使用 &lt;code&gt;H.265&lt;&#x2F;code&gt; 来压缩高质量图片（？），对于非写实图片，&lt;code&gt;AV1&lt;&#x2F;code&gt; 的压缩率还是更好一些，毕竟质量不那么敏感。在我这 &lt;code&gt;H.266&lt;&#x2F;code&gt; 可能还要再过几年才能取代 &lt;code&gt;H.265&lt;&#x2F;code&gt; 吧？嘛，或许没有 8K 视频的话，也没必要上这种大炮……&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>keyword args</title>
+        <published>2025-03-20T00:00:00+00:00</published>
+        <updated>2025-03-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/kw-args/"/>
+        <id>https://rsuu.github.io/blog/kw-args/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/kw-args/">&lt;h2 id=&quot;kw-struct&quot;&gt;kw-struct&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; 语法糖
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;v1&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;v2&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, 
+&lt;&#x2F;span&gt;&lt;span&gt;    struct s {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;g&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    }: impl Default,
+&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; 脱糖后 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;v1&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;v2&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, 
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; 注意: 有无实现 Default 是在编译时判断的
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, 
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;g&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; s &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(r, g, b);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;s &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;: 1,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;g&lt;&#x2F;span&gt;&lt;span&gt;: 2,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;: 3,
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; opt &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; StructA {
+&lt;&#x2F;span&gt;&lt;span&gt;    r: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, 
+&lt;&#x2F;span&gt;&lt;span&gt;    g: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, 
+&lt;&#x2F;span&gt;&lt;span&gt;    b: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;, 
+&lt;&#x2F;span&gt;&lt;span&gt;    a: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; 自动收集 fields
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;s &lt;&#x2F;span&gt;&lt;span&gt;{ ..opt });
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;kw-enum&quot;&gt;kw-enum&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; 对 enum 也是有效的
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ? 如何脱糖
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ? Default
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;v1&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;v2&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, 
+&lt;&#x2F;span&gt;&lt;span&gt;    enum e {
+&lt;&#x2F;span&gt;&lt;span&gt;        #[default]
+&lt;&#x2F;span&gt;&lt;span&gt;        Unit,
+&lt;&#x2F;span&gt;&lt;span&gt;        Unnamed(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;),
+&lt;&#x2F;span&gt;&lt;span&gt;        Named { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt; },
+&lt;&#x2F;span&gt;&lt;span&gt;    }: impl Default,
+&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; 太奇怪
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;enum &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;e&lt;&#x2F;span&gt;&lt;span&gt;::Unit);
+&lt;&#x2F;span&gt;&lt;span&gt;f(1, 2, enum e::Unnamed(1));
+&lt;&#x2F;span&gt;&lt;span&gt;f(1, 2, enum e::Named { r: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;} );
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;enum &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;e&lt;&#x2F;span&gt;&lt;span&gt;::Default::default());
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ? 允许 kw-arg 出现在 unnamed arg 之前
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;s &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;: 1,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;g&lt;&#x2F;span&gt;&lt;span&gt;: 2,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;: 3,
+&lt;&#x2F;span&gt;&lt;span&gt;}, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ? 哪个好
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;match&lt;&#x2F;span&gt;&lt;span&gt; s {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;s &lt;&#x2F;span&gt;&lt;span&gt;{ ... } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;... &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;... &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fin&quot;&gt;fin&lt;&#x2F;h2&gt;
+&lt;p&gt;或许还是这样最好,只要命名参数而不要可选参数和自动收集,这样就是单纯的允许手动添加参数名注释了&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;g&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;) {}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; 脱糖,少即是多(LESS IS MORE) 🤣
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;* a = *&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;* b = *&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;g&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;) {}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;7&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(r &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;7&lt;&#x2F;span&gt;&lt;span&gt;, b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;, g &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;); &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; stage 1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;, g &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;Default&lt;&#x2F;span&gt;&lt;span&gt;::default()); &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; stage 2
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;Default&lt;&#x2F;span&gt;&lt;span&gt;::default());
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;opts); 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; error
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;Default&lt;&#x2F;span&gt;&lt;span&gt;::default()); &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; mix unnamed args and `..`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(r &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;7&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;); &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; mix unnamed and named args.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; empty args
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;03221733&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rfcs&#x2F;issues&#x2F;323&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2503</title>
+        <published>2025-03-01T00:00:00+00:00</published>
+        <updated>2025-03-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2503/"/>
+        <id>https://rsuu.github.io/blog/2503/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2503/">&lt;h2 id=&quot;camera&quot;&gt;camera&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2503&#x2F;20250130_1.heic&quot; alt=&quot;chestnut Tree&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;如你所见,板栗树的嫩芽摸起来是毛茸茸的,初见那会儿还让我联想到了多肉植物.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2503&#x2F;20250130_2.heic&quot; alt=&quot;lentils&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;不知是从何而来的扁豆.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2503&#x2F;20250204_1.heic&quot; alt=&quot;rock&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;这些岩石让我想到了唐僧,嗯???&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;&quot;&gt;Books&lt;&#x2F;h2&gt;
+ 
+&lt;table class=&quot;books&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title-CN&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;notes&lt;&#x2F;th&gt;
+    &lt;&#x2F;tr&gt;
+  &lt;&#x2F;thead&gt;
+  &lt;tbody&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Stendhal] Le Rouge et le Noi&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        红与黑
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+  &lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;-1&quot;&gt;misc&lt;&#x2F;h2&gt;
+&lt;p&gt;想不到像我这样几百年才练几分钟琴的人都能练到手疼,果然长期不动就容易死 😆&lt;&#x2F;p&gt;
+&lt;p&gt;html的table竟然用不了圆角,难搞.&lt;&#x2F;p&gt;
+&lt;p&gt;或许我应该拿一些音乐上来?还是等我学会鉴赏再说吧!啊,不对,我可以找LLM啊...&lt;&#x2F;p&gt;
+&lt;p&gt;yaml是真的让人讨厌...&lt;&#x2F;p&gt;
+&lt;p&gt;百事可乐喝起来有点苦,气也没那么冲;可口可乐就不一样了,他更甜气也更冲,喝完牙齿腐蚀的也就更厉害了,加上一喝就打嗝...怎么说呢?两个都不太行?或许碳酸饮料天生就不是咱的type?
+虽然但是雪碧挺好的.&lt;&#x2F;p&gt;
+&lt;p&gt;要是我会Android开发那我就牛逼了,什么狗屎代码都能编译了!!!但是那套工具链是真的闻
+不得 💩&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2408</title>
+        <published>2024-08-01T00:00:00+00:00</published>
+        <updated>2024-08-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2408/"/>
+        <id>https://rsuu.github.io/blog/2408/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2408/">&lt;box&gt;
+  &lt;div
+    class=&quot;jou&quot;
+    
+    color=&quot;green&quot;
+    
+  &gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;ul&gt;
+&lt;li&gt;清洗绿豆&lt;&#x2F;li&gt;
+&lt;li&gt;直接把绿豆放入电饭锅中,放入刚好淹没过绿豆的水&lt;&#x2F;li&gt;
+&lt;li&gt;通电将水煮干&lt;&#x2F;li&gt;
+&lt;li&gt;拿出锅后用冷水冲洗绿豆后倒出水,重复几遍&lt;&#x2F;li&gt;
+&lt;li&gt;放入适量的水煮一个钟,期间每个十分钟就打开盖子随便捞出绿豆壳&lt;&#x2F;li&gt;
+&lt;li&gt;等绿豆溶完后放入冰糖&lt;&#x2F;li&gt;
+&lt;li&gt;取出冷却后放入冰箱&lt;&#x2F;li&gt;
+&lt;li&gt;完&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;div class=&quot;side&quot;&gt;
+        &lt;!-- &lt;div class=&quot;article-date-outer&quot;&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-month&quot;&gt;2024.08&lt;&#x2F;span&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-date&quot;&gt;18&lt;&#x2F;span&gt; --&gt;
+        &lt;!-- &lt;&#x2F;div&gt; --&gt;
+        
+        &lt;a name=&quot;绿豆沙&quot; href=&quot;#绿豆沙&quot;&gt;绿豆沙&lt;&#x2F;a&gt;
+        
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2407</title>
+        <published>2024-07-01T00:00:00+00:00</published>
+        <updated>2024-07-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2407/"/>
+        <id>https://rsuu.github.io/blog/2407/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2407/">&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;绝区零真的不行,打击感不如战双的玩意,打斗系统也还是这么迂腐.&lt;&#x2F;p&gt;
+&lt;p&gt;界面UI设计混乱,对比度差的一笔,布局没有一点层次感,塞满塞满,再搭配这昏暗的界面和字体...完美!&lt;&#x2F;p&gt;
+&lt;p&gt;跳过剧情居然二级菜单还要我点击确认,但凡你们学一丁点GalGame的剧情回顾模式都不至于这么弱智.&lt;&#x2F;p&gt;
+&lt;p&gt;而且主界面居然是3D视角,我的天哪,你们真的是疯了.&lt;&#x2F;p&gt;
+&lt;p&gt;浪费我感情,浪费我流量.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-07-04  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;发现粉色和其他颜色都不怎么搭配.
+然后我又看了看火烈鸟🦩,嗯...
+以后找配色直接去看鸟得了...&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-07-03  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Little MIDI</title>
+        <published>2024-07-01T00:00:00+00:00</published>
+        <updated>2024-07-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/midi/"/>
+        <id>https://rsuu.github.io/blog/midi/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/midi/">&lt;h2 id=&quot;staff&quot;&gt;Staff&lt;&#x2F;h2&gt;
+&lt;p&gt;制谱这块我们用&lt;a href=&quot;https:&#x2F;&#x2F;lilypond.org&quot;&gt;LilyPond&lt;&#x2F;a&gt;,虽然用的是&lt;code&gt;LaTeX&lt;&#x2F;code&gt;那样的语法(还混入了&lt;code&gt;LISP&lt;&#x2F;code&gt;),但除此之外也没什么好的选择了,能在终端里使用还兼顾着这么完美的质量...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;lilypond&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-lilypond &quot;&gt;&lt;code class=&quot;language-lilypond&quot; data-lang=&quot;lilypond&quot;&gt;&lt;span&gt;% test.ly
+&lt;&#x2F;span&gt;&lt;span&gt;\version &amp;quot;2.24.3&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;\language &amp;quot;english&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;\score {
+&lt;&#x2F;span&gt;&lt;span&gt;    \midi   {} 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    \relative {
+&lt;&#x2F;span&gt;&lt;span&gt;        c d e f g a b
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后轻轻地编译一下: &lt;code&gt;lilypond test.ly&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;player&quot;&gt;Player&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;FluidSynth&#x2F;fluidsynth&quot;&gt;FluidSynth&lt;&#x2F;a&gt;在&lt;a href=&quot;https:&#x2F;&#x2F;termux.dev&quot;&gt;Termux&lt;&#x2F;a&gt;上不知道为啥没声音,所以只能用&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mpv-player&#x2F;mpv&quot;&gt;MPV&lt;&#x2F;a&gt;来播放,绕了个小圈子.&lt;&#x2F;p&gt;
+&lt;p&gt;虽然&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Timidity++&quot;&gt;TiMidity++&lt;&#x2F;a&gt;也可以播放&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;MIDI&quot;&gt;MIDI&lt;&#x2F;a&gt;,但他本身指定字体的方式过于繁琐(只能通过配置文件来指定),所以这里就选择了FluidSynth.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;zsh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-zsh &quot;&gt;&lt;code class=&quot;language-zsh&quot; data-lang=&quot;zsh&quot;&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;midi-play&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;500-soundfonts-full-gm-sets
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_NAME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;Arachno.sf2&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_FONT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;HOME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&#x2F;soundfonts&#x2F;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_NAME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_FORMAT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;s16le
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_RATIO&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;44100
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fluidsynth -nli -o synth.cpu-cores=8 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -r $_RATIO -g 2 -T raw -F - \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -i $_FONT $1 \
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;mpv \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;rawaudio \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer-rawaudio-format&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;$_FORMAT \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer-rawaudio-rate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;$_RATIO \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;DONE: &lt;code&gt;midi-play test.midi&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Girls Band Cry</title>
+        <published>2024-06-29T00:00:00+00:00</published>
+        <updated>2024-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/gbc/"/>
+        <id>https://rsuu.github.io/blog/gbc/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/gbc/">&lt;h2 id=&quot;tracker&quot;&gt;tracker&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;txt&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-txt &quot;&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;&lt;span&gt;01:
+&lt;&#x2F;span&gt;&lt;span&gt;   终于知道为什么要用3D了,因为可以用光追呀,而且Live本身工作量就很大,要么3D要么2D.
+&lt;&#x2F;span&gt;&lt;span&gt;   可如果在用2D的情况下突然来个3D又显得突兀,而且这也是用烂了的做法. 
+&lt;&#x2F;span&gt;&lt;span&gt;   与其如此倒不如全程3D,而不是2&#x2F;3D混着来. 
+&lt;&#x2F;span&gt;&lt;span&gt;   加上光追的加持,气氛特效整个就上来啦!!! YES
+&lt;&#x2F;span&gt;&lt;span&gt;   而且ED的漫画风我也很喜欢,YES XDDD
+&lt;&#x2F;span&gt;&lt;span&gt;   当然,缺点就是歌不好听,486捧读,剧情有待观察
+&lt;&#x2F;span&gt;&lt;span&gt;05: 
+&lt;&#x2F;span&gt;&lt;span&gt;   486的捧读消失了?!剧情也开始上正轨了?运镜nice
+&lt;&#x2F;span&gt;&lt;span&gt;   歌曲还是要加把劲啊 :|
+&lt;&#x2F;span&gt;&lt;span&gt;   最好别出第二季 X
+&lt;&#x2F;span&gt;&lt;span&gt;06:
+&lt;&#x2F;span&gt;&lt;span&gt;   键盘加入后歌上来了 :)
+&lt;&#x2F;span&gt;&lt;span&gt;07:
+&lt;&#x2F;span&gt;&lt;span&gt;   说什么呢 :&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;   好!!!
+&lt;&#x2F;span&gt;&lt;span&gt;10:
+&lt;&#x2F;span&gt;&lt;span&gt;   稳~~~~
+&lt;&#x2F;span&gt;&lt;span&gt;11: 
+&lt;&#x2F;span&gt;&lt;span&gt;   nina的气场完全变了 XXXX
+&lt;&#x2F;span&gt;&lt;span&gt;12:
+&lt;&#x2F;span&gt;&lt;span&gt;   花田你这样是不行的
+&lt;&#x2F;span&gt;&lt;span&gt;13:
+&lt;&#x2F;span&gt;&lt;span&gt;   平稳落地啊...好吧...
+&lt;&#x2F;span&gt;&lt;span&gt;   如果有第二季那是一回事,没有就是另一回事是了...
+&lt;&#x2F;span&gt;&lt;span&gt;   而且第二季这种东西嘛...不太可能不是吗?
+&lt;&#x2F;span&gt;&lt;span&gt;   但我认为通过降格的方式来搞第二季不是很好啊,是吧
+&lt;&#x2F;span&gt;&lt;span&gt;   而且最后一画那种这是最后的演出,已经散伙了的感觉已经拉满了不是吗?
+&lt;&#x2F;span&gt;&lt;span&gt;   虽然这样调子的结尾也不是不行...好吧...意犹未尽是吧......
+&lt;&#x2F;span&gt;&lt;span&gt;   最后,问题还是相当多的,遗憾加期待吧...
+&lt;&#x2F;span&gt;&lt;span&gt;   最后最后,我认为吉野家出现的次数太多了!!!
+&lt;&#x2F;span&gt;&lt;span&gt;   哦知道了,懂吧,那种被腰斩的感觉.
+&lt;&#x2F;span&gt;&lt;span&gt;   唉
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fin&quot;&gt;fin&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;手島:&lt;&#x2F;p&gt;
+&lt;p&gt;死んだら棺桶にガールズバンドクライのBlu-rayとCD入れてもらお&lt;&#x2F;p&gt;
+&lt;p&gt;edは13話後のエピローグとして描かせていただいとります&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;虽然刚开始我也不屑于3D,但是等等,封面挺好的,好些人喜欢,背靠东映应该不会太差吧?
+于是在第二集出来后就去瞄了下,结果一发不可收拾.&lt;&#x2F;p&gt;
+&lt;p&gt;各种意义上的违背传统,&lt;code&gt;不看就可惜了&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;2025-01-01: 岩鸽又名&lt;code&gt;Rock&lt;&#x2F;code&gt;...&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2406</title>
+        <published>2024-06-01T00:00:00+00:00</published>
+        <updated>2024-06-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2406/"/>
+        <id>https://rsuu.github.io/blog/2406/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2406/">&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;当情感开始交织,平静的海面将激荡出无垠的浪花,汹涌的波涛之下,于暗流中消碎的生命将再次肆意迸发.&lt;&#x2F;p&gt;
+&lt;p&gt;在时间抛下钩锚坠入海面打破黑夜的刹那,有如飘渺的碎沫抽离出一般,湮于死寂......&lt;&#x2F;p&gt;
+&lt;p&gt;太阳坐落之处,万物青虹.&lt;&#x2F;p&gt;
+&lt;p&gt;GBC 赢了吗?&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-06-29  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;GBC 能赢吗? 从十一集开始的滑坡究竟只是匆匆的过渡还是烂尾的前奏呢,花田?&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-06-28  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;timeline&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;老子也是会大横按的人了 XD&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        &lt;span&gt;  2024-06-27  &lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Braille</title>
+        <published>2024-05-01T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/braille/"/>
+        <id>https://rsuu.github.io/blog/braille/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/braille/">&lt;p&gt;TODO:&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2401</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2401/"/>
+        <id>https://rsuu.github.io/blog/2401/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2401/">&lt;h2 id=&quot;show&quot;&gt;show&lt;&#x2F;h2&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Title&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Title-CN&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Notes&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Fallout&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;还行&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Shōgun&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;居然是一年一季放三年???你确定可以狗三年???&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;俺の话は长い&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;我的事说来话长&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;草(从种子开始发芽🌱)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Breaking Bad&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;老白该死了&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;フェンス&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;围栏&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;你讲了什么???&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;ブラッシュアップライフ&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;重启人生&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;我在路边看到的原来是鸽子 XD&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;家売るオンナ&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;理解不能&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;The Truman Show&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;art&quot;&gt;Art&lt;&#x2F;h2&gt;
+  
+
+&lt;div class=&quot;gallery&quot;&gt;
+  &lt;div class=&quot;carousel-card&quot;&gt;
+    &lt;div class=&quot;carousel&quot;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-06-27.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-06-16_01.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-06-16.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-06-14.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-06-11.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-06-08_01.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-06-08.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-28.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-23_02.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-23_01.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-23.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-21_03.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-21_02.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-21_01.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-05-21.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-04-03.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-04_01.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-04-01_02.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-04-01_01.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+        
+      &lt;img src=&quot;&amp;#x2F;blog&amp;#x2F;2401&amp;#x2F;2024-03-01.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+      
+    &lt;&#x2F;div&gt;
+
+    &lt;div class=&quot;wrap-scrollbar&quot;&gt;
+      &lt;div class=&quot;scrollbar&quot;&gt;
+        &lt;div class=&quot;thumb&quot;&gt;&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>test</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/test/"/>
+        <id>https://rsuu.github.io/test/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/test/">&lt;p&gt;&lt;i class=&quot;ti ti-brand-tabler&quot;&gt;&lt;&#x2F;i&gt;
+&lt;i class=&quot;ti ti-rating-18-plus&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;p&gt;
+&lt;div class=&quot;carousel-card&quot;&gt;
+    &lt;div class=&quot;carousel&quot;&gt;
+        &lt;img src=&quot;&#x2F;blog&#x2F;2201&#x2F;2022-02-10.avif&quot; alt=&quot;1&quot;&gt;
+        &lt;img src=&quot;&#x2F;blog&#x2F;2201&#x2F;2022-03-06.avif&quot; alt=&quot;1&quot;&gt;
+        &lt;img src=&quot;&#x2F;blog&#x2F;2201&#x2F;2022-03-28.avif&quot; alt=&quot;1&quot;&gt;
+    &lt;&#x2F;div&gt;
+  &lt;div class=&quot;wrap-scrollbar&quot;&gt;
+      &lt;div class=&quot;scrollbar&quot;&gt;
+          &lt;div class=&quot;thumb&quot;&gt;&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Title&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;zh_CN&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Notes&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;[Stendhal] Le Rouge et le Noi&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;红与黑&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;TODO&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;div class=&quot;anim-box&quot; style=&quot;
+width: 3rem;
+height:3rem;
+background: red;
+&quot;&gt;
+&lt;&#x2F;div&gt;
+&lt;style&gt;
+.logo {
+  .bg {
+    width: 10rem;
+    height: 10rem;
+    background: oklch(76.57% 0.222 358.96 &#x2F; 0.1);
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  .cube2,
+  .cube3,.line {
+    width: 9rem;
+    height: 9rem;
+    background: oklch(76.57% 0.222 358.96 &#x2F; 0.1);
+    position: absolute;
+  }
+  .cube3 {
+    width: 8rem;
+    height: 8rem;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.004);
+
+  }
+  .line{
+    width: 10rem;
+    height: 0.3rem;
+    background: white;
+  }
+  .cube {
+    width: 7rem;
+    height: 7rem;
+    background: oklch(76.57% 0.222 358.96 &#x2F; 1);
+    border-radius: 50%;
+    position: relative;
+  }
+  .cube2{
+    border-radius: 0.9px;
+  }
+
+  .w,
+  .t {
+    position: absolute;
+    color: white;
+  }
+  .t {
+    font: normal normal 400 12rem&#x2F; 1 Bungee;
+    opacity: 0.4;
+  }
+  .w {
+    font: normal normal 400 5rem&#x2F; 1 Bungee;
+    opacity: 1;
+  }
+}
+&lt;&#x2F;style&gt;
+&lt;div&gt;
+&lt;div class=&quot;logo&quot;&gt;
+ &lt;div class=&quot;bg&quot;&gt;
+  &lt;div class=&quot;cube2&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;cube3&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;line&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;cube&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;t&quot;&gt;T&lt;&#x2F;div&gt;
+  &lt;div class=&quot;w&quot;&gt;W&lt;&#x2F;div&gt;
+ &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;review&quot;&gt;
+ &lt;div class=&quot;top&quot;&gt;  
+  &lt;div class=&quot;left&quot;&gt;
+    &lt;div class=&quot;list&quot;&gt;
+     &lt;div class=&quot;ep&quot;&gt;
+      &lt;div class=&quot;meta&quot;&gt;
+       &lt;div class=&quot;idx&quot;&gt;01&lt;&#x2F;div&gt;
+       &lt;div class=&quot;score&quot;&gt;8.5&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;text&quot;&gt;&lt;p&gt;There is a dog&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+     &lt;&#x2F;div&gt;
+     &lt;div class=&quot;ep&quot;&gt;
+      &lt;div class=&quot;meta&quot;&gt;
+       &lt;div class=&quot;idx&quot;&gt;13&lt;&#x2F;div&gt;
+       &lt;div class=&quot;score&quot;&gt;7.7&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;text&quot;&gt;&lt;p&gt;
+终于知道为什么要用3D了,因为可以用光追呀,而且Live本身工作量就很大,要么3D要么2D.
+可如果在用2D的情况下突然来个3D又显得突兀,而且这也是用烂了的做法. 
+与其如此倒不如全程3D,而不是2&#x2F;3D混着来. 
+加上光追的加持,气氛特效整个就上来啦!!! YES
+而且ED的漫画风我也很喜欢,YES XDDD
+当然,缺点就是歌不好听,486捧读,剧情有待观察
+&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+     &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;hr &#x2F;&gt;
+  &lt;div class=&quot;right&quot;&gt;
+   &lt;div class=&quot;cover&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;p.sda1.dev&#x2F;16&#x2F;161963b590879f40e29530492dbb2744&#x2F;20240416_001825.jpg&quot;&gt;&lt;&#x2F;img&gt;
+   &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+ &lt;&#x2F;div&gt;
+ &lt;div class=&quot;bottom&quot;&gt;
+  &lt;hr &#x2F;&gt;
+  &lt;a class=&quot;tag&quot;&gt;movie&lt;&#x2F;a&gt;
+  &lt;div class=&quot;text&quot;&gt;
+   &lt;p&gt;There is a dog&lt;&#x2F;p&gt;
+   &lt;p&gt;There is a dog&lt;&#x2F;p&gt;
+   &lt;p&gt;There is a dog&lt;&#x2F;p&gt;
+  &lt;&#x2F;div&gt;
+ &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;box&gt;
+&lt;div style=&quot;
+width: 100%;
+height: 10rem;
+background: url(&#x2F;Assets&#x2F;2024&#x2F;2024-06-27.avif) repeat-x 0 0&#x2F;auto 100%;
+margin: 1rem 0;&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;css-doodle&gt;
+ :doodle {
+   @grid: 8x8 &#x2F; 10em &#x2F; #f0f0f0 _1px;
+   @shape: circle; 
+   --s: 0;
+ }
+ :doodle(:hover) { 
+   --s: 1;
+ }
+ background: #60569e;
+ border-radius: 3px;
+ @y(odd) {
+   @shape: circle; 
+   background: pink;
+   border-radius: 0;
+   :after { 
+     content: &quot;+&quot;;
+   }
+ }
+ transition: 500ms cubic-bezier(.175, .885, .32, 1.275);
+ transition-delay: @rand(300ms);
+ transform: translateY(calc(var(--s) * 100%));
+&lt;&#x2F;css-doodle&gt;
+&lt;css-doodle&gt;
+@grid: 1 &#x2F; 16em;
+background: @svg(
+ svg {
+   viewBox: 0 0 100 100;
+   fill: none;
+   style background: #0ce5f2;
+   path*30 {
+     stroke-linecap: round;
+     stroke-dasharray: 0 8 5 6 3 12;
+     stroke: @pn(
+       #ff4ea5, yellow, @m4(#fff)
+     );
+     d: M 37 40
+        Q @Plot(r: 80) @Plot(r: 150);
+   }
+ }
+);
+&lt;&#x2F;css-doodle&gt;
+&lt;css-doodle&gt;
+@grid: 24 &#x2F; 240px &#x2F; #4d49af +0.95;
+@size: 100% 2px;
+--n: @round(@dy&#x2F;@dx + @dx&#x2F;@dy);
+margin: auto;
+rotate: $(60n)deg;
+background: hsl(
+  $(36n), 80%, 80%
+);
+&lt;&#x2F;css-doodle&gt;
+&lt;css-doodle&gt;
+ @grid: 3x3 &#x2F; 10em &#x2F; #f0f0f0 _1px;
+ &#x2F;* elem *&#x2F;
+ background: #60569e;
+ transform: rotate(calc(@t &#x2F; 10 * 1deg));
+ transform: translateY(calc(@t &#x2F; 100 * 1%));
+&lt;&#x2F;css-doodle&gt;
+&lt;div class=&quot;vec-star&quot;&gt;
+ &lt;svg class=&quot;star&quot; viewBox=&quot;0 0 576 512&quot; width=&quot;100&quot; title=&quot;star&quot;&gt;
+       &lt;path d=&quot;M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7
+       54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7
+       68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5
+       8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z&quot; &#x2F;&gt;
+        &lt;&#x2F;svg&gt;
+ &lt;div class=&quot;overlay&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;dict&quot;&gt;
+ &lt;div class=&quot;examples&quot;&gt;
+  &lt;h1&gt;examples&lt;&#x2F;h1&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+   &lt;div class=&quot;left&quot;&gt;
+     &lt;span class=&quot;idx&quot;&gt;&lt;&#x2F;span&gt;  
+   &lt;&#x2F;div&gt;
+   &lt;div class=&quot;right&quot;&gt;
+     &lt;div class=&quot;from&quot;&gt;
+       &lt;p&gt;hello&lt;&#x2F;p&gt; 
+     &lt;&#x2F;div&gt;
+     &lt;div class=&quot;to&quot;&gt;
+      &lt;p&gt;你好&lt;&#x2F;p&gt; 
+     &lt;&#x2F;div&gt;
+   &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+   &lt;div class=&quot;left&quot;&gt;
+     &lt;span class=&quot;idx&quot;&gt;&lt;&#x2F;span&gt;  
+   &lt;&#x2F;div&gt;
+   &lt;div class=&quot;right&quot;&gt;
+     &lt;div class=&quot;from&quot;&gt;
+       &lt;p&gt;hello&lt;&#x2F;p&gt; 
+     &lt;&#x2F;div&gt;
+     &lt;div class=&quot;to&quot;&gt;
+      &lt;p&gt;你好&lt;&#x2F;p&gt; 
+     &lt;&#x2F;div&gt;
+   &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+ &lt;&#x2F;div&gt;
+ &lt;div class=&quot;synonyms&quot;&gt;
+  &lt;h1&gt;synonyms&lt;&#x2F;h1&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+   &lt;div class=&quot;left&quot;&gt;
+     &lt;span class=&quot;type&quot; type=&quot;n.&quot;&gt;&lt;&#x2F;span&gt;  
+   &lt;&#x2F;div&gt;
+   &lt;div class=&quot;right&quot;&gt;
+     &lt;div class=&quot;from&quot;&gt;
+       &lt;p&gt;hello&lt;&#x2F;p&gt; 
+     &lt;&#x2F;div&gt;
+     &lt;div class=&quot;to&quot;&gt;
+      &lt;p&gt;你好&lt;&#x2F;p&gt; 
+     &lt;&#x2F;div&gt;
+   &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+ &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;ssr&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div class=&quot;fishway&quot;&gt;
+  &lt;div class=&quot;bg&quot;&gt;
+    &lt;div class=&quot;circle&quot;&gt;
+      &lt;div class=&quot;wave&quot;&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;box&gt;
+&lt;div class=&quot;set-box&quot;&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;AAA&lt;&#x2F;legend&gt;
+  &lt;textarea type=&quot;text&quot; placeholder=&quot;some text&quot;&gt;&lt;&#x2F;textarea&gt;
+&lt;&#x2F;fieldset&gt;
+ &lt;div class=&quot;menu&quot;&gt;
+  &lt;input id=&quot;1&quot; name=&quot;r&quot; type=&quot;radio&quot; checked&#x2F;&gt;
+  &lt;label class=&quot;collapse&quot; for=&quot;1&quot;&gt;tab1&lt;&#x2F;label&gt;
+  &lt;div&gt;111111111111111111111&lt;&#x2F;div&gt;
+  &lt;input id=&quot;2&quot; name=&quot;r&quot; type=&quot;radio&quot;&#x2F;&gt;
+  &lt;label class=&quot;collapse&quot; for=&quot;2&quot;&gt;tab2&lt;&#x2F;label&gt;
+  &lt;div&gt;2222222222222222222222&lt;&#x2F;div&gt;
+  &lt;input id=&quot;3&quot; name=&quot;r&quot; type=&quot;radio&quot; &#x2F;&gt;
+  &lt;label class=&quot;collapse&quot; for=&quot;3&quot;&gt;tab3&lt;&#x2F;label&gt;
+  &lt;div&gt;333333333333333333333&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;set-box&quot;&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;AAA&lt;&#x2F;legend&gt;
+  &lt;textarea type=&quot;text&quot; placeholder=&quot;some text&quot;&gt;&lt;&#x2F;textarea&gt;
+&lt;&#x2F;fieldset&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;div class=&quot;desc&quot;&gt;
+    &lt;div class=&quot;top&quot;&gt;
+      &lt;div class=&quot;icon&quot;&gt;
+        &lt;a href=&quot;#h1&quot;&gt; desc &lt;&#x2F;a&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;line&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;清洗绿豆
+直接把绿豆放入电饭锅中,放入刚好淹没过绿豆的水
+通电将水煮干
+拿出锅后用冷水冲洗绿豆后倒出水,重复几遍
+lsls ksos&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+    &lt;div class=&quot;bottom&quot;&gt;
+      &lt;div class=&quot;line&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;div class=&quot;jchart&quot;&gt;
+    &lt;div class=&quot;header&quot;&gt;参议院选举 选举席次&lt;&#x2F;div&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+      &lt;div class=&quot;l1&quot;&gt;
+        &lt;div class=&quot;left&quot;&gt;执政党&lt;&#x2F;div&gt;
+        &lt;div class=&quot;center&quot;&gt;
+          &lt;div class=&quot;count&quot;&gt;
+            剩余 &lt;span class=&quot;zero&quot;&gt;0&lt;&#x2F;span&gt;&#x2F;&lt;span&gt;465&lt;&#x2F;span&gt; 席
+          &lt;&#x2F;div&gt;
+        &lt;&#x2F;div&gt;
+        &lt;div class=&quot;right&quot;&gt;在野党&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;l2&quot;&gt;
+        &lt;div class=&quot;left&quot;&gt;&lt;span&gt;215&lt;&#x2F;span&gt;席&lt;&#x2F;div&gt;
+        &lt;div class=&quot;center&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div class=&quot;right&quot;&gt;&lt;span&gt;250&lt;&#x2F;span&gt;席&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;chart&quot;&gt;
+      &lt;div class=&quot;line&quot;&gt;&lt;&#x2F;div&gt;
+      &lt;div class=&quot;half&quot;&gt;🗳过半数&lt;span&gt;233&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;
+
+      &lt;div class=&quot;cur&quot;&gt;
+        &lt;div class=&quot;red&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div class=&quot;blue&quot;&gt;&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;prev&quot;&gt;
+        &lt;div class=&quot;red&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div class=&quot;blue&quot;&gt;&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;table&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;div class=&quot;chat&quot;&gt;
+  &lt;div class=&quot;left&quot;&gt;
+    &lt;span class=&quot;name&quot;&gt;dodo&lt;&#x2F;span&gt;
+    &lt;div class=&quot;msg&quot;&gt;kwow sjsj sjwj&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+
+  
+  &lt;div class=&quot;right&quot;&gt;
+    &lt;div class=&quot;reply&quot;&gt;&lt;p&gt;ksejenejn snjsj snejej&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;music_card&quot;&gt;
+  &lt;div class=&quot;l1&quot;&gt;
+    &lt;div class=&quot;l2&quot;&gt;
+      &lt;div class=&quot;info&quot;&gt;
+        &lt;div class=&quot;img&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div class=&quot;txt&quot;&gt;
+          &lt;div&gt;
+            &lt;span class=&quot;title&quot;&gt;title&lt;&#x2F;span&gt;
+          &lt;&#x2F;div&gt;
+          &lt;div&gt;
+            &lt;span class=&quot;author&quot;&gt;author&lt;&#x2F;span&gt;
+          &lt;&#x2F;div&gt;
+          &lt;div class=&quot;sync&quot;&gt;
+            &lt;span&gt;sync&lt;&#x2F;span&gt;
+          &lt;&#x2F;div&gt;
+        &lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+
+    &lt;div class=&quot;bar&quot;&gt;
+      &lt;div class=&quot;left&quot;&gt;
+        &lt;span class=&quot;txt&quot;&gt;Last played on Thursday 15:02&lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;right&quot;&gt;
+        &lt;span class=&quot;day&quot;&gt;4d&lt;&#x2F;span&gt;
+        &lt;span class=&quot;suffix&quot;&gt;ago&lt;&#x2F;span&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;qa-chat&quot;&gt;
+&lt;div class=&quot;qa&quot;&gt;
+  &lt;div class=&quot;q&quot;&gt;
+    &lt;span&gt;Q&lt;&#x2F;span&gt;
+    &lt;a&gt; jdii jdj ehhh b? &lt;&#x2F;a&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;a&quot;&gt;
+    &lt;span&gt;A&lt;&#x2F;span&gt;
+    &lt;div class=&quot;p&quot;&gt;&lt;p&gt;清洗绿豆
+直接把绿豆放入电饭锅中,放入刚好淹没过绿豆的水
+通电将水煮干
+拿出锅后用冷水冲洗绿豆后倒出水,重复几遍
+lsls ksos&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div class=&quot;list&quot;&gt;
+&lt;div class=&quot;chat&quot;&gt;
+  &lt;div class=&quot;left&quot;&gt;
+    &lt;span class=&quot;name&quot;&gt;dodo&lt;&#x2F;span&gt;
+    &lt;div class=&quot;msg&quot;&gt;sllss sjsk sjsk&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+
+  
+  &lt;div class=&quot;right&quot;&gt;
+    &lt;div class=&quot;reply&quot;&gt;&lt;p&gt;skekke&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;chat&quot;&gt;
+  &lt;div class=&quot;left&quot;&gt;
+    &lt;span class=&quot;name&quot;&gt;dodo&lt;&#x2F;span&gt;
+    &lt;div class=&quot;msg&quot;&gt;hjdkh jkejkejk ejkehke ejk hekh eh kehi ebe ii ebbieeke hkekj je&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+
+  
+  &lt;div class=&quot;right&quot;&gt;
+    &lt;div class=&quot;reply&quot;&gt;&lt;p&gt;skekekmens nejej&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;morphing&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div class=&quot;test-box a-trc&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div class=&quot;test-circle&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div class=&quot;play&quot; style=&quot;
+  display: flex;
+  gap: 1rem;               
+  flex-wrap: wrap;
+&quot;&gt;
+  &lt;div class=&quot;eg-clip-path&quot;&gt;
+  &lt;div class=&quot;bg&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;fg&quot; ty=&quot;circle&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;eg-clip-path&quot;&gt;
+  &lt;div class=&quot;bg&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;fg&quot; ty=&quot;rect&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;eg-clip-path&quot;&gt;
+  &lt;div class=&quot;bg&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;fg&quot; ty=&quot;rect-round&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;box&gt;
+&lt;svg version=&quot;1.1&quot; id=&quot;map_line_svg&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; xmlns:xlink=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;1999&#x2F;xlink&quot; width=&quot;300&quot; height=&quot;300&quot; viewBox=&quot;0 0 300 300&quot; &gt;
+&lt;rect x=&quot;50&quot; y=&quot;100&quot; width=&quot;200&quot; height=&quot;100&quot; rx=&quot;50&quot; fill=&quot;#E0E9F6&quot; stroke-width=&quot;4&quot;  stroke=&quot;grey&quot; stroke-dashoffset=&quot;600&quot; stroke-dasharray=&quot;600&quot;&gt;
+ &lt;animate attributeName=&quot;stroke-dashoffset&quot; begin=&quot;1s&quot; from=&quot;600&quot; to=&quot;0&quot; dur=&quot;7s&quot; repeatCount=&quot;indefinite&quot; &#x2F;&gt;
+ &lt;&#x2F;rect&gt;
+&lt;&#x2F;svg&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;pre class=&quot;mermaid&quot;&gt; graph TD
+A[Client] --&amp;gt;|tcp_123| B
+B(Load Balancer)
+B --&amp;gt;|tcp_456| C[Server1]
+B --&amp;gt;|tcp_456| D[Server2] &lt;&#x2F;pre&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;div class=&quot;d3&quot;&gt;
+    &lt;!-- https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;403967&#x2F;how-may-i-reference-the-script-tag-that-loaded-the-currently-executing-script --&gt;
+    &lt;script
+      async
+      type=&quot;module&quot;
+      data-id=&quot;test&quot;
+      src=&quot;&#x2F;Assets&#x2F;d3&#x2F;test.js&quot;
+    &gt;&lt;&#x2F;script&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;div class=&quot;vg&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;div class=&quot;img&quot;&gt;
+        &lt;img src=&quot;http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;Assets&#x2F;2024&#x2F;2024-06-27.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;txt&quot;&gt;
+        &lt;div class=&quot;tag&quot;&gt;
+          &lt;span&gt;music&lt;&#x2F;span&gt;
+        &lt;&#x2F;div&gt;
+        &lt;div class=&quot;title&quot;&gt;
+          &lt;a&gt;“もしかして肝斑？” 私たちのアンサー【トランシーノ&lt;&#x2F;a&gt;
+        &lt;&#x2F;div&gt;
+        &lt;div class=&quot;date&quot;&gt;
+          &lt;span&gt;2024.01.09&lt;&#x2F;span&gt;
+        &lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;div class=&quot;photo-box&quot;&gt;
+  &lt;img src=&quot;&amp;#x2F;Assets&amp;#x2F;2024&amp;#x2F;2024-06-27.avif&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;&#x2F;div&gt;
+&lt;box&gt;
+  &lt;div class=&quot;photo&quot;&gt;
+    &lt;div class=&quot;top&quot;&gt;
+      &lt;div class=&quot;side&quot;&gt;
+        &lt;div&gt;
+          &lt;span class=&quot;date&quot;&gt;2024.10.12&lt;&#x2F;span&gt;
+          &lt;span class=&quot;tag&quot;&gt;music&lt;&#x2F;span&gt;
+        &lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+      &lt;div class=&quot;img&quot;&gt;&lt;img src=&quot;&amp;#x2F;Assets&amp;#x2F;2024&amp;#x2F;2024-06-27.avif&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;bottom&quot;&gt;
+      &lt;div class=&quot;empty&quot;&gt;&lt;&#x2F;div&gt;
+      &lt;div class=&quot;desc&quot;&gt;&lt;a&gt;鸡蛋定价近看上空,经率军窘困&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;div class=&quot;qa&quot;&gt;
+  &lt;div class=&quot;q&quot;&gt;
+    &lt;span&gt;Q&lt;&#x2F;span&gt;
+    &lt;a&gt; jdii jdj ehhh b? &lt;&#x2F;a&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;a&quot;&gt;
+    &lt;span&gt;A&lt;&#x2F;span&gt;
+    &lt;div class=&quot;p&quot;&gt;&lt;p&gt;清洗绿豆
+直接把绿豆放入电饭锅中,放入刚好淹没过绿豆的水
+通电将水煮干
+拿出锅后用冷水冲洗绿豆后倒出水,重复几遍
+lsls ksos&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;box&gt;
+  &lt;div
+    class=&quot;jou&quot;
+    
+    color=&quot;green&quot;
+    
+  &gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;ul&gt;
+&lt;li&gt;清洗绿豆&lt;&#x2F;li&gt;
+&lt;li&gt;直接把绿豆放入电饭锅中,放入刚好淹没过绿豆的水&lt;&#x2F;li&gt;
+&lt;li&gt;通电将水煮干&lt;&#x2F;li&gt;
+&lt;li&gt;拿出锅后用冷水冲洗绿豆后倒出水,重复几遍&lt;&#x2F;li&gt;
+&lt;li&gt;放入适量的水煮一个钟,期间每个十分钟就打开盖子随便捞出绿豆壳&lt;&#x2F;li&gt;
+&lt;li&gt;等绿豆溶完后放入冰糖&lt;&#x2F;li&gt;
+&lt;li&gt;取出冷却后放入冰箱&lt;&#x2F;li&gt;
+&lt;li&gt;完&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;div class=&quot;side&quot;&gt;
+        &lt;!-- &lt;div class=&quot;article-date-outer&quot;&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-month&quot;&gt;2024.08&lt;&#x2F;span&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-date&quot;&gt;18&lt;&#x2F;span&gt; --&gt;
+        &lt;!-- &lt;&#x2F;div&gt; --&gt;
+        
+        &lt;a name=&quot;绿豆沙&quot; href=&quot;#绿豆沙&quot;&gt;绿豆沙&lt;&#x2F;a&gt;
+        
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;div
+    class=&quot;jou&quot;
+    
+    color=&quot;purple&quot;
+    
+  &gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;2024-08-01
+H2O
+2&#x2F;1&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;div class=&quot;side&quot;&gt;
+        &lt;!-- &lt;div class=&quot;article-date-outer&quot;&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-month&quot;&gt;2024.08&lt;&#x2F;span&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-date&quot;&gt;18&lt;&#x2F;span&gt; --&gt;
+        &lt;!-- &lt;&#x2F;div&gt; --&gt;
+        
+        &lt;a&gt; &amp;nbsp &lt;&#x2F;a&gt;
+        
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;div
+    class=&quot;jou&quot;
+    
+    color=&quot;pink&quot;
+    
+  &gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;test&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;div class=&quot;side&quot;&gt;
+        &lt;!-- &lt;div class=&quot;article-date-outer&quot;&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-month&quot;&gt;2024.08&lt;&#x2F;span&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-date&quot;&gt;18&lt;&#x2F;span&gt; --&gt;
+        &lt;!-- &lt;&#x2F;div&gt; --&gt;
+        
+        &lt;a&gt; &amp;nbsp &lt;&#x2F;a&gt;
+        
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;box&gt;
+  &lt;div
+    class=&quot;jou&quot;
+    
+    color=&quot;blue&quot;
+    
+  &gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;p&gt;test&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;div class=&quot;side&quot;&gt;
+        &lt;!-- &lt;div class=&quot;article-date-outer&quot;&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-month&quot;&gt;2024.08&lt;&#x2F;span&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-date&quot;&gt;18&lt;&#x2F;span&gt; --&gt;
+        &lt;!-- &lt;&#x2F;div&gt; --&gt;
+        
+        &lt;a&gt; &amp;nbsp &lt;&#x2F;a&gt;
+        
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+&lt;ol&gt;
+&lt;li&gt;123 abc&lt;&#x2F;li&gt;
+&lt;li&gt;test&lt;&#x2F;li&gt;
+&lt;li&gt;slslsl&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;ssjysjhshjshj&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2301</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2301/"/>
+        <id>https://rsuu.github.io/blog/2301/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2301/"> 
+&lt;table class=&quot;books&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title-CN&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;notes&lt;&#x2F;th&gt;
+    &lt;&#x2F;tr&gt;
+  &lt;&#x2F;thead&gt;
+  &lt;tbody&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Jonathan Balcombe] What a Fish Knows&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Marah J. Hardt] Sex in the Sea&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Daniel Whiteson &amp;amp; Jorge Cham] We Have No Idea&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Paul Theroux] An Area of Darkness&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        巴基斯坦脱离印度独立,印度人随地大小便
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Jennifer Ackerman] The Genius of Bird&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        鸟类的天赋
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        给我看
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Helen Scales] Eye of the Shoal&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[James Nestor] Deep&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        深海
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Paul Theroux] Riding the Iron Rooster&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        騎乘鐵公雞
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        啊,山珍海味
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[有间カオル] 魔法使いのハーブティー&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        魔法使的香草茶
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[三浦 しをん] 神去なあなあ日常&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        挺有意思
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] ツナグ&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] 水底フェスタ&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        我狗血喜欢
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] 鍵のない夢を見る&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] かがみの孤城&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        镜之孤城
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        居然是温馨故事
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[三島 由紀夫] 豊饒の海&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        春雪挺好的,我讨厌转世的玩法
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[三島 由紀夫] 金阁寺&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        莫名的吸引人,好奇怪
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[重松 清] 流星ワゴン&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        流星休旅車
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        日本人这么喜欢写出轨嘛
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[生井 英考] 空の帝国 アメリカの20世紀&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[村田 沙耶香] 地球星人&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[村上 春樹] 騎士団長殺し&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        叼毛
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+  &lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;art&quot;&gt;art&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2301&#x2F;2023-01-01.avif&quot; alt=&quot;2023-01-01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2201</title>
+        <published>2022-01-01T00:00:00+00:00</published>
+        <updated>2022-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2201/"/>
+        <id>https://rsuu.github.io/blog/2201/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2201/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-26_01.avif&quot; alt=&quot;2022-12-26_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-26.avif&quot; alt=&quot;2022-12-26&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-24_03.avif&quot; alt=&quot;2022-12-24_03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-24_02.avif&quot; alt=&quot;2022-12-24_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-24_01.avif&quot; alt=&quot;2022-12-24_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-24.avif&quot; alt=&quot;2022-12-24&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-23_01.avif&quot; alt=&quot;2022-12-23_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-23.avif&quot; alt=&quot;2022-12-23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-16_02.avif&quot; alt=&quot;2022-12-16_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-16_01.avif&quot; alt=&quot;2022-12-16_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-16.avif&quot; alt=&quot;2022-12-16&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-06.avif&quot; alt=&quot;2022-12-06&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-05.avif&quot; alt=&quot;2022-12-05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-04.avif&quot; alt=&quot;2022-12-04&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-12-01.avif&quot; alt=&quot;2022-12-01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-11-30_01.avif&quot; alt=&quot;2022-11-30_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-11-30.avif&quot; alt=&quot;2022-11-30&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-11-29_03.avif&quot; alt=&quot;2022-11-29_03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-11-29_02.avif&quot; alt=&quot;2022-11-29_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-11-29_01.avif&quot; alt=&quot;2022-11-29_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-11-29.avif&quot; alt=&quot;2022-11-29&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-10-23.avif&quot; alt=&quot;2022-10-23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-10-22.avif&quot; alt=&quot;2022-10-22&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-10-16.avif&quot; alt=&quot;2022-10-16&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-10-13.avif&quot; alt=&quot;2022-10-13&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-10-05.avif&quot; alt=&quot;2022-10-05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-10-04.avif&quot; alt=&quot;2022-10-04&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-10-03.avif&quot; alt=&quot;2022-10-03&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-28_01.avif&quot; alt=&quot;2022-09-28_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-28.avif&quot; alt=&quot;2022-09-28&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-26.avif&quot; alt=&quot;2022-09-26&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-24.avif&quot; alt=&quot;2022-09-24&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-23.avif&quot; alt=&quot;2022-09-23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-22.avif&quot; alt=&quot;2022-09-22&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-09_01.avif&quot; alt=&quot;2022-09-09_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-09.avif&quot; alt=&quot;2022-09-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-08.avif&quot; alt=&quot;2022-09-08&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-09-07.avif&quot; alt=&quot;2022-09-07&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-08-12.avif&quot; alt=&quot;2022-08-12&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-08-07.avif&quot; alt=&quot;2022-08-07&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-07-13.avif&quot; alt=&quot;2022-07-13&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-06-08.avif&quot; alt=&quot;2022-06-08&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-06-07.avif&quot; alt=&quot;2022-06-07&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-06-05.avif&quot; alt=&quot;2022-06-05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-04-10.avif&quot; alt=&quot;2022-04-10&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_38.avif&quot; alt=&quot;2022-03-28_38&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_37.avif&quot; alt=&quot;2022-03-28_37&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_36.avif&quot; alt=&quot;2022-03-28_36&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_35.avif&quot; alt=&quot;2022-03-28_35&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_34.avif&quot; alt=&quot;2022-03-28_34&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_33.avif&quot; alt=&quot;2022-03-28_33&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_32.avif&quot; alt=&quot;2022-03-28_32&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_31.avif&quot; alt=&quot;2022-03-28_31&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_30.avif&quot; alt=&quot;2022-03-28_30&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_29.avif&quot; alt=&quot;2022-03-28_29&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_28.avif&quot; alt=&quot;2022-03-28_28&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_27.avif&quot; alt=&quot;2022-03-28_27&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_26.avif&quot; alt=&quot;2022-03-28_26&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_25.avif&quot; alt=&quot;2022-03-28_25&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_24.avif&quot; alt=&quot;2022-03-28_24&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_23.avif&quot; alt=&quot;2022-03-28_23&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_22.avif&quot; alt=&quot;2022-03-28_22&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_21.avif&quot; alt=&quot;2022-03-28_21&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_20.avif&quot; alt=&quot;2022-03-28_20&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_19.avif&quot; alt=&quot;2022-03-28_19&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_18.avif&quot; alt=&quot;2022-03-28_18&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_17.avif&quot; alt=&quot;2022-03-28_17&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_16.avif&quot; alt=&quot;2022-03-28_16&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_15.avif&quot; alt=&quot;2022-03-28_15&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_14.avif&quot; alt=&quot;2022-03-28_14&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_13.avif&quot; alt=&quot;2022-03-28_13&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_12.avif&quot; alt=&quot;2022-03-28_12&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_11.avif&quot; alt=&quot;2022-03-28_11&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_10.avif&quot; alt=&quot;2022-03-28_10&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_09.avif&quot; alt=&quot;2022-03-28_09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_08.avif&quot; alt=&quot;2022-03-28_08&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_06.avif&quot; alt=&quot;2022-03-28_06&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_05.avif&quot; alt=&quot;2022-03-28_05&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_04.avif&quot; alt=&quot;2022-03-28_04&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_02.avif&quot; alt=&quot;2022-03-28_02&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28_01.avif&quot; alt=&quot;2022-03-28_01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-28.avif&quot; alt=&quot;2022-03-28&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-03-06.avif&quot; alt=&quot;2022-03-06&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2201&#x2F;2022-02-10.avif&quot; alt=&quot;2022-02-10&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2101</title>
+        <published>2021-01-01T00:00:00+00:00</published>
+        <updated>2021-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2101/"/>
+        <id>https://rsuu.github.io/blog/2101/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2101/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2101&#x2F;2021-12-09.avif&quot; alt=&quot;2021-12-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2101&#x2F;2021-09-09.avif&quot; alt=&quot;2021-09-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2101&#x2F;2021-08-09.avif&quot; alt=&quot;2021-08-09&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2001</title>
+        <published>2020-01-01T00:00:00+00:00</published>
+        <updated>2020-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2001/"/>
+        <id>https://rsuu.github.io/blog/2001/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2001/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2001&#x2F;rsuu.svg&quot; alt=&quot;rsuu&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

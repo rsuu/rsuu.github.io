@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - tracker</title>
+    <link rel="self" type="application/atom+xml" href="https://rsuu.github.io/tags/tracker/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rsuu.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-01-01T00:00:00+00:00</updated>
+    <id>https://rsuu.github.io/tags/tracker/atom.xml</id>
+    <entry xml:lang="en">
+        <title>2301</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2301/"/>
+        <id>https://rsuu.github.io/blog/2301/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2301/"> 
+&lt;table class=&quot;books&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title-CN&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;notes&lt;&#x2F;th&gt;
+    &lt;&#x2F;tr&gt;
+  &lt;&#x2F;thead&gt;
+  &lt;tbody&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Jonathan Balcombe] What a Fish Knows&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Marah J. Hardt] Sex in the Sea&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Daniel Whiteson &amp;amp; Jorge Cham] We Have No Idea&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Paul Theroux] An Area of Darkness&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        巴基斯坦脱离印度独立,印度人随地大小便
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Jennifer Ackerman] The Genius of Bird&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        鸟类的天赋
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        给我看
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Helen Scales] Eye of the Shoal&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[James Nestor] Deep&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        深海
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Paul Theroux] Riding the Iron Rooster&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        騎乘鐵公雞
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        啊,山珍海味
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[有间カオル] 魔法使いのハーブティー&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        魔法使的香草茶
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[三浦 しをん] 神去なあなあ日常&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        挺有意思
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] ツナグ&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] 水底フェスタ&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        我狗血喜欢
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] 鍵のない夢を見る&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[辻村 深月] かがみの孤城&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        镜之孤城
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        居然是温馨故事
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[三島 由紀夫] 豊饒の海&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        春雪挺好的,我讨厌转世的玩法
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[三島 由紀夫] 金阁寺&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        莫名的吸引人,好奇怪
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[重松 清] 流星ワゴン&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        流星休旅車
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        日本人这么喜欢写出轨嘛
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[生井 英考] 空の帝国 アメリカの20世紀&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[村田 沙耶香] 地球星人&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[村上 春樹] 騎士団長殺し&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        叼毛
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+  &lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;art&quot;&gt;art&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2301&#x2F;2023-01-01.avif&quot; alt=&quot;2023-01-01&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

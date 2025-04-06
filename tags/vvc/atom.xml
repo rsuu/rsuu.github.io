@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - vvc</title>
+    <link rel="self" type="application/atom+xml" href="https://rsuu.github.io/tags/vvc/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rsuu.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-03-24T00:00:00+00:00</updated>
+    <id>https://rsuu.github.io/tags/vvc/atom.xml</id>
+    <entry xml:lang="en">
+        <title>the debut of H.266</title>
+        <published>2025-03-24T00:00:00+00:00</published>
+        <updated>2025-03-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/h266-img/"/>
+        <id>https://rsuu.github.io/blog/h266-img/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/h266-img/">&lt;h2 id=&quot;build-vvenc-on-termux&quot;&gt;build vvenc on termux&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;zsh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-zsh &quot;&gt;&lt;code class=&quot;language-zsh&quot; data-lang=&quot;zsh&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;pkg install binutils-gold llvmgold
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;git clone --depth 1 https:&#x2F;&#x2F;github.com&#x2F;fraunhoferhhi&#x2F;vvenc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; vvenc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;mkdir build               cd build              cmake ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;cmake --build . --config Release
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; ..&#x2F;bin
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;en266&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;ffmpeg -i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; -pix_fmt yuv420p10le -strict -1 -f yuv4mpegpipe - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&#x2F;vvencapp -i - --y4m --format yuv420_10 --hdr hdr10_2020 -t 4 -o &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;}.266&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;de266&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&#x2F;vvdecapp -b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; -f 1 --y4m -o - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;ffmpeg -f yuv4mpegpipe -i - -c:v libwebp -lossless 1 -y &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;}.webp&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;en266 test.jpg
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;de266 test.266
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fin&quot;&gt;fin&lt;&#x2F;h2&gt;
+&lt;p&gt;今天简单地测试了一下 &lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩图片效果，直接说结论：低码率下，&lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩率相比 &lt;code&gt;H.265&lt;&#x2F;code&gt; 略有提升；高压缩比情况下，画质和 &lt;code&gt;AV1&lt;&#x2F;code&gt; 一样差（涂抹严重）；而 &lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩速度已经下降到 &lt;code&gt;AV1&lt;&#x2F;code&gt; 和 &lt;code&gt;JXL&lt;&#x2F;code&gt; 这样的级别了（笑）。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;H.265&lt;&#x2F;code&gt; 作为上一代编码算法，质量依然很强。你们 &lt;code&gt;AV1&lt;&#x2F;code&gt; 就别老去碰瓷老前辈了，你们真正的竞争对手是 &lt;code&gt;H.266&lt;&#x2F;code&gt; 啊！！！&lt;&#x2F;p&gt;
+&lt;p&gt;目前我这边仍然使用 &lt;code&gt;H.265&lt;&#x2F;code&gt; 来压缩高质量图片（？），对于非写实图片，&lt;code&gt;AV1&lt;&#x2F;code&gt; 的压缩率还是更好一些，毕竟质量不那么敏感。在我这 &lt;code&gt;H.266&lt;&#x2F;code&gt; 可能还要再过几年才能取代 &lt;code&gt;H.265&lt;&#x2F;code&gt; 吧？嘛，或许没有 8K 视频的话，也没必要上这种大炮……&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

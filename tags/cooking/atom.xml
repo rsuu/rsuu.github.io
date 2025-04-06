@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - cooking</title>
+    <link rel="self" type="application/atom+xml" href="https://rsuu.github.io/tags/cooking/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rsuu.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-01T00:00:00+00:00</updated>
+    <id>https://rsuu.github.io/tags/cooking/atom.xml</id>
+    <entry xml:lang="en">
+        <title>2408</title>
+        <published>2024-08-01T00:00:00+00:00</published>
+        <updated>2024-08-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2408/"/>
+        <id>https://rsuu.github.io/blog/2408/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2408/">&lt;box&gt;
+  &lt;div
+    class=&quot;jou&quot;
+    
+    color=&quot;green&quot;
+    
+  &gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;div class=&quot;txt&quot;&gt;&lt;ul&gt;
+&lt;li&gt;清洗绿豆&lt;&#x2F;li&gt;
+&lt;li&gt;直接把绿豆放入电饭锅中,放入刚好淹没过绿豆的水&lt;&#x2F;li&gt;
+&lt;li&gt;通电将水煮干&lt;&#x2F;li&gt;
+&lt;li&gt;拿出锅后用冷水冲洗绿豆后倒出水,重复几遍&lt;&#x2F;li&gt;
+&lt;li&gt;放入适量的水煮一个钟,期间每个十分钟就打开盖子随便捞出绿豆壳&lt;&#x2F;li&gt;
+&lt;li&gt;等绿豆溶完后放入冰糖&lt;&#x2F;li&gt;
+&lt;li&gt;取出冷却后放入冰箱&lt;&#x2F;li&gt;
+&lt;li&gt;完&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;div class=&quot;side&quot;&gt;
+        &lt;!-- &lt;div class=&quot;article-date-outer&quot;&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-month&quot;&gt;2024.08&lt;&#x2F;span&gt; --&gt;
+        &lt;!--   &lt;span class=&quot;article-date&quot;&gt;18&lt;&#x2F;span&gt; --&gt;
+        &lt;!-- &lt;&#x2F;div&gt; --&gt;
+        
+        &lt;a name=&quot;绿豆沙&quot; href=&quot;#绿豆沙&quot;&gt;绿豆沙&lt;&#x2F;a&gt;
+        
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;box&gt;
+</content>
+        
+    </entry>
+</feed>

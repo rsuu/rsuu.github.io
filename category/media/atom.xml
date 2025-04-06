@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - media</title>
+    <link rel="self" type="application/atom+xml" href="https://rsuu.github.io/category/media/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rsuu.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-03-24T00:00:00+00:00</updated>
+    <id>https://rsuu.github.io/category/media/atom.xml</id>
+    <entry xml:lang="en">
+        <title>the debut of H.266</title>
+        <published>2025-03-24T00:00:00+00:00</published>
+        <updated>2025-03-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/h266-img/"/>
+        <id>https://rsuu.github.io/blog/h266-img/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/h266-img/">&lt;h2 id=&quot;build-vvenc-on-termux&quot;&gt;build vvenc on termux&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;zsh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-zsh &quot;&gt;&lt;code class=&quot;language-zsh&quot; data-lang=&quot;zsh&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;pkg install binutils-gold llvmgold
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;git clone --depth 1 https:&#x2F;&#x2F;github.com&#x2F;fraunhoferhhi&#x2F;vvenc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; vvenc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;mkdir build               cd build              cmake ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;cmake --build . --config Release
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; ..&#x2F;bin
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;en266&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;ffmpeg -i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; -pix_fmt yuv420p10le -strict -1 -f yuv4mpegpipe - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&#x2F;vvencapp -i - --y4m --format yuv420_10 --hdr hdr10_2020 -t 4 -o &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;}.266&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;de266&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&#x2F;vvdecapp -b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; -f 1 --y4m -o - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;ffmpeg -f yuv4mpegpipe -i - -c:v libwebp -lossless 1 -y &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;}.webp&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;en266 test.jpg
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;de266 test.266
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fin&quot;&gt;fin&lt;&#x2F;h2&gt;
+&lt;p&gt;今天简单地测试了一下 &lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩图片效果，直接说结论：低码率下，&lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩率相比 &lt;code&gt;H.265&lt;&#x2F;code&gt; 略有提升；高压缩比情况下，画质和 &lt;code&gt;AV1&lt;&#x2F;code&gt; 一样差（涂抹严重）；而 &lt;code&gt;H.266&lt;&#x2F;code&gt; 的压缩速度已经下降到 &lt;code&gt;AV1&lt;&#x2F;code&gt; 和 &lt;code&gt;JXL&lt;&#x2F;code&gt; 这样的级别了（笑）。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;H.265&lt;&#x2F;code&gt; 作为上一代编码算法，质量依然很强。你们 &lt;code&gt;AV1&lt;&#x2F;code&gt; 就别老去碰瓷老前辈了，你们真正的竞争对手是 &lt;code&gt;H.266&lt;&#x2F;code&gt; 啊！！！&lt;&#x2F;p&gt;
+&lt;p&gt;目前我这边仍然使用 &lt;code&gt;H.265&lt;&#x2F;code&gt; 来压缩高质量图片（？），对于非写实图片，&lt;code&gt;AV1&lt;&#x2F;code&gt; 的压缩率还是更好一些，毕竟质量不那么敏感。在我这 &lt;code&gt;H.266&lt;&#x2F;code&gt; 可能还要再过几年才能取代 &lt;code&gt;H.265&lt;&#x2F;code&gt; 吧？嘛，或许没有 8K 视频的话，也没必要上这种大炮……&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Little MIDI</title>
+        <published>2024-07-01T00:00:00+00:00</published>
+        <updated>2024-07-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/midi/"/>
+        <id>https://rsuu.github.io/blog/midi/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/midi/">&lt;h2 id=&quot;staff&quot;&gt;Staff&lt;&#x2F;h2&gt;
+&lt;p&gt;制谱这块我们用&lt;a href=&quot;https:&#x2F;&#x2F;lilypond.org&quot;&gt;LilyPond&lt;&#x2F;a&gt;,虽然用的是&lt;code&gt;LaTeX&lt;&#x2F;code&gt;那样的语法(还混入了&lt;code&gt;LISP&lt;&#x2F;code&gt;),但除此之外也没什么好的选择了,能在终端里使用还兼顾着这么完美的质量...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;lilypond&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-lilypond &quot;&gt;&lt;code class=&quot;language-lilypond&quot; data-lang=&quot;lilypond&quot;&gt;&lt;span&gt;% test.ly
+&lt;&#x2F;span&gt;&lt;span&gt;\version &amp;quot;2.24.3&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;\language &amp;quot;english&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;\score {
+&lt;&#x2F;span&gt;&lt;span&gt;    \midi   {} 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    \relative {
+&lt;&#x2F;span&gt;&lt;span&gt;        c d e f g a b
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后轻轻地编译一下: &lt;code&gt;lilypond test.ly&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;player&quot;&gt;Player&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;FluidSynth&#x2F;fluidsynth&quot;&gt;FluidSynth&lt;&#x2F;a&gt;在&lt;a href=&quot;https:&#x2F;&#x2F;termux.dev&quot;&gt;Termux&lt;&#x2F;a&gt;上不知道为啥没声音,所以只能用&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mpv-player&#x2F;mpv&quot;&gt;MPV&lt;&#x2F;a&gt;来播放,绕了个小圈子.&lt;&#x2F;p&gt;
+&lt;p&gt;虽然&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Timidity++&quot;&gt;TiMidity++&lt;&#x2F;a&gt;也可以播放&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;MIDI&quot;&gt;MIDI&lt;&#x2F;a&gt;,但他本身指定字体的方式过于繁琐(只能通过配置文件来指定),所以这里就选择了FluidSynth.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;zsh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-zsh &quot;&gt;&lt;code class=&quot;language-zsh&quot; data-lang=&quot;zsh&quot;&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;midi-play&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;500-soundfonts-full-gm-sets
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_NAME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;Arachno.sf2&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_FONT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;HOME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&#x2F;soundfonts&#x2F;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_NAME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_FORMAT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;s16le
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;_RATIO&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;44100
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fluidsynth -nli -o synth.cpu-cores=8 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -r $_RATIO -g 2 -T raw -F - \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -i $_FONT $1 \
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;mpv \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;rawaudio \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer-rawaudio-format&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;$_FORMAT \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        --demuxer-rawaudio-rate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;$_RATIO \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;        -
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;DONE: &lt;code&gt;midi-play test.midi&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

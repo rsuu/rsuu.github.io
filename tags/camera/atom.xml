@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - camera</title>
+    <link rel="self" type="application/atom+xml" href="https://rsuu.github.io/tags/camera/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rsuu.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-03-01T00:00:00+00:00</updated>
+    <id>https://rsuu.github.io/tags/camera/atom.xml</id>
+    <entry xml:lang="en">
+        <title>2503</title>
+        <published>2025-03-01T00:00:00+00:00</published>
+        <updated>2025-03-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              rsuu
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rsuu.github.io/blog/2503/"/>
+        <id>https://rsuu.github.io/blog/2503/</id>
+        
+        <content type="html" xml:base="https://rsuu.github.io/blog/2503/">&lt;h2 id=&quot;camera&quot;&gt;camera&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2503&#x2F;20250130_1.heic&quot; alt=&quot;chestnut Tree&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;如你所见,板栗树的嫩芽摸起来是毛茸茸的,初见那会儿还让我联想到了多肉植物.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2503&#x2F;20250130_2.heic&quot; alt=&quot;lentils&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;不知是从何而来的扁豆.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;rsuu.github.io&#x2F;blog&#x2F;2503&#x2F;20250204_1.heic&quot; alt=&quot;rock&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;这些岩石让我想到了唐僧,嗯???&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;&quot;&gt;Books&lt;&#x2F;h2&gt;
+ 
+&lt;table class=&quot;books&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;title-CN&lt;&#x2F;th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;notes&lt;&#x2F;th&gt;
+    &lt;&#x2F;tr&gt;
+  &lt;&#x2F;thead&gt;
+  &lt;tbody&gt;
+    
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        &lt;strong&gt;[Stendhal] Le Rouge et le Noi&lt;&#x2F;strong&gt;
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        红与黑
+      &lt;&#x2F;td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;
+        
+      &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    
+  &lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;-1&quot;&gt;misc&lt;&#x2F;h2&gt;
+&lt;p&gt;想不到像我这样几百年才练几分钟琴的人都能练到手疼,果然长期不动就容易死 😆&lt;&#x2F;p&gt;
+&lt;p&gt;html的table竟然用不了圆角,难搞.&lt;&#x2F;p&gt;
+&lt;p&gt;或许我应该拿一些音乐上来?还是等我学会鉴赏再说吧!啊,不对,我可以找LLM啊...&lt;&#x2F;p&gt;
+&lt;p&gt;yaml是真的让人讨厌...&lt;&#x2F;p&gt;
+&lt;p&gt;百事可乐喝起来有点苦,气也没那么冲;可口可乐就不一样了,他更甜气也更冲,喝完牙齿腐蚀的也就更厉害了,加上一喝就打嗝...怎么说呢?两个都不太行?或许碳酸饮料天生就不是咱的type?
+虽然但是雪碧挺好的.&lt;&#x2F;p&gt;
+&lt;p&gt;要是我会Android开发那我就牛逼了,什么狗屎代码都能编译了!!!但是那套工具链是真的闻
+不得 💩&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
